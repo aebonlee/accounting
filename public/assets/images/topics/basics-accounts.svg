@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F0F5FF" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="30" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Chart of Accounts</text>
+
+  <!-- Root node -->
+  <rect x="145" y="42" width="110" height="32" fill="#1D4ED8" rx="8"/>
+  <text x="200" y="63" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">All Accounts</text>
+
+  <!-- Vertical line from root -->
+  <line x1="200" y1="74" x2="200" y2="88" stroke="#1D4ED8" stroke-width="2"/>
+  <!-- Horizontal branch line -->
+  <line x1="60" y1="88" x2="340" y2="88" stroke="#1D4ED8" stroke-width="2"/>
+
+  <!-- Branch lines down to Level 1 categories -->
+  <line x1="60" y1="88" x2="60" y2="100" stroke="#1D4ED8" stroke-width="2"/>
+  <line x1="130" y1="88" x2="130" y2="100" stroke="#1D4ED8" stroke-width="2"/>
+  <line x1="200" y1="88" x2="200" y2="100" stroke="#1D4ED8" stroke-width="2"/>
+  <line x1="270" y1="88" x2="270" y2="100" stroke="#1D4ED8" stroke-width="2"/>
+  <line x1="340" y1="88" x2="340" y2="100" stroke="#1D4ED8" stroke-width="2"/>
+
+  <!-- Level 1: Assets -->
+  <rect x="20" y="100" width="80" height="28" fill="#1D4ED8" rx="6"/>
+  <text x="60" y="119" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Assets</text>
+
+  <!-- Level 1: Liabilities -->
+  <rect x="90" y="100" width="80" height="28" fill="#3B82F6" rx="6"/>
+  <text x="130" y="119" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Liabilities</text>
+
+  <!-- Level 1: Equity -->
+  <rect x="162" y="100" width="76" height="28" fill="#60A5FA" rx="6"/>
+  <text x="200" y="119" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Equity</text>
+
+  <!-- Level 1: Revenue -->
+  <rect x="232" y="100" width="76" height="28" fill="#3B82F6" rx="6"/>
+  <text x="270" y="119" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Revenue</text>
+
+  <!-- Level 1: Expenses -->
+  <rect x="300" y="100" width="80" height="28" fill="#1D4ED8" rx="6"/>
+  <text x="340" y="119" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Expenses</text>
+
+  <!-- Sub-branches from Assets -->
+  <line x1="60" y1="128" x2="60" y2="145" stroke="#60A5FA" stroke-width="1.5"/>
+  <line x1="40" y1="145" x2="80" y2="145" stroke="#60A5FA" stroke-width="1.5"/>
+  <line x1="40" y1="145" x2="40" y2="152" stroke="#60A5FA" stroke-width="1.5"/>
+  <line x1="80" y1="145" x2="80" y2="152" stroke="#60A5FA" stroke-width="1.5"/>
+
+  <!-- Asset sub-items -->
+  <rect x="15" y="152" width="52" height="22" fill="#DBEAFE" rx="5" stroke="#60A5FA" stroke-width="1"/>
+  <text x="41" y="167" font-family="sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">Current</text>
+
+  <rect x="72" y="152" width="52" height="22" fill="#DBEAFE" rx="5" stroke="#60A5FA" stroke-width="1"/>
+  <text x="98" y="167" font-family="sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">Non-Curr.</text>
+
+  <!-- Sub-items under Current Assets -->
+  <line x1="41" y1="174" x2="41" y2="184" stroke="#60A5FA" stroke-width="1"/>
+  <rect x="12" y="184" width="58" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="41" y="196" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Cash</text>
+
+  <rect x="12" y="205" width="58" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="41" y="217" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Receivables</text>
+
+  <rect x="12" y="226" width="58" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="41" y="238" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Inventory</text>
+
+  <!-- Lines connecting sub-items -->
+  <line x1="41" y1="184" x2="41" y2="244" stroke="#BFDBFE" stroke-width="1"/>
+  <line x1="41" y1="193" x2="12" y2="193" stroke="none" stroke-width="0"/>
+
+  <!-- Sub-items under Non-Current -->
+  <line x1="98" y1="174" x2="98" y2="184" stroke="#60A5FA" stroke-width="1"/>
+  <rect x="72" y="184" width="58" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="101" y="196" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Equipment</text>
+
+  <rect x="72" y="205" width="58" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="101" y="217" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Buildings</text>
+
+  <line x1="98" y1="184" x2="98" y2="223" stroke="#BFDBFE" stroke-width="1"/>
+
+  <!-- Sub-branches from Liabilities -->
+  <line x1="130" y1="128" x2="130" y2="152" stroke="#60A5FA" stroke-width="1.5"/>
+  <rect x="105" y="152" width="52" height="22" fill="#DBEAFE" rx="5" stroke="#60A5FA" stroke-width="1"/>
+  <text x="131" y="167" font-family="sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">Current</text>
+
+  <rect x="105" y="184" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="131" y="196" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Payables</text>
+  <line x1="130" y1="174" x2="130" y2="202" stroke="#BFDBFE" stroke-width="1"/>
+
+  <rect x="105" y="205" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="131" y="217" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Short Loans</text>
+
+  <!-- Sub-branches from Equity -->
+  <line x1="200" y1="128" x2="200" y2="152" stroke="#60A5FA" stroke-width="1.5"/>
+  <rect x="172" y="152" width="56" height="22" fill="#DBEAFE" rx="5" stroke="#60A5FA" stroke-width="1"/>
+  <text x="200" y="167" font-family="sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">Capital</text>
+
+  <rect x="172" y="184" width="56" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="200" y="196" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Paid-in Cap.</text>
+  <line x1="200" y1="174" x2="200" y2="202" stroke="#BFDBFE" stroke-width="1"/>
+
+  <rect x="172" y="205" width="56" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="200" y="217" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Ret. Earnings</text>
+
+  <!-- Sub-branches from Revenue -->
+  <line x1="270" y1="128" x2="270" y2="152" stroke="#60A5FA" stroke-width="1.5"/>
+  <rect x="244" y="152" width="52" height="22" fill="#DBEAFE" rx="5" stroke="#60A5FA" stroke-width="1"/>
+  <text x="270" y="167" font-family="sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">Sales</text>
+
+  <rect x="244" y="184" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="270" y="196" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Product Rev.</text>
+  <line x1="270" y1="174" x2="270" y2="202" stroke="#BFDBFE" stroke-width="1"/>
+
+  <rect x="244" y="205" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="270" y="217" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Service Rev.</text>
+
+  <!-- Sub-branches from Expenses -->
+  <line x1="340" y1="128" x2="340" y2="152" stroke="#60A5FA" stroke-width="1.5"/>
+  <rect x="314" y="152" width="52" height="22" fill="#DBEAFE" rx="5" stroke="#60A5FA" stroke-width="1"/>
+  <text x="340" y="167" font-family="sans-serif" font-size="8" fill="#1D4ED8" text-anchor="middle">Operating</text>
+
+  <rect x="314" y="184" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="340" y="196" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Salaries</text>
+  <line x1="340" y1="174" x2="340" y2="223" stroke="#BFDBFE" stroke-width="1"/>
+
+  <rect x="314" y="205" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="340" y="217" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Rent</text>
+
+  <rect x="314" y="226" width="52" height="18" fill="#FFFFFF" rx="4" stroke="#BFDBFE" stroke-width="1"/>
+  <text x="340" y="238" font-family="sans-serif" font-size="7" fill="#3B82F6" text-anchor="middle">Utilities</text>
+
+  <!-- Bottom decoration -->
+  <rect x="100" y="260" width="200" height="26" fill="#DBEAFE" rx="13"/>
+  <text x="200" y="278" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Hierarchical Structure</text>
+</svg>

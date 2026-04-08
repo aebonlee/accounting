@@ -1,0 +1,106 @@
+const translations: Record<string, Record<string, any>> = {
+  ko: {
+    nav: {
+      about: '소개',
+      community: '커뮤니티',
+    },
+    hero: {
+      badge: '회계 & 재무 종합 가이드 2026',
+      title: '회계와 재무의\n',
+      titleHighlight: '모든 것을 마스터하세요',
+      description: '회계 기초, 재무제표, 원가회계, 세무, 관리회계, 감사, 재무분석까지 — 회계와 재무의 A to Z를 체계적으로 배워보세요.',
+      cta: '학습 시작하기',
+      ctaSecondary: '더 알아보기',
+    },
+    features: {
+      title: '왜 DreamIT Accounting인가?',
+      subtitle: '실무에서 바로 활용 가능한 회계·재무 지식을 체계적으로 정리했습니다.',
+      habits: { title: '체계적 기초', desc: '회계 원칙과 기준부터 IFRS/K-GAAP까지 탄탄한 기초를 쌓을 수 있습니다.' },
+      memory: { title: '재무제표 분석', desc: '재무상태표, 손익계산서, 현금흐름표 등 핵심 재무제표를 완벽 이해합니다.' },
+      strategy: { title: '세무·원가 실무', desc: '세무회계, 원가회계의 핵심 이론과 실무 적용 방법을 학습합니다.' },
+      balance: { title: '감사·분석 역량', desc: '회계감사와 재무분석 능력을 키워 전문성을 높입니다.' },
+    },
+    home: {
+      pathsTitle: '학습 경로',
+      pathsSubtitle: '목표에 맞는 학습 경로를 선택하고 체계적으로 학습하세요.',
+      workflowTitle: '학습 플로우',
+      workflowSubtitle: '4단계로 회계·재무 전문가가 되어보세요.',
+      step1: '회계 기초 다지기',
+      step1desc: '회계의 개념, 원칙, 등식을 이해하고 복식부기의 기본을 익힙니다.',
+      step2: '재무제표 마스터',
+      step2desc: '재무상태표, 손익계산서, 현금흐름표 등 핵심 재무제표를 완벽히 학습합니다.',
+      step3: '전문 영역 심화',
+      step3desc: '원가회계, 세무회계, 관리회계 등 전문 분야를 깊이 있게 학습합니다.',
+      step4: '실전 분석 역량',
+      step4desc: '회계감사와 재무분석을 통해 실무 전문성을 완성합니다.',
+    },
+    stats: {
+      guides: '학습 가이드',
+      topics: '학습 주제',
+      categories: '학습 카테고리',
+    },
+    cta: {
+      title: '지금 바로 회계·재무 학습을 시작하세요',
+      description: '체계적인 커리큘럼으로 회계의 기초부터 재무분석까지, 전문가 수준의 역량을 키워보세요.',
+      button: '학습 시작하기',
+    },
+    footer: {
+      description: '회계와 재무의 모든 것을 체계적으로 학습하는 종합 플랫폼입니다.',
+      descriptionDetail: '회계 기초, 재무제표, 부기, 원가회계, 세무, 관리회계, 감사, 재무분석까지 전문적인 학습 자료를 제공합니다.',
+      quickLinks: '빠른 링크',
+    },
+  },
+  en: {
+    nav: {
+      about: 'About',
+      community: 'Community',
+    },
+    hero: {
+      badge: 'Accounting & Finance Guide 2026',
+      title: 'Master Everything About\n',
+      titleHighlight: 'Accounting & Finance',
+      description: 'From accounting basics to financial analysis — learn the A to Z of accounting and finance systematically.',
+      cta: 'Start Learning',
+      ctaSecondary: 'Learn More',
+    },
+    features: {
+      title: 'Why DreamIT Accounting?',
+      subtitle: 'Practical accounting and finance knowledge organized for real-world application.',
+      habits: { title: 'Solid Foundation', desc: 'Build a strong foundation from accounting principles to IFRS/K-GAAP standards.' },
+      memory: { title: 'Financial Statements', desc: 'Fully understand balance sheets, income statements, cash flow statements, and more.' },
+      strategy: { title: 'Tax & Cost Practice', desc: 'Learn core theories and practical applications of tax and cost accounting.' },
+      balance: { title: 'Audit & Analysis', desc: 'Build expertise in auditing and financial analysis capabilities.' },
+    },
+    home: {
+      pathsTitle: 'Learning Paths',
+      pathsSubtitle: 'Choose a learning path that matches your goals and learn systematically.',
+      workflowTitle: 'Learning Flow',
+      workflowSubtitle: 'Become an accounting & finance expert in 4 systematic steps.',
+      step1: 'Build Foundation',
+      step1desc: 'Understand accounting concepts, principles, equations, and master double-entry bookkeeping.',
+      step2: 'Master Financial Statements',
+      step2desc: 'Thoroughly learn balance sheets, income statements, cash flow statements, and more.',
+      step3: 'Deepen Specialization',
+      step3desc: 'Study cost accounting, tax accounting, and management accounting in depth.',
+      step4: 'Practical Analysis Skills',
+      step4desc: 'Complete professional expertise through auditing and financial analysis.',
+    },
+    stats: {
+      guides: 'Study Guides',
+      topics: 'Topics Covered',
+      categories: 'Categories',
+    },
+    cta: {
+      title: 'Start Your Accounting & Finance Journey Today',
+      description: 'Build expert-level skills from basics to financial analysis with a structured curriculum.',
+      button: 'Start Learning',
+    },
+    footer: {
+      description: 'A comprehensive platform for learning accounting and finance systematically.',
+      descriptionDetail: 'We provide professional learning materials covering accounting basics, financial statements, bookkeeping, cost, tax, management accounting, auditing, and financial analysis.',
+      quickLinks: 'Quick Links',
+    },
+  },
+};
+
+export default translations;

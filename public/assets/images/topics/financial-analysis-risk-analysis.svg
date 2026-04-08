@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="12" fill="#FFFBEB"/>
+  <!-- Warning triangle -->
+  <polygon points="200,25 260,130 140,130" fill="#F59E0B" stroke="#D97706" stroke-width="2.5"/>
+  <polygon points="200,45 248,122 152,122" fill="#FEFCE8"/>
+  <text x="200" y="105" font-family="sans-serif" font-size="36" fill="#F59E0B" font-weight="bold" text-anchor="middle">!</text>
+  <!-- Risk level labels on triangle -->
+  <text x="200" y="68" font-family="sans-serif" font-size="8" fill="#92400E" font-weight="bold" text-anchor="middle">HIGH</text>
+  <text x="200" y="90" font-family="sans-serif" font-size="8" fill="#B45309" text-anchor="middle">MED</text>
+  <!-- Probability distribution curve (bell curve) -->
+  <rect x="40" y="145" width="320" height="140" rx="8" fill="white" stroke="#FBBF24" stroke-width="2"/>
+  <!-- Axis -->
+  <line x1="60" y1="260" x2="340" y2="260" stroke="#D97706" stroke-width="1.5"/>
+  <line x1="60" y1="260" x2="60" y2="160" stroke="#D97706" stroke-width="1.5"/>
+  <!-- Axis labels -->
+  <text x="200" y="278" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Return (%)</text>
+  <text x="52" y="210" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="end" transform="rotate(-90,52,210)">Probability</text>
+  <!-- Bell curve -->
+  <path d="M70,258 Q100,255 120,248 Q140,235 160,210 Q175,185 190,170 Q195,165 200,162 Q205,165 210,170 Q225,185 240,210 Q260,235 280,248 Q300,255 330,258" fill="#FBBF24" fill-opacity="0.3" stroke="#F59E0B" stroke-width="2.5"/>
+  <!-- Mean line -->
+  <line x1="200" y1="160" x2="200" y2="260" stroke="#D97706" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="200" y="155" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle" font-weight="bold">Mean</text>
+  <!-- Standard deviation markers -->
+  <line x1="150" y1="255" x2="150" y2="245" stroke="#92400E" stroke-width="1"/>
+  <text x="150" y="270" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">-1sd</text>
+  <line x1="250" y1="255" x2="250" y2="245" stroke="#92400E" stroke-width="1"/>
+  <text x="250" y="270" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">+1sd</text>
+  <line x1="100" y1="255" x2="100" y2="250" stroke="#92400E" stroke-width="1"/>
+  <text x="100" y="270" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">-2sd</text>
+  <line x1="300" y1="255" x2="300" y2="250" stroke="#92400E" stroke-width="1"/>
+  <text x="300" y="270" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">+2sd</text>
+  <!-- VaR indicator (left tail) -->
+  <path d="M70,258 Q100,255 120,248 Q130,242 135,237 L135,260 L70,260 Z" fill="#DC2626" fill-opacity="0.4"/>
+  <text x="95" y="240" font-family="sans-serif" font-size="8" fill="#DC2626" font-weight="bold">VaR</text>
+  <!-- Risk metrics on sides -->
+  <rect x="280" y="25" width="105" height="30" rx="6" fill="white" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="290" y="44" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Beta: 1.25</text>
+  <rect x="280" y="60" width="105" height="30" rx="6" fill="white" stroke="#FBBF24" stroke-width="1.5"/>
+  <text x="290" y="79" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Std Dev: 14.2%</text>
+  <rect x="280" y="95" width="105" height="30" rx="6" fill="white" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="290" y="114" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Sharpe: 0.82</text>
+  <rect x="15" y="25" width="105" height="30" rx="6" fill="white" stroke="#FBBF24" stroke-width="1.5"/>
+  <text x="25" y="44" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">VaR 95%: -8.3%</text>
+  <rect x="15" y="60" width="105" height="30" rx="6" fill="white" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="25" y="79" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">CVaR: -11.5%</text>
+  <rect x="15" y="95" width="105" height="30" rx="6" fill="white" stroke="#FBBF24" stroke-width="1.5"/>
+  <text x="25" y="114" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Max DD: -22%</text>
+</svg>

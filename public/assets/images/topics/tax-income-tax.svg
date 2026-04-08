@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF1F2" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#E11D48">Corporate Income Tax</text>
+
+  <!-- Building Icon -->
+  <rect x="40" y="55" width="80" height="100" fill="#E11D48" rx="4"/>
+  <rect x="50" y="65" width="20" height="16" fill="#FFF1F2" rx="2"/>
+  <rect x="78" y="65" width="20" height="16" fill="#FFF1F2" rx="2"/>
+  <rect x="50" y="88" width="20" height="16" fill="#FFF1F2" rx="2"/>
+  <rect x="78" y="88" width="20" height="16" fill="#FFF1F2" rx="2"/>
+  <rect x="50" y="111" width="20" height="16" fill="#FFF1F2" rx="2"/>
+  <rect x="78" y="111" width="20" height="16" fill="#FFF1F2" rx="2"/>
+  <rect x="68" y="133" width="24" height="22" fill="#FFF1F2" rx="2"/>
+  <rect x="30" y="155" width="100" height="8" fill="#9F1239" rx="2"/>
+  <text x="80" y="178" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#E11D48">Corporation</text>
+
+  <!-- Arrow from building to calculation -->
+  <polygon points="135,105 155,95 155,115" fill="#E11D48"/>
+  <line x1="125" y1="105" x2="155" y2="105" stroke="#E11D48" stroke-width="2"/>
+
+  <!-- Tax Calculation Flow -->
+  <rect x="165" y="50" width="210" height="140" fill="white" stroke="#E11D48" stroke-width="2" rx="8"/>
+  <text x="270" y="72" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E11D48">Tax Calculation</text>
+  <line x1="175" y1="78" x2="365" y2="78" stroke="#FDA4AF" stroke-width="1"/>
+
+  <!-- Calculation rows -->
+  <text x="180" y="96" font-family="sans-serif" font-size="11" fill="#4B5563">Revenue</text>
+  <text x="350" y="96" text-anchor="end" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1F2937">100,000</text>
+
+  <text x="180" y="114" font-family="sans-serif" font-size="11" fill="#4B5563">(-) Expenses</text>
+  <text x="350" y="114" text-anchor="end" font-family="sans-serif" font-size="11" fill="#E11D48">- 70,000</text>
+
+  <line x1="175" y1="120" x2="365" y2="120" stroke="#FDA4AF" stroke-width="1"/>
+
+  <text x="180" y="136" font-family="sans-serif" font-size="11" font-weight="bold" fill="#4B5563">Taxable Income</text>
+  <text x="350" y="136" text-anchor="end" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1F2937">30,000</text>
+
+  <text x="180" y="154" font-family="sans-serif" font-size="11" fill="#4B5563">Tax Rate</text>
+  <text x="350" y="154" text-anchor="end" font-family="sans-serif" font-size="11" fill="#E11D48">x 20%</text>
+
+  <line x1="175" y1="160" x2="365" y2="160" stroke="#E11D48" stroke-width="1.5"/>
+
+  <text x="180" y="178" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E11D48">Tax Due</text>
+  <text x="350" y="178" text-anchor="end" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E11D48">6,000</text>
+
+  <!-- Tax Rate Brackets -->
+  <text x="200" y="215" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E11D48">Tax Rate Brackets</text>
+
+  <!-- Bracket bars -->
+  <rect x="30" y="228" width="80" height="22" fill="#FDA4AF" rx="4"/>
+  <text x="70" y="243" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#9F1239">~2억: 10%</text>
+
+  <rect x="120" y="228" width="80" height="22" fill="#FB7185" rx="4"/>
+  <text x="160" y="243" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="white">~200억: 20%</text>
+
+  <rect x="210" y="228" width="80" height="22" fill="#E11D48" rx="4"/>
+  <text x="250" y="243" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="white">~3000억: 22%</text>
+
+  <rect x="300" y="228" width="80" height="22" fill="#9F1239" rx="4"/>
+  <text x="340" y="243" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="white">3000억~: 25%</text>
+
+  <!-- Arrow indicating progressive -->
+  <line x1="30" y1="260" x2="380" y2="260" stroke="#E11D48" stroke-width="1.5"/>
+  <polygon points="380,260 372,255 372,265" fill="#E11D48"/>
+  <text x="200" y="278" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B7280">Progressive Tax Rate</text>
+</svg>

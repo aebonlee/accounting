@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F0FDF4" rx="8"/>
+
+  <!-- Title -->
+  <text x="200" y="28" font-family="sans-serif" font-size="15" fill="#059669" text-anchor="middle" font-weight="bold">Statement Analysis</text>
+
+  <!-- Pie chart (top-left) -->
+  <circle cx="100" cy="110" r="55" fill="#34D399"/>
+  <path d="M100,110 L100,55 A55,55 0 0,1 148,82 Z" fill="#059669"/>
+  <path d="M100,110 L148,82 A55,55 0 0,1 145,145 Z" fill="#6EE7B7"/>
+  <path d="M100,110 L145,145 A55,55 0 0,1 100,165 Z" fill="#A7F3D0"/>
+  <!-- Pie labels -->
+  <text x="118" y="80" font-family="sans-serif" font-size="9" fill="white" font-weight="bold">35%</text>
+  <text x="130" y="118" font-family="sans-serif" font-size="9" fill="#059669" font-weight="bold">25%</text>
+  <text x="115" y="148" font-family="sans-serif" font-size="9" fill="#059669" font-weight="bold">15%</text>
+  <text x="72" y="118" font-family="sans-serif" font-size="9" fill="white" font-weight="bold">25%</text>
+
+  <!-- Bar chart (top-right) -->
+  <line x1="220" y1="55" x2="220" y2="170" stroke="#059669" stroke-width="1.5"/>
+  <line x1="220" y1="170" x2="370" y2="170" stroke="#059669" stroke-width="1.5"/>
+
+  <rect x="235" y="90" width="24" height="80" fill="#059669" rx="2"/>
+  <rect x="267" y="110" width="24" height="60" fill="#34D399" rx="2"/>
+  <rect x="299" y="70" width="24" height="100" fill="#059669" rx="2"/>
+  <rect x="331" y="100" width="24" height="70" fill="#34D399" rx="2"/>
+
+  <text x="247" y="183" font-family="sans-serif" font-size="8" fill="#059669" text-anchor="middle">Q1</text>
+  <text x="279" y="183" font-family="sans-serif" font-size="8" fill="#059669" text-anchor="middle">Q2</text>
+  <text x="311" y="183" font-family="sans-serif" font-size="8" fill="#059669" text-anchor="middle">Q3</text>
+  <text x="343" y="183" font-family="sans-serif" font-size="8" fill="#059669" text-anchor="middle">Q4</text>
+
+  <!-- Line chart (bottom-left) -->
+  <line x1="30" y1="200" x2="30" y2="280" stroke="#059669" stroke-width="1.5"/>
+  <line x1="30" y1="280" x2="180" y2="280" stroke="#059669" stroke-width="1.5"/>
+
+  <polyline points="40,265 65,250 90,255 115,235 140,220 165,210" fill="none" stroke="#059669" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="40,270 65,262 90,268 115,255 140,248 165,240" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Data points on line chart -->
+  <circle cx="40" cy="265" r="3" fill="#059669"/>
+  <circle cx="90" cy="255" r="3" fill="#059669"/>
+  <circle cx="140" cy="220" r="3" fill="#059669"/>
+  <circle cx="65" cy="262" r="3" fill="#34D399"/>
+  <circle cx="115" cy="255" r="3" fill="#34D399"/>
+  <circle cx="165" cy="240" r="3" fill="#34D399"/>
+
+  <!-- KPI cards (bottom-right) -->
+  <rect x="210" y="200" width="80" height="36" fill="#059669" rx="6"/>
+  <text x="250" y="215" font-family="sans-serif" font-size="8" fill="#A7F3D0" text-anchor="middle">ROE</text>
+  <text x="250" y="230" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">18.5%</text>
+
+  <rect x="300" y="200" width="80" height="36" fill="#34D399" rx="6"/>
+  <text x="340" y="215" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">ROA</text>
+  <text x="340" y="230" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">12.3%</text>
+
+  <rect x="210" y="244" width="80" height="36" fill="#34D399" rx="6"/>
+  <text x="250" y="259" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle">Debt Ratio</text>
+  <text x="250" y="274" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">42.1%</text>
+
+  <rect x="300" y="244" width="80" height="36" fill="#059669" rx="6"/>
+  <text x="340" y="259" font-family="sans-serif" font-size="8" fill="#A7F3D0" text-anchor="middle">Current</text>
+  <text x="340" y="274" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">2.15</text>
+</svg>

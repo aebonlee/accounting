@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" rx="12" fill="#F5F3FF"/>
+
+  <!-- Title -->
+  <text x="200" y="32" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#8B5CF6">Journal Entries</text>
+
+  <!-- Journal page -->
+  <rect x="30" y="45" width="340" height="235" rx="6" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+
+  <!-- Header row -->
+  <rect x="30" y="45" width="340" height="30" rx="6" fill="#8B5CF6"/>
+  <!-- Fix corners at bottom of header -->
+  <rect x="30" y="60" width="340" height="15" fill="#8B5CF6"/>
+
+  <!-- Column headers -->
+  <text x="68" y="66" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Date</text>
+  <text x="170" y="66" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Account</text>
+  <text x="288" y="66" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Debit</text>
+  <text x="345" y="66" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Credit</text>
+
+  <!-- Column dividers -->
+  <line x1="105" y1="45" x2="105" y2="280" stroke="#C4B5FD" stroke-width="1"/>
+  <line x1="258" y1="45" x2="258" y2="280" stroke="#C4B5FD" stroke-width="1"/>
+  <line x1="318" y1="45" x2="318" y2="280" stroke="#C4B5FD" stroke-width="1"/>
+
+  <!-- Entry 1 -->
+  <rect x="31" y="76" width="338" height="24" fill="#EDE9FE"/>
+  <text x="68" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Jan 01</text>
+  <text x="170" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Cash</text>
+  <text x="288" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">50,000</text>
+  <text x="345" y="92" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+
+  <rect x="31" y="100" width="338" height="24" fill="#FFFFFF"/>
+  <text x="68" y="116" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+  <text x="178" y="116" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Owner's Equity</text>
+  <text x="288" y="116" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+  <text x="345" y="116" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">50,000</text>
+
+  <!-- Separator -->
+  <line x1="40" y1="130" x2="360" y2="130" stroke="#C4B5FD" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Entry 2 -->
+  <rect x="31" y="136" width="338" height="24" fill="#EDE9FE"/>
+  <text x="68" y="152" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Jan 05</text>
+  <text x="170" y="152" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Equipment</text>
+  <text x="288" y="152" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">12,000</text>
+  <text x="345" y="152" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+
+  <rect x="31" y="160" width="338" height="24" fill="#FFFFFF"/>
+  <text x="68" y="176" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+  <text x="170" y="176" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Cash</text>
+  <text x="288" y="176" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+  <text x="345" y="176" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">12,000</text>
+
+  <!-- Separator -->
+  <line x1="40" y1="190" x2="360" y2="190" stroke="#C4B5FD" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Entry 3 -->
+  <rect x="31" y="196" width="338" height="24" fill="#EDE9FE"/>
+  <text x="68" y="212" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Jan 10</text>
+  <text x="170" y="212" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Rent Expense</text>
+  <text x="288" y="212" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">3,000</text>
+  <text x="345" y="212" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+
+  <rect x="31" y="220" width="338" height="24" fill="#FFFFFF"/>
+  <text x="68" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+  <text x="170" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95">Cash</text>
+  <text x="288" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4C1D95"></text>
+  <text x="345" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">3,000</text>
+
+  <!-- Page curl bottom-right -->
+  <path d="M370,260 L370,280 L350,280 Z" fill="#C4B5FD"/>
+
+  <!-- "General Journal" label -->
+  <text x="200" y="270" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A78BFA">General Journal - Page 1</text>
+</svg>

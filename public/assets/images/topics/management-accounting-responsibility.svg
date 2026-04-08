@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#F0FDFA" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="25" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0891B2">Responsibility Accounting</text>
+
+  <!-- CEO / Investment Center (Top) -->
+  <rect x="130" y="38" width="140" height="44" fill="#0891B2" rx="8"/>
+  <text x="200" y="56" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">CEO</text>
+  <text x="200" y="72" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#CFFAFE">Investment Center</text>
+
+  <!-- Vertical line from CEO -->
+  <line x1="200" y1="82" x2="200" y2="100" stroke="#0891B2" stroke-width="2"/>
+  <!-- Horizontal connector -->
+  <line x1="80" y1="100" x2="320" y2="100" stroke="#0891B2" stroke-width="2"/>
+
+  <!-- Left branch line -->
+  <line x1="80" y1="100" x2="80" y2="115" stroke="#0891B2" stroke-width="2"/>
+  <!-- Center branch line -->
+  <line x1="200" y1="100" x2="200" y2="115" stroke="#0891B2" stroke-width="2"/>
+  <!-- Right branch line -->
+  <line x1="320" y1="100" x2="320" y2="115" stroke="#0891B2" stroke-width="2"/>
+
+  <!-- Division A - Profit Center -->
+  <rect x="15" y="115" width="130" height="44" fill="#67E8F9" rx="8"/>
+  <text x="80" y="133" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0E7490">Division A</text>
+  <text x="80" y="148" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#0E7490">Profit Center</text>
+
+  <!-- Division B - Profit Center -->
+  <rect x="135" y="115" width="130" height="44" fill="#67E8F9" rx="8"/>
+  <text x="200" y="133" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0E7490">Division B</text>
+  <text x="200" y="148" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#0E7490">Profit Center</text>
+
+  <!-- Division C - Profit Center -->
+  <rect x="255" y="115" width="130" height="44" fill="#67E8F9" rx="8"/>
+  <text x="320" y="133" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0E7490">Division C</text>
+  <text x="320" y="148" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#0E7490">Profit Center</text>
+
+  <!-- Lines down from Division A -->
+  <line x1="55" y1="159" x2="55" y2="175" stroke="#67E8F9" stroke-width="1.5"/>
+  <line x1="105" y1="159" x2="105" y2="175" stroke="#67E8F9" stroke-width="1.5"/>
+
+  <!-- Lines down from Division B -->
+  <line x1="175" y1="159" x2="175" y2="175" stroke="#67E8F9" stroke-width="1.5"/>
+  <line x1="225" y1="159" x2="225" y2="175" stroke="#67E8F9" stroke-width="1.5"/>
+
+  <!-- Lines down from Division C -->
+  <line x1="295" y1="159" x2="295" y2="175" stroke="#67E8F9" stroke-width="1.5"/>
+  <line x1="345" y1="159" x2="345" y2="175" stroke="#67E8F9" stroke-width="1.5"/>
+
+  <!-- Level 3: Revenue and Cost Centers -->
+  <!-- Div A - Revenue -->
+  <rect x="15" y="175" width="80" height="36" fill="#FFFFFF" rx="6" stroke="#0891B2" stroke-width="1.5"/>
+  <text x="55" y="191" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0891B2">Revenue</text>
+  <text x="55" y="203" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6B7280">Center</text>
+
+  <!-- Div A - Cost -->
+  <rect x="100" y="175" width="80" height="36" fill="#FFFFFF" rx="6" stroke="#67E8F9" stroke-width="1.5"/>
+  <text x="140" y="191" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0891B2">Cost</text>
+  <text x="140" y="203" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6B7280">Center</text>
+
+  <!-- Div B - Revenue -->
+  <rect x="135" y="175" width="80" height="36" fill="#FFFFFF" rx="6" stroke="#0891B2" stroke-width="1.5"/>
+  <text x="175" y="191" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0891B2">Revenue</text>
+  <text x="175" y="203" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6B7280">Center</text>
+
+  <!-- Div B - Cost -->
+  <rect x="220" y="175" width="80" height="36" fill="#FFFFFF" rx="6" stroke="#67E8F9" stroke-width="1.5"/>
+  <text x="260" y="191" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0891B2">Cost</text>
+  <text x="260" y="203" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6B7280">Center</text>
+
+  <!-- Div C - Revenue -->
+  <rect x="255" y="175" width="80" height="36" fill="#FFFFFF" rx="6" stroke="#0891B2" stroke-width="1.5"/>
+  <text x="295" y="191" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0891B2">Revenue</text>
+  <text x="295" y="203" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6B7280">Center</text>
+
+  <!-- Div C - Cost -->
+  <rect x="340" y="175" width="45" height="36" fill="#FFFFFF" rx="6" stroke="#67E8F9" stroke-width="1.5"/>
+  <text x="362" y="191" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0891B2">Cost</text>
+  <text x="362" y="203" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#6B7280">Center</text>
+
+  <!-- Legend / Info box -->
+  <rect x="25" y="225" width="350" height="60" fill="#FFFFFF" rx="8" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="200" y="244" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#374151">Responsibility Center Types</text>
+
+  <rect x="40" y="254" width="12" height="12" fill="#0891B2" rx="2"/>
+  <text x="57" y="264" font-family="sans-serif" font-size="9" fill="#374151">Investment</text>
+
+  <rect x="120" y="254" width="12" height="12" fill="#67E8F9" rx="2"/>
+  <text x="137" y="264" font-family="sans-serif" font-size="9" fill="#374151">Profit</text>
+
+  <rect x="185" y="254" width="12" height="12" fill="#FFFFFF" rx="2" stroke="#0891B2" stroke-width="1.5"/>
+  <text x="202" y="264" font-family="sans-serif" font-size="9" fill="#374151">Revenue</text>
+
+  <rect x="260" y="254" width="12" height="12" fill="#FFFFFF" rx="2" stroke="#67E8F9" stroke-width="1.5"/>
+  <text x="277" y="264" font-family="sans-serif" font-size="9" fill="#374151">Cost</text>
+</svg>

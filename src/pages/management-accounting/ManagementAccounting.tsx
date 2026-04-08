@@ -1,0 +1,535 @@
+import { useState } from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
+import TipBox from '../../components/TipBox';
+import type { ReactElement } from 'react';
+
+const SECTIONS = [
+  { id: 'budgeting', icon: 'fa-money-bill-trend-up', ko: '예산편성과 통제', en: 'Budgeting & Control' },
+  { id: 'performance', icon: 'fa-gauge-high', ko: '성과측정과 BSC', en: 'Performance & BSC' },
+  { id: 'decision', icon: 'fa-route', ko: '의사결정 회계', en: 'Decision-Making Accounting' },
+  { id: 'pricing', icon: 'fa-tag', ko: '가격결정과 이전가격', en: 'Pricing & Transfer Pricing' },
+  { id: 'responsibility', icon: 'fa-sitemap', ko: '책임회계와 분권화', en: 'Responsibility Accounting' },
+  { id: 'strategic', icon: 'fa-chess-queen', ko: '전략적 관리회계', en: 'Strategic Management Accounting' },
+];
+
+/* ── Section Components ─────────────────────────────────── */
+
+function BudgetingSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '예산편성과 통제' : 'Budgeting & Control'}</h2>
+
+      <h3>{isKo ? '예산의 의의와 기능' : 'Significance and Functions of Budgets'}</h3>
+      <p>
+        {isKo
+          ? '예산(Budget)은 기업의 미래 경영 계획을 화폐 단위로 표현한 공식적인 계획서입니다. 예산은 단순한 숫자의 나열이 아니라 조직의 전략적 목표를 구체적인 행동 계획으로 전환하는 핵심 관리 도구입니다. 예산은 계획(Planning), 조정(Coordination), 통제(Control), 성과평가(Performance Evaluation), 의사소통(Communication), 동기부여(Motivation)의 6가지 핵심 기능을 수행합니다.'
+          : 'A budget is a formal plan expressing a company\'s future management plans in monetary terms. Far more than a mere listing of numbers, a budget is a core management tool that translates an organization\'s strategic objectives into concrete action plans. Budgets serve six key functions: Planning, Coordination, Control, Performance Evaluation, Communication, and Motivation.'}
+      </p>
+      <img src="/assets/images/topics/management-accounting-budgeting.svg" alt={isKo ? '예산편성 프로세스' : 'Budgeting Process'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '예산편성 프로세스' : 'The Budgeting Process'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '매출 예산 (Sales Budget)' : 'Sales Budget'}</strong>
+          <p>{isKo ? '모든 예산의 출발점으로, 시장 수요 예측과 판매 계획에 기반합니다. 과거 실적, 시장 동향, 경제 지표, 경쟁사 분석 등을 종합적으로 고려하여 판매량과 매출액을 추정합니다. 매출 예산의 정확도가 전체 종합예산의 신뢰성을 좌우합니다.' : 'The starting point for all budgets, based on market demand forecasting and sales planning. It estimates sales volume and revenue by comprehensively considering past performance, market trends, economic indicators, and competitor analysis. The accuracy of the sales budget determines the reliability of the entire master budget.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '생산 예산 (Production Budget)' : 'Production Budget'}</strong>
+          <p>{isKo ? '매출 예산을 기반으로 필요한 생산량을 결정합니다. 예상 판매량에 기말 목표 재고량을 더하고 기초 재고량을 차감하여 산출합니다. 생산량 = 예상 판매량 + 기말 목표 재고 - 기초 재고의 공식을 따릅니다.' : 'Determines required production volume based on the sales budget. Calculated by adding target ending inventory to expected sales and subtracting beginning inventory. Follows the formula: Production = Expected Sales + Target Ending Inventory - Beginning Inventory.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '직접재료비 및 직접노무비 예산' : 'Direct Materials and Direct Labor Budgets'}</strong>
+          <p>{isKo ? '생산 예산에서 도출된 생산량에 기초하여 필요한 원재료 구매량과 노동시간을 산정합니다. 직접재료비 예산은 재료 구매 시기와 자금 계획에 직접 연결되며, 직접노무비 예산은 인력 계획과 연관됩니다.' : 'Based on production volumes derived from the production budget, estimates required raw material purchases and labor hours. The direct materials budget links directly to material procurement timing and funding plans, while the direct labor budget relates to workforce planning.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '제조간접비 예산' : 'Manufacturing Overhead Budget'}</strong>
+          <p>{isKo ? '공장 운영에 필요한 간접비용을 예측합니다. 변동제조간접비(생산량에 비례)와 고정제조간접비(감가상각비, 보험료 등)를 구분하여 편성합니다. 현금 지출과 비현금 항목(감가상각비)을 구분하는 것이 현금예산 작성 시 중요합니다.' : 'Forecasts indirect costs for factory operations. Separates variable manufacturing overhead (proportional to production volume) from fixed manufacturing overhead (depreciation, insurance, etc.). Distinguishing cash expenditures from non-cash items (depreciation) is crucial when preparing the cash budget.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '종합예산과 현금예산' : 'Master Budget and Cash Budget'}</strong>
+          <p>{isKo ? '각 부문별 예산을 통합하여 예산손익계산서, 예산재무상태표, 현금예산을 작성합니다. 특히 현금예산은 자금의 과부족을 사전에 파악하여 차입이나 투자 계획을 수립하는 데 핵심적 역할을 합니다.' : 'Integrates departmental budgets to prepare the budgeted income statement, budgeted balance sheet, and cash budget. The cash budget plays a crucial role in identifying cash surpluses or shortfalls in advance to plan borrowing or investment activities.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '예산 통제와 차이 분석' : 'Budget Control and Variance Analysis'}</h3>
+      <p>
+        {isKo
+          ? '예산 통제는 실제 성과와 예산을 비교하여 차이를 분석하고, 그 원인을 규명하여 시정 조치를 취하는 과정입니다. 차이 분석에는 두 가지 주요 접근법이 있습니다.'
+          : 'Budget control is the process of comparing actual performance against the budget, analyzing variances, identifying their causes, and taking corrective actions. There are two main approaches to variance analysis.'}
+      </p>
+      <ul>
+        <li>
+          <strong>{isKo ? '정태적 예산 차이 (Static Budget Variance)' : 'Static Budget Variance'}</strong>
+          <p>{isKo ? '원래 편성한 예산과 실적의 차이입니다. 활동량 변동의 영향을 분리할 수 없어 성과 평가에 한계가 있습니다.' : 'The difference between the original budget and actual results. Limited for performance evaluation as it cannot isolate the impact of activity volume changes.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '변동예산 차이 (Flexible Budget Variance)' : 'Flexible Budget Variance'}</strong>
+          <p>{isKo ? '실제 활동량 수준에서 재편성된 예산과 실적의 차이입니다. 활동량 차이와 가격/효율 차이를 분리하여 보다 정확한 성과 평가가 가능합니다.' : 'The difference between a budget re-prepared at actual activity levels and actual results. Enables more accurate performance evaluation by separating activity volume variances from price/efficiency variances.'}</p>
+        </li>
+      </ul>
+
+      <h3>{isKo ? '현대적 예산 접근법' : 'Modern Budgeting Approaches'}</h3>
+      <ul>
+        <li>{isKo ? '영기준 예산(ZBB): 매년 백지 상태에서 모든 지출을 재검토하여 불필요한 관성 지출을 제거합니다' : 'Zero-Based Budgeting (ZBB): Reviews all expenditures from scratch each year, eliminating unnecessary inertial spending'}</li>
+        <li>{isKo ? '활동기준 예산(ABB): 활동 분석에 기초하여 자원을 배분하므로 원가동인과 연결된 정확한 예산 편성이 가능합니다' : 'Activity-Based Budgeting (ABB): Allocates resources based on activity analysis, enabling accurate budgeting linked to cost drivers'}</li>
+        <li>{isKo ? '연동예산(Rolling Budget): 매 분기마다 향후 12개월 예산을 갱신하여 항상 1년 앞을 내다보는 예산을 유지합니다' : 'Rolling Budget: Updates the next 12-month budget each quarter, maintaining a continuous forward-looking annual budget'}</li>
+        <li>{isKo ? '탈예산 경영(Beyond Budgeting): 고정 예산을 폐지하고 상대적 성과 목표와 동적 자원 배분으로 대체합니다' : 'Beyond Budgeting: Abolishes fixed budgets, replacing them with relative performance targets and dynamic resource allocation'}</li>
+      </ul>
+
+      <TipBox type="important" title={isKo ? '예산의 행동적 측면' : 'Behavioral Aspects of Budgeting'}>
+        <p>
+          {isKo
+            ? '예산은 단순한 재무적 도구가 아니라 조직 구성원의 행동에 깊은 영향을 미칩니다. 예산 여유(Budget Slack) 현상, 즉 관리자가 쉽게 달성할 수 있도록 의도적으로 느슨한 예산을 편성하는 것은 참여적 예산편성의 대표적 부작용입니다. 이를 방지하기 위해 상향식과 하향식 접근의 균형, 그리고 예산과 보상의 적절한 연계가 필수적입니다.'
+            : 'Budgets are not merely financial tools but profoundly influence organizational behavior. Budget slack — where managers intentionally set easily achievable, loose budgets — is a classic side effect of participative budgeting. Preventing this requires balancing bottom-up and top-down approaches and appropriately linking budgets to compensation.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function PerformanceSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '성과측정과 BSC' : 'Performance & BSC'}</h2>
+
+      <h3>{isKo ? '성과측정의 의의' : 'Significance of Performance Measurement'}</h3>
+      <p>
+        {isKo
+          ? '성과측정(Performance Measurement)은 조직의 목표 달성 정도를 평가하고 개선 방향을 제시하는 관리회계의 핵심 기능입니다. 전통적으로 재무적 지표(ROI, RI, EVA)에 의존해왔으나, 재무적 지표만으로는 기업의 장기적 가치 창출 역량을 완전히 파악할 수 없다는 한계가 인식되면서 비재무적 지표를 통합한 균형잡힌 성과측정 체계가 발전하였습니다.'
+          : 'Performance Measurement is a core function of management accounting that evaluates the degree of organizational goal achievement and provides improvement direction. Traditionally reliant on financial metrics (ROI, RI, EVA), the recognition that financial metrics alone cannot fully capture a company\'s long-term value creation capability led to the development of balanced performance measurement systems integrating non-financial indicators.'}
+      </p>
+      <img src="/assets/images/topics/management-accounting-performance.svg" alt={isKo ? 'BSC 4가지 관점' : 'BSC Four Perspectives'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '전통적 재무 성과지표' : 'Traditional Financial Performance Metrics'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '투자수익률 (ROI: Return on Investment)' : 'Return on Investment (ROI)'}</strong>
+          <p>{isKo ? 'ROI = 영업이익 / 투자자본. 투자된 자본 대비 수익성을 측정합니다. 사업부 간 비교가 용이하지만, 단기 이익 극대화에 치우칠 수 있고 NPV 양(+)인 프로젝트도 사업부 ROI를 낮출 수 있어 과소투자 문제가 발생할 수 있습니다.' : 'ROI = Operating Income / Invested Capital. Measures profitability relative to invested capital. Easy for inter-divisional comparison, but may bias toward short-term profit maximization, and even positive NPV projects may lower divisional ROI, causing underinvestment problems.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '잔여이익 (RI: Residual Income)' : 'Residual Income (RI)'}</strong>
+          <p>{isKo ? 'RI = 영업이익 - (투자자본 x 최소요구수익률). 투자자본에 대한 기회비용을 차감한 후의 초과 이익을 측정합니다. ROI의 과소투자 문제를 해결하지만, 사업부 규모에 따라 절대 금액이 달라져 규모가 다른 사업부 간 비교가 어렵습니다.' : 'RI = Operating Income - (Invested Capital x Minimum Required Rate of Return). Measures excess profit after deducting the opportunity cost of invested capital. Solves ROI\'s underinvestment problem, but absolute amounts vary by division size, making comparison between differently-sized divisions difficult.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '경제적 부가가치 (EVA: Economic Value Added)' : 'Economic Value Added (EVA)'}</strong>
+          <p>{isKo ? 'EVA = 세후순영업이익(NOPAT) - (투하자본 x 가중평균자본비용). Stern Stewart사가 개발한 지표로, RI 개념을 정교화한 것입니다. 타인자본과 자기자본 모두의 기회비용을 반영하여 진정한 경제적 이익을 측정합니다.' : 'EVA = Net Operating Profit After Tax (NOPAT) - (Invested Capital x WACC). Developed by Stern Stewart, it refines the RI concept. Measures true economic profit by reflecting the opportunity cost of both debt and equity capital.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '균형성과표 (BSC: Balanced Scorecard)' : 'Balanced Scorecard (BSC)'}</h3>
+      <p>
+        {isKo
+          ? 'Robert Kaplan과 David Norton이 1992년에 제안한 BSC는 재무적 관점과 비재무적 관점을 통합한 전략적 성과관리 시스템입니다. BSC는 단순한 성과측정 도구가 아니라 전략을 실행 가능한 구체적 목표와 지표로 전환하는 전략 실행 체계입니다.'
+          : 'Proposed by Robert Kaplan and David Norton in 1992, the BSC is a strategic performance management system integrating financial and non-financial perspectives. BSC is not merely a performance measurement tool but a strategy execution framework that translates strategy into actionable specific objectives and metrics.'}
+      </p>
+      <ol>
+        <li>
+          <strong>{isKo ? '재무적 관점 (Financial Perspective)' : 'Financial Perspective'}</strong>
+          <p>{isKo ? '"주주에게 어떻게 보여야 하는가?" 매출 성장률, 영업이익률, ROE, EVA 등의 지표를 사용합니다. 다른 세 관점의 성과가 궁극적으로 재무적 성과로 연결되어야 합니다.' : '"How should we appear to shareholders?" Uses metrics such as revenue growth rate, operating margin, ROE, and EVA. Results from the other three perspectives must ultimately connect to financial performance.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '고객 관점 (Customer Perspective)' : 'Customer Perspective'}</strong>
+          <p>{isKo ? '"고객에게 어떻게 보여야 하는가?" 고객 만족도, 시장 점유율, 고객 유지율, 신규 고객 획득률, 고객 수익성 등을 측정합니다. 고객 가치 제안(가격, 품질, 기능, 서비스, 관계, 이미지)이 핵심입니다.' : '"How should we appear to customers?" Measures customer satisfaction, market share, customer retention rate, new customer acquisition rate, and customer profitability. The customer value proposition (price, quality, functionality, service, relationship, image) is key.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '내부 프로세스 관점 (Internal Process Perspective)' : 'Internal Process Perspective'}</strong>
+          <p>{isKo ? '"어떤 프로세스에서 탁월해야 하는가?" 혁신 프로세스(R&D 투자 효율성), 운영 프로세스(생산 리드타임, 불량률), 판매 후 서비스 프로세스(A/S 응답시간)를 포괄적으로 관리합니다.' : '"What processes must we excel at?" Comprehensively manages innovation processes (R&D investment efficiency), operations processes (production lead time, defect rates), and post-sale service processes (after-sales response time).'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '학습과 성장 관점 (Learning & Growth Perspective)' : 'Learning & Growth Perspective'}</strong>
+          <p>{isKo ? '"변화하고 개선하는 능력을 어떻게 유지할 것인가?" 직원 역량(교육 시간, 자격증), 정보시스템(IT 인프라), 조직 문화(직원 만족도, 이직률)를 측정합니다. 다른 세 관점의 기반이 되는 토대입니다.' : '"How can we sustain our ability to change and improve?" Measures employee capabilities (training hours, certifications), information systems (IT infrastructure), and organizational culture (employee satisfaction, turnover rate). This forms the foundation for the other three perspectives.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '전략 맵과 인과관계' : 'Strategy Map and Cause-Effect Relationships'}</h3>
+      <p>
+        {isKo
+          ? 'BSC의 핵심은 네 가지 관점 간의 인과관계(Cause-and-Effect Chain)를 명확히 하는 것입니다. 예를 들어: 직원 교육 강화(학습과 성장) -> 불량률 감소(내부 프로세스) -> 고객 만족도 향상(고객) -> 매출 증가(재무). 이러한 인과관계를 시각화한 것이 전략 맵(Strategy Map)이며, 조직 구성원이 자신의 업무가 전체 전략에 어떻게 기여하는지 이해하게 합니다.'
+          : 'The core of BSC is clarifying cause-and-effect chains among the four perspectives. For example: Enhanced employee training (Learning & Growth) -> Reduced defect rate (Internal Process) -> Improved customer satisfaction (Customer) -> Revenue growth (Financial). Visualizing these cause-and-effect relationships creates a Strategy Map, helping employees understand how their work contributes to overall strategy.'}
+      </p>
+
+      <TipBox type="tip" title={isKo ? 'BSC 도입 시 주의사항' : 'Cautions When Implementing BSC'}>
+        <p>
+          {isKo
+            ? 'BSC 성공의 핵심은 지표의 수를 20~25개 이내로 제한하고, 각 관점 간 인과관계를 명확히 설정하는 것입니다. 지표가 너무 많으면 관리 부담이 과중해지고 초점이 흐려집니다. 또한 BSC는 최고경영층의 강력한 지지(Top-down Commitment)가 없으면 단순한 보고서 양식으로 전락할 위험이 있습니다. 전략과의 연계가 핵심이며, KPI는 반드시 전략적 목표에서 도출되어야 합니다.'
+            : 'The key to BSC success is limiting metrics to 20-25 and clearly establishing cause-effect relationships between perspectives. Too many metrics create excessive management burden and blur focus. Also, without strong top-down commitment from senior management, BSC risks becoming merely a reporting format. Strategic alignment is essential, and KPIs must be derived from strategic objectives.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function DecisionSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '의사결정 회계' : 'Decision-Making Accounting'}</h2>
+
+      <h3>{isKo ? '관련원가 분석' : 'Relevant Cost Analysis'}</h3>
+      <p>
+        {isKo
+          ? '의사결정 회계의 핵심은 관련원가(Relevant Cost)와 비관련원가(Irrelevant Cost)를 구분하는 것입니다. 관련원가란 의사결정 대안 간에 차이가 나는 미래 원가를 말하며, 이미 발생한 매몰원가(Sunk Cost)는 어떤 대안을 선택하든 변하지 않으므로 의사결정에서 제외해야 합니다. 또한 기회원가(Opportunity Cost)는 차선의 대안을 포기함으로써 발생하는 비용으로, 회계장부에는 기록되지 않지만 의사결정에 반드시 고려해야 합니다.'
+          : 'The core of decision-making accounting is distinguishing relevant costs from irrelevant costs. Relevant costs are future costs that differ between decision alternatives. Sunk costs, already incurred, do not change regardless of which alternative is chosen and must be excluded from decisions. Opportunity cost — the cost of forgoing the next best alternative — is not recorded in accounting books but must be considered in decisions.'}
+      </p>
+      <img src="/assets/images/topics/management-accounting-decision.svg" alt={isKo ? '의사결정 프레임워크' : 'Decision-Making Framework'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '특별주문 의사결정' : 'Special Order Decisions'}</h3>
+      <p>
+        {isKo
+          ? '정상 판매가격보다 낮은 가격으로 추가 주문이 들어왔을 때, 이를 수락할 것인지 결정하는 문제입니다. 잔여 생산능력이 있고, 특별주문 가격이 추가적 변동원가를 초과하며, 기존 시장에 부정적 영향을 미치지 않는다면 수락이 유리합니다. 고정원가는 특별주문과 무관하게 발생하므로 비관련원가입니다.'
+          : 'This involves deciding whether to accept additional orders at prices below normal selling price. Acceptance is favorable if idle capacity exists, the special order price exceeds incremental variable costs, and there is no negative impact on existing markets. Fixed costs are irrelevant as they occur regardless of the special order.'}
+      </p>
+
+      <h3>{isKo ? '자가제조 vs 외부구매 (Make or Buy)' : 'Make or Buy Decisions'}</h3>
+      <p>
+        {isKo
+          ? '부품이나 서비스를 자체 생산할 것인지, 외부에서 구매할 것인지를 결정하는 문제입니다. 비교 대상은 자가제조 시의 회피가능원가(Avoidable Cost)와 외부구매 가격입니다. 회피불능 고정원가는 어느 대안을 선택하든 발생하므로 분석에서 제외합니다. 정성적 요소(품질 통제, 공급 안정성, 핵심역량 유지)도 함께 고려해야 합니다.'
+          : 'Deciding whether to manufacture components or services in-house or purchase externally. The comparison is between avoidable costs of in-house production and the external purchase price. Unavoidable fixed costs are excluded from analysis as they occur under either alternative. Qualitative factors (quality control, supply reliability, core competency retention) must also be considered.'}
+      </p>
+
+      <h3>{isKo ? '제약자원 의사결정' : 'Constrained Resource Decisions'}</h3>
+      <p>
+        {isKo
+          ? '생산 자원(기계 시간, 노동 시간, 원재료)이 제한되어 있을 때, 어떤 제품을 우선 생산할 것인지 결정하는 문제입니다. 핵심 원칙은 제약자원 단위당 공헌이익이 가장 높은 제품을 우선 생산하는 것입니다. 제약자원이 기계 시간이라면, 기계 시간 1시간당 공헌이익이 가장 큰 제품에 최대한 자원을 배분합니다.'
+          : 'When production resources (machine hours, labor hours, raw materials) are limited, deciding which products to produce first. The core principle is prioritizing products with the highest contribution margin per unit of constrained resource. If the constraint is machine hours, allocate maximum resources to products with the greatest contribution margin per machine hour.'}
+      </p>
+      <ul>
+        <li>{isKo ? '단일 제약조건: 제약자원 단위당 공헌이익 순위에 따라 생산 순서 결정' : 'Single constraint: Determine production order by contribution margin per unit of constrained resource'}</li>
+        <li>{isKo ? '복수 제약조건: 선형계획법(Linear Programming)으로 최적 제품 배합 결정' : 'Multiple constraints: Use Linear Programming to determine optimal product mix'}</li>
+        <li>{isKo ? '제약이론(TOC): 병목공정을 식별하고 최대한 활용하여 시스템 전체 처리량(Throughput) 극대화' : 'Theory of Constraints (TOC): Identify bottleneck processes and maximize system-wide throughput'}</li>
+      </ul>
+
+      <h3>{isKo ? '사업부(제품라인) 폐지 의사결정' : 'Segment (Product Line) Discontinuation Decisions'}</h3>
+      <p>
+        {isKo
+          ? '적자를 보이는 사업부나 제품라인을 폐지할 것인지 결정하는 문제입니다. 핵심은 해당 사업부의 공헌이익이 양(+)인지를 확인하는 것입니다. 사업부가 적자를 보이더라도, 그 적자가 배부된 공통고정원가 때문이라면 폐지하면 오히려 전체 이익이 감소합니다. 폐지 시 회피 가능한 고정원가와 상실되는 공헌이익을 비교해야 합니다.'
+          : 'Deciding whether to discontinue a loss-making segment or product line. The key is checking whether the segment\'s contribution margin is positive. Even if a segment shows a loss, if it is due to allocated common fixed costs, discontinuation would actually reduce overall profit. Compare avoidable fixed costs upon discontinuation with the lost contribution margin.'}
+      </p>
+
+      <TipBox type="warning" title={isKo ? '매몰원가의 함정' : 'The Sunk Cost Trap'}>
+        <p>
+          {isKo
+            ? '매몰원가의 함정(Sunk Cost Fallacy)은 이미 투자한 비용이 아까워서 비합리적인 의사결정을 계속하는 현상입니다. "이미 10억 원을 투자했으니 중단할 수 없다"는 논리는 경제학적으로 잘못된 판단입니다. 올바른 의사결정은 과거의 투입이 아니라 미래의 추가 비용과 추가 수익만을 기준으로 이루어져야 합니다. 이를 "앞을 보는 분석(Forward-looking Analysis)"이라 합니다.'
+            : 'The Sunk Cost Fallacy is the phenomenon of continuing irrational decisions because of already invested costs. The logic "we can\'t stop because we\'ve already invested 1 billion won" is economically flawed. Correct decisions should be based only on future incremental costs and revenues, not past investments. This is called "Forward-looking Analysis."'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function PricingSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '가격결정과 이전가격' : 'Pricing & Transfer Pricing'}</h2>
+
+      <h3>{isKo ? '원가기반 가격결정' : 'Cost-Based Pricing'}</h3>
+      <p>
+        {isKo
+          ? '가격결정은 기업의 수익성을 좌우하는 가장 중요한 의사결정 중 하나입니다. 원가기반 가격결정(Cost-Based Pricing)은 제품의 원가에 목표 이익을 가산하여 판매가격을 결정하는 방법입니다. 가장 기본적인 형태인 원가가산법(Cost-Plus Pricing)은 총원가에 일정 비율의 마크업(Markup)을 더하여 가격을 산출합니다.'
+          : 'Pricing is one of the most important decisions determining corporate profitability. Cost-Based Pricing determines selling prices by adding target profit to product cost. The most basic form, Cost-Plus Pricing, calculates prices by adding a percentage markup to total cost.'}
+      </p>
+      <img src="/assets/images/topics/management-accounting-pricing.svg" alt={isKo ? '가격결정 방법론' : 'Pricing Methodology'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '목표원가 계산법 (Target Costing)' : 'Target Costing'}</h3>
+      <p>
+        {isKo
+          ? '전통적 원가가산법과 반대 방향으로 접근하는 혁신적 방법입니다. 시장 가격에서 목표 이익을 차감하여 허용 원가를 도출합니다. 목표원가 = 목표 판매가격 - 목표 이익. 일본 도요타에서 발전시킨 이 방법은 설계 단계에서부터 원가를 관리하는 것이 핵심입니다. 제품 원가의 약 80%가 설계 단계에서 결정되므로, 생산 후 원가절감보다 설계 시 원가 관리가 훨씬 효과적입니다.'
+          : 'An innovative approach working opposite to traditional cost-plus pricing. Derives allowable cost by subtracting target profit from market price. Target Cost = Target Selling Price - Target Profit. Developed by Toyota in Japan, its core is managing costs from the design stage. Since approximately 80% of product costs are determined during design, managing costs at design is far more effective than post-production cost reduction.'}
+      </p>
+
+      <h3>{isKo ? '수명주기 원가계산 (Life-Cycle Costing)' : 'Life-Cycle Costing'}</h3>
+      <ul>
+        <li>{isKo ? '연구개발 원가: 신제품 기획, 설계, 프로토타입 개발 비용' : 'R&D costs: New product planning, design, and prototype development expenses'}</li>
+        <li>{isKo ? '제조 원가: 직접재료비, 직접노무비, 제조간접비 등 생산 비용' : 'Manufacturing costs: Production expenses including direct materials, direct labor, and manufacturing overhead'}</li>
+        <li>{isKo ? '판매 및 유통 원가: 마케팅, 물류, 판매 활동 비용' : 'Selling and distribution costs: Marketing, logistics, and sales activity expenses'}</li>
+        <li>{isKo ? '고객 서비스 원가: 보증, 수리, 기술 지원 비용' : 'Customer service costs: Warranty, repair, and technical support expenses'}</li>
+        <li>{isKo ? '폐기 원가: 제품 수명 종료 후 환경 처리, 회수 비용' : 'Disposal costs: Environmental treatment and recovery expenses after end of product life'}</li>
+      </ul>
+      <p>
+        {isKo
+          ? '수명주기 원가계산은 제품의 전체 수명 동안 발생하는 모든 원가를 고려하여 의사결정합니다. 판매가격 결정 시 판매 후 발생하는 서비스 원가와 폐기 원가까지 포함해야 진정한 수익성을 평가할 수 있습니다.'
+          : 'Life-cycle costing considers all costs occurring throughout a product\'s entire life span for decision-making. True profitability can only be evaluated when post-sale service costs and disposal costs are included in pricing decisions.'}
+      </p>
+
+      <h3>{isKo ? '이전가격 (Transfer Pricing)' : 'Transfer Pricing'}</h3>
+      <p>
+        {isKo
+          ? '이전가격은 같은 기업 내의 사업부 간 재화나 서비스가 이전될 때 적용되는 내부 거래 가격입니다. 이전가격은 각 사업부의 성과 평가, 전체 기업의 이익 최적화, 그리고 사업부 관리자의 의사결정에 중대한 영향을 미칩니다.'
+          : 'Transfer pricing is the internal transaction price applied when goods or services are transferred between divisions within the same company. Transfer prices significantly impact each division\'s performance evaluation, overall corporate profit optimization, and divisional managers\' decision-making.'}
+      </p>
+      <ol>
+        <li>
+          <strong>{isKo ? '시장가격 기준법' : 'Market-Based Transfer Pricing'}</strong>
+          <p>{isKo ? '외부 시장에서 거래되는 가격을 이전가격으로 사용합니다. 완전경쟁시장이 존재하고 사업부 간 거래가 외부 거래와 동일한 조건일 때 가장 이상적입니다. 사업부 자율성을 최대한 보장하며 목표일치성이 높습니다.' : 'Uses prices from external markets as the transfer price. Most ideal when a perfectly competitive market exists and inter-divisional transactions are under the same conditions as external transactions. Maximizes divisional autonomy with high goal congruence.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '원가기준 이전가격' : 'Cost-Based Transfer Pricing'}</strong>
+          <p>{isKo ? '변동원가, 전부원가, 원가가산(Cost-Plus) 등 원가에 기반하여 이전가격을 설정합니다. 외부 시장가격이 존재하지 않을 때 사용됩니다. 변동원가 기준은 단기적으로 최적이지만 공급부서에 이익이 배분되지 않는 문제가 있습니다.' : 'Sets transfer prices based on variable cost, full cost, or cost-plus. Used when no external market price exists. Variable cost basis is optimal short-term but has the problem of no profit allocated to the supplying division.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '협상가격 기준법' : 'Negotiated Transfer Pricing'}</strong>
+          <p>{isKo ? '공급 사업부와 구매 사업부가 협상을 통해 이전가격을 결정합니다. 사업부의 자율성을 존중하지만, 협상력 차이로 불공정한 결과가 나올 수 있으며 시간과 비용이 소요됩니다.' : 'The supplying and purchasing divisions determine the transfer price through negotiation. Respects divisional autonomy but may yield unfair results due to differences in bargaining power, and consumes time and cost.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '이전가격의 일반원칙' : 'General Principle of Transfer Pricing'}</h3>
+      <p>
+        {isKo
+          ? '최소 이전가격 = 변동원가 + 단위당 기회원가. 공급 사업부의 잔여능력이 있으면 기회원가가 0이므로 최소 이전가격은 변동원가가 됩니다. 잔여능력이 없으면 기회원가는 외부 판매 시 얻을 수 있는 공헌이익이 됩니다.'
+          : 'Minimum Transfer Price = Variable Cost + Opportunity Cost per Unit. If the supplying division has idle capacity, opportunity cost is zero, so the minimum transfer price equals variable cost. Without idle capacity, opportunity cost is the contribution margin obtainable from external sales.'}
+      </p>
+
+      <TipBox type="important" title={isKo ? '국제 이전가격의 세무 이슈' : 'Tax Issues in International Transfer Pricing'}>
+        <p>
+          {isKo
+            ? '다국적 기업의 이전가격은 세금 문제와 직결됩니다. 세율이 낮은 국가의 자회사에 높은 이전가격을 적용하면 전체 세금을 절감할 수 있으나, 각국 세무당국은 이를 방지하기 위해 독립기업원칙(Arm\'s Length Principle)에 따른 이전가격 설정을 요구합니다. OECD의 이전가격 지침과 각국의 이전가격 세제(한국의 국제조세조정법 등)를 반드시 준수해야 합니다.'
+            : 'Transfer pricing for multinational corporations directly relates to tax issues. Applying high transfer prices to subsidiaries in low-tax countries can reduce overall taxes, but tax authorities require transfer prices following the Arm\'s Length Principle. Compliance with OECD transfer pricing guidelines and each country\'s transfer pricing tax regulations is mandatory.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function ResponsibilitySection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '책임회계와 분권화' : 'Responsibility Accounting'}</h2>
+
+      <h3>{isKo ? '분권화의 의의' : 'Significance of Decentralization'}</h3>
+      <p>
+        {isKo
+          ? '분권화(Decentralization)란 의사결정 권한을 하위 관리자에게 위임하는 조직 구조입니다. 기업 규모가 커지면 최고경영자 한 사람이 모든 의사결정을 내리기 어려워지므로, 분권화를 통해 현장 지식을 활용하고 신속한 의사결정을 가능하게 합니다. 분권화는 관리자의 동기부여, 의사결정 속도, 경영 교육 효과 등의 장점이 있으나, 목표불일치(Goal Incongruence), 정보 중복, 부분 최적화의 위험도 수반합니다.'
+          : 'Decentralization is an organizational structure that delegates decision-making authority to lower-level managers. As companies grow, it becomes difficult for a single CEO to make all decisions, so decentralization leverages local knowledge and enables faster decision-making. Benefits include manager motivation, decision speed, and management training effects, but risks include goal incongruence, information duplication, and suboptimization.'}
+      </p>
+      <img src="/assets/images/topics/management-accounting-responsibility.svg" alt={isKo ? '책임중심점 유형' : 'Types of Responsibility Centers'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '책임중심점의 유형' : 'Types of Responsibility Centers'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '원가중심점 (Cost Center)' : 'Cost Center'}</strong>
+          <p>{isKo ? '발생한 원가에 대해서만 책임을 지는 단위입니다. 생산부서, 서비스부서가 대표적이며, 예산 대비 실제 원가의 차이(원가 차이)로 성과를 평가합니다. 원가 절감이 품질 저하로 이어지지 않도록 원가 지표와 품질 지표를 함께 관리해야 합니다.' : 'A unit responsible only for costs incurred. Production and service departments are typical examples, with performance evaluated by variances between budgeted and actual costs. Cost and quality metrics must be managed together to prevent cost reduction from leading to quality degradation.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '수익중심점 (Revenue Center)' : 'Revenue Center'}</strong>
+          <p>{isKo ? '매출 수익에 대해 책임을 지는 단위입니다. 영업부서가 대표적이며, 매출 목표 달성률, 시장 점유율 등으로 성과를 평가합니다. 매출 극대화를 위한 과도한 할인이나 불량 거래처 확대를 방지하기 위해 매출총이익률도 함께 관리합니다.' : 'A unit responsible for sales revenue. Sales departments are typical examples, with performance evaluated by sales target achievement rate, market share, etc. Gross profit margin is also managed to prevent excessive discounts or expansion of bad accounts for revenue maximization.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '이익중심점 (Profit Center)' : 'Profit Center'}</strong>
+          <p>{isKo ? '수익과 비용 모두에 대해 책임을 지는 단위입니다. 사업부(Division)가 대표적이며, 공헌이익, 사업부 영업이익 등으로 성과를 평가합니다. 이전가격 문제가 이익중심점 간 성과 평가에 직접적 영향을 미칩니다.' : 'A unit responsible for both revenue and costs. Divisions are typical examples, with performance evaluated by contribution margin, divisional operating income, etc. Transfer pricing issues directly affect performance evaluation between profit centers.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '투자중심점 (Investment Center)' : 'Investment Center'}</strong>
+          <p>{isKo ? '수익, 비용, 투자자본 모두에 대해 책임을 지는 최상위 책임단위입니다. ROI, RI, EVA 등으로 성과를 평가합니다. 투자 의사결정 권한이 있으므로 자본 배분의 효율성까지 평가 대상이 됩니다.' : 'The highest-level responsibility unit accountable for revenue, costs, and invested capital. Performance is evaluated using ROI, RI, EVA, etc. Since it has investment decision authority, capital allocation efficiency is also subject to evaluation.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '통제가능성의 원칙' : 'The Controllability Principle'}</h3>
+      <p>
+        {isKo
+          ? '책임회계의 핵심 원칙은 관리자가 통제할 수 있는 항목에 대해서만 책임을 부과하는 것입니다. 본사에서 배부한 공통고정원가나 환율 변동 등 사업부 관리자가 통제할 수 없는 요인으로 성과를 평가하면 불공정한 결과를 초래합니다. 성과보고서는 통제가능원가와 통제불능원가를 명확히 구분해야 합니다.'
+          : 'The core principle of responsibility accounting is to hold managers accountable only for items they can control. Evaluating performance based on factors outside a divisional manager\'s control, such as allocated common fixed costs or exchange rate fluctuations, produces unfair results. Performance reports must clearly separate controllable costs from uncontrollable costs.'}
+      </p>
+
+      <h3>{isKo ? '성과보고서 체계' : 'Performance Reporting Framework'}</h3>
+      <ul>
+        <li>{isKo ? '매출액에서 변동원가를 차감한 공헌이익: 사업부의 시장 성과 측정' : 'Contribution margin (revenue minus variable costs): Measures divisional market performance'}</li>
+        <li>{isKo ? '공헌이익에서 통제가능 고정원가를 차감한 통제가능 이익: 관리자 성과 평가의 핵심' : 'Controllable profit (contribution margin minus controllable fixed costs): Core metric for manager performance evaluation'}</li>
+        <li>{isKo ? '통제가능 이익에서 통제불능 고정원가를 차감한 사업부 이익: 사업부 자체의 경제적 성과 측정' : 'Divisional profit (controllable profit minus uncontrollable fixed costs): Measures the division\'s economic performance'}</li>
+        <li>{isKo ? '사업부 이익에서 공통원가 배부액을 차감한 순이익: 전사적 관점의 사업부 기여도 측정' : 'Net profit (divisional profit minus allocated common costs): Measures divisional contribution from a corporate perspective'}</li>
+      </ul>
+
+      <TipBox type="tip" title={isKo ? '분권화와 목표일치성' : 'Decentralization and Goal Congruence'}>
+        <p>
+          {isKo
+            ? '분권화의 성공은 목표일치성(Goal Congruence) 확보에 달려 있습니다. 개별 사업부 관리자가 자신의 이익을 극대화하는 의사결정이 동시에 전체 기업의 이익도 극대화하도록 성과측정 시스템과 보상 체계를 설계해야 합니다. 예를 들어, ROI만으로 평가하면 사업부 관리자가 기업 전체에 유리한 투자를 기각할 수 있으므로 RI나 EVA를 병행하는 것이 효과적입니다.'
+            : 'The success of decentralization depends on achieving goal congruence. Performance measurement systems and compensation structures must be designed so that divisional managers\' decisions to maximize their own profit simultaneously maximize overall corporate profit. For example, evaluating only by ROI may lead divisional managers to reject investments beneficial to the entire company, so combining RI or EVA is more effective.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function StrategicSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '전략적 관리회계' : 'Strategic Management Accounting'}</h2>
+
+      <h3>{isKo ? '전략적 관리회계의 등장 배경' : 'Emergence of Strategic Management Accounting'}</h3>
+      <p>
+        {isKo
+          ? '전통적 관리회계가 내부 지향적이고 단기적인 의사결정에 초점을 맞춘 데 비해, 전략적 관리회계(SMA: Strategic Management Accounting)는 외부 환경과 경쟁 상황을 통합적으로 고려하며 장기적 경쟁우위 확보를 지원합니다. 글로벌 경쟁 심화, 기술 혁신 가속화, 제품 수명주기 단축 등의 경영 환경 변화가 전략적 관리회계의 발전을 촉진했습니다.'
+          : 'While traditional management accounting focused on internal, short-term decisions, Strategic Management Accounting (SMA) comprehensively considers the external environment and competitive landscape, supporting long-term competitive advantage. Changes in the business environment — intensifying global competition, accelerating technological innovation, and shortening product life cycles — drove the development of SMA.'}
+      </p>
+      <img src="/assets/images/topics/management-accounting-strategic.svg" alt={isKo ? '전략적 관리회계 프레임워크' : 'Strategic Management Accounting Framework'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '활동기준원가계산 (ABC: Activity-Based Costing)' : 'Activity-Based Costing (ABC)'}</h3>
+      <p>
+        {isKo
+          ? 'ABC는 전통적 원가배분의 왜곡 문제를 해결하기 위해 개발된 원가계산 방법입니다. 제조간접비를 "활동(Activity)" 단위로 추적하여 원가동인(Cost Driver)에 따라 제품에 배분합니다. 전통적 원가계산이 직접노동시간이나 기계시간 같은 단일 배부기준을 사용하는 것과 달리, ABC는 주문 처리, 품질 검사, 기계 셋업 등 다양한 활동별로 원가를 추적합니다.'
+          : 'ABC is a costing method developed to solve the distortion problems of traditional cost allocation. It traces manufacturing overhead to "Activity" units and allocates them to products according to cost drivers. Unlike traditional costing using single allocation bases like direct labor hours or machine hours, ABC traces costs by various activities such as order processing, quality inspection, and machine setup.'}
+      </p>
+      <ul>
+        <li>{isKo ? '단위수준 활동: 제품 한 단위를 생산할 때마다 발생 (직접재료, 직접노동)' : 'Unit-level activities: Occur each time a single unit is produced (direct materials, direct labor)'}</li>
+        <li>{isKo ? '배치수준 활동: 하나의 배치를 생산할 때마다 발생 (기계 셋업, 검사)' : 'Batch-level activities: Occur each time a batch is produced (machine setup, inspection)'}</li>
+        <li>{isKo ? '제품수준 활동: 특정 제품 라인을 유지하기 위해 발생 (제품 설계, 부품 관리)' : 'Product-level activities: Occur to sustain a specific product line (product design, parts management)'}</li>
+        <li>{isKo ? '시설수준 활동: 공장 전체를 유지하기 위해 발생 (공장 관리, 보안)' : 'Facility-level activities: Occur to maintain the entire facility (plant management, security)'}</li>
+      </ul>
+
+      <h3>{isKo ? '활동기준경영 (ABM: Activity-Based Management)' : 'Activity-Based Management (ABM)'}</h3>
+      <p>
+        {isKo
+          ? 'ABM은 ABC에서 산출된 원가 정보를 활용하여 경영 개선을 추구하는 관리 접근법입니다. 운영적 ABM은 활동 효율성을 개선하여 원가를 절감하고, 전략적 ABM은 수익성 낮은 제품이나 고객을 식별하여 제품 구성과 고객 전략을 최적화합니다. 부가가치 활동과 비부가가치 활동을 구분하여 비부가가치 활동을 제거하거나 최소화하는 것이 핵심입니다.'
+          : 'ABM is a management approach using cost information from ABC to pursue management improvement. Operational ABM improves activity efficiency to reduce costs, while Strategic ABM identifies low-profitability products or customers to optimize product mix and customer strategy. The core is distinguishing value-added from non-value-added activities and eliminating or minimizing non-value-added activities.'}
+      </p>
+
+      <h3>{isKo ? '가치사슬 분석 (Value Chain Analysis)' : 'Value Chain Analysis'}</h3>
+      <p>
+        {isKo
+          ? 'Michael Porter의 가치사슬 분석은 기업의 모든 활동을 주활동(본원적 활동)과 지원활동으로 분류하여 각 활동의 원가와 가치 기여도를 분석합니다. 주활동에는 물류 투입, 운영, 물류 산출, 마케팅/판매, 서비스가 포함되고, 지원활동에는 기업 인프라, 인적자원관리, 기술개발, 구매가 포함됩니다. 전략적 관리회계는 자사 가치사슬뿐 아니라 공급업체부터 최종고객까지의 전체 가치사슬을 분석하여 경쟁우위의 원천을 파악합니다.'
+          : 'Michael Porter\'s Value Chain Analysis classifies all company activities into primary and support activities, analyzing each activity\'s cost and value contribution. Primary activities include inbound logistics, operations, outbound logistics, marketing/sales, and service. Support activities include firm infrastructure, human resource management, technology development, and procurement. SMA analyzes not just the company\'s own value chain but the entire value chain from suppliers to end customers to identify sources of competitive advantage.'}
+      </p>
+
+      <h3>{isKo ? '품질원가 관리 (COQ: Cost of Quality)' : 'Cost of Quality (COQ)'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '예방원가 (Prevention Cost)' : 'Prevention Cost'}</strong>
+          <p>{isKo ? '불량 발생을 사전에 방지하기 위한 비용입니다. 품질 교육, 공정 개선, 예방적 유지보수, 품질 기획 등이 포함됩니다. 예방원가의 증가는 장기적으로 실패원가를 크게 감소시킵니다.' : 'Costs to prevent defects from occurring. Includes quality training, process improvement, preventive maintenance, and quality planning. Increased prevention costs significantly reduce failure costs long-term.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '평가원가 (Appraisal Cost)' : 'Appraisal Cost'}</strong>
+          <p>{isKo ? '불량을 검출하기 위한 비용입니다. 검사, 시험, 감사, 측정 장비 유지 등이 포함됩니다.' : 'Costs to detect defects. Includes inspection, testing, auditing, and measurement equipment maintenance.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '내부 실패원가 (Internal Failure Cost)' : 'Internal Failure Cost'}</strong>
+          <p>{isKo ? '고객에게 전달되기 전에 발견된 불량으로 인한 비용입니다. 재작업, 폐기, 공정 중단, 재검사 등이 포함됩니다.' : 'Costs from defects discovered before delivery to customers. Includes rework, scrap, process downtime, and re-inspection.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '외부 실패원가 (External Failure Cost)' : 'External Failure Cost'}</strong>
+          <p>{isKo ? '고객에게 전달된 후 발견된 불량으로 인한 비용입니다. 보증 수리, 리콜, 제품 책임 소송, 고객 이탈 등이 포함되며, 가장 비용이 큰 품질원가입니다.' : 'Costs from defects discovered after delivery to customers. Includes warranty repairs, recalls, product liability lawsuits, and customer churn — the most expensive quality cost category.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '카이젠 원가계산 (Kaizen Costing)' : 'Kaizen Costing'}</h3>
+      <p>
+        {isKo
+          ? '카이젠 원가계산은 생산 단계에서의 지속적 원가절감을 추구하는 일본식 관리회계 기법입니다. 목표원가가 설계 단계의 원가 관리라면, 카이젠 원가계산은 생산 단계에서 매기 일정 비율의 원가절감 목표를 설정하고 현장 작업자의 개선 활동을 통해 달성합니다. 작은 개선의 누적이 장기적으로 큰 원가 절감 효과를 가져옵니다.'
+          : 'Kaizen Costing is a Japanese management accounting technique pursuing continuous cost reduction during the production stage. While target costing manages costs at the design stage, Kaizen Costing sets periodic cost reduction targets during production and achieves them through frontline worker improvement activities. The accumulation of small improvements brings significant long-term cost reduction effects.'}
+      </p>
+
+      <TipBox type="danger" title={isKo ? '전략적 관리회계의 통합적 관점' : 'Integrated Perspective of Strategic Management Accounting'}>
+        <p>
+          {isKo
+            ? '전략적 관리회계의 다양한 기법들(ABC, ABM, BSC, 목표원가, 카이젠 원가, 가치사슬 분석, 품질원가)은 개별적으로 적용하는 것보다 통합적으로 연계할 때 시너지가 극대화됩니다. 예를 들어, BSC의 내부 프로세스 관점에서 ABC 정보를 활용하고, 목표원가와 카이젠 원가를 설계-생산 단계에서 연속적으로 적용하며, 가치사슬 분석으로 파악한 핵심 활동에 품질원가 관리를 집중하는 통합적 접근이 기업의 지속가능한 경쟁우위를 구축합니다.'
+            : 'The various SMA techniques (ABC, ABM, BSC, target costing, Kaizen costing, value chain analysis, COQ) maximize synergy when integrated rather than applied individually. For example, an integrated approach — utilizing ABC information within BSC\'s internal process perspective, applying target costing and Kaizen costing sequentially across design and production stages, and focusing COQ management on key activities identified through value chain analysis — builds sustainable competitive advantage.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+/* ── Main Component ─────────────────────────────────────── */
+
+export default function ManagementAccounting(): ReactElement {
+  const { language } = useLanguage();
+  const [activeSection, setActiveSection] = useState(SECTIONS[0].id);
+  const isKo = language === 'ko';
+  const currentIndex = SECTIONS.findIndex((s) => s.id === activeSection);
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setActiveSection(SECTIONS[currentIndex - 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex < SECTIONS.length - 1) {
+      setActiveSection(SECTIONS[currentIndex + 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (id: string) => {
+    setActiveSection(id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <SEOHead
+        title={isKo ? '관리회계 완벽 가이드' : 'Management Accounting Complete Guide'}
+        description={
+          isKo
+            ? '관리회계의 핵심 주제를 체계적으로 학습합니다. 예산편성과 통제, 성과측정과 BSC, 의사결정 회계, 가격결정과 이전가격, 책임회계와 분권화, 전략적 관리회계까지 모든 영역을 다룹니다.'
+            : 'Systematically learn core management accounting topics. Covers budgeting and control, performance measurement and BSC, decision-making accounting, pricing and transfer pricing, responsibility accounting, and strategic management accounting.'
+        }
+        path="/management-accounting"
+      />
+
+      <div className="guide-page">
+        <div className="guide-layout">
+          {/* Sidebar */}
+          <aside className="guide-sidebar">
+            <div className="guide-sidebar-title">
+              {isKo ? '목차' : 'Contents'}
+            </div>
+            <ul className="guide-nav">
+              {SECTIONS.map((section) => (
+                <li key={section.id} className="guide-nav-item">
+                  <button
+                    className={`guide-nav-link ${activeSection === section.id ? 'active' : ''}`}
+                    onClick={() => handleNavClick(section.id)}
+                  >
+                    <i className={`fa-solid ${section.icon}`} />
+                    <span>{isKo ? section.ko : section.en}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          {/* Content */}
+          <main className="guide-content">
+            <div className="guide-content-header">
+              <h1>{isKo ? '관리회계 완벽 가이드' : 'Complete Guide to Management Accounting'}</h1>
+              <p>
+                {isKo
+                  ? '관리회계는 경영자의 의사결정을 지원하는 회계의 핵심 분야입니다. 예산편성과 통제, 성과측정과 균형성과표(BSC), 관련원가 분석에 기반한 의사결정, 가격결정과 이전가격, 책임회계와 분권화, 그리고 ABC, 목표원가, 가치사슬 분석 등 전략적 관리회계 기법까지 체계적으로 학습합니다.'
+                  : 'Management accounting is a core field of accounting that supports managerial decision-making. Systematically learn budgeting and control, performance measurement and BSC, relevant cost-based decision-making, pricing and transfer pricing, responsibility accounting and decentralization, and strategic management accounting techniques including ABC, target costing, and value chain analysis.'}
+              </p>
+              <img src="/assets/images/topics/management-accounting-hero.svg" alt={isKo ? '관리회계 일러스트' : 'Management Accounting Illustration'} className="guide-hero-illustration" />
+            </div>
+
+            {/* ────────── Section Rendering ────────── */}
+            {activeSection === 'budgeting' && <BudgetingSection isKo={isKo} />}
+            {activeSection === 'performance' && <PerformanceSection isKo={isKo} />}
+            {activeSection === 'decision' && <DecisionSection isKo={isKo} />}
+            {activeSection === 'pricing' && <PricingSection isKo={isKo} />}
+            {activeSection === 'responsibility' && <ResponsibilitySection isKo={isKo} />}
+            {activeSection === 'strategic' && <StrategicSection isKo={isKo} />}
+
+            {/* Section Navigation */}
+            <div className="guide-section-nav">
+              <button className="guide-nav-btn prev" onClick={handlePrev} disabled={currentIndex === 0}>
+                <i className="fa-solid fa-arrow-left" />
+                <span>
+                  {currentIndex > 0
+                    ? (isKo ? SECTIONS[currentIndex - 1].ko : SECTIONS[currentIndex - 1].en)
+                    : (isKo ? '이전' : 'Previous')}
+                </span>
+              </button>
+              <button className="guide-nav-btn next" onClick={handleNext} disabled={currentIndex === SECTIONS.length - 1}>
+                <span>
+                  {currentIndex < SECTIONS.length - 1
+                    ? (isKo ? SECTIONS[currentIndex + 1].ko : SECTIONS[currentIndex + 1].en)
+                    : (isKo ? '다음' : 'Next')}
+                </span>
+                <i className="fa-solid fa-arrow-right" />
+              </button>
+            </div>
+          </main>
+        </div>
+      </div>
+    </>
+  );
+}

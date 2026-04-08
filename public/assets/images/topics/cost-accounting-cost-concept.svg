@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF7ED" rx="8"/>
+
+  <!-- Title -->
+  <text x="200" y="30" font-family="sans-serif" font-size="16" fill="#92400E" text-anchor="middle" font-weight="bold">Cost Concepts</text>
+
+  <!-- Main container label: By Traceability -->
+  <text x="110" y="58" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">By Traceability</text>
+
+  <!-- Direct Cost Box -->
+  <rect x="30" y="65" width="160" height="45" fill="#D97706" rx="6"/>
+  <text x="110" y="84" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Direct Costs</text>
+  <text x="110" y="100" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">Materials, Labor</text>
+
+  <!-- Indirect Cost Box -->
+  <rect x="30" y="118" width="160" height="45" fill="#FBBF24" rx="6"/>
+  <text x="110" y="137" font-family="sans-serif" font-size="12" fill="#92400E" text-anchor="middle" font-weight="bold">Indirect Costs</text>
+  <text x="110" y="153" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Overhead, Utilities</text>
+
+  <!-- Main container label: By Behavior -->
+  <text x="290" y="58" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">By Behavior</text>
+
+  <!-- Fixed Cost Box -->
+  <rect x="210" y="65" width="160" height="45" fill="#D97706" rx="6"/>
+  <text x="290" y="84" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Fixed Costs</text>
+  <text x="290" y="100" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">Rent, Insurance</text>
+
+  <!-- Variable Cost Box -->
+  <rect x="210" y="118" width="160" height="45" fill="#FBBF24" rx="6"/>
+  <text x="290" y="137" font-family="sans-serif" font-size="12" fill="#92400E" text-anchor="middle" font-weight="bold">Variable Costs</text>
+  <text x="290" y="153" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Raw Materials, Commission</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="178" x2="360" y2="178" stroke="#FBBF24" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Bottom section: By Function -->
+  <text x="200" y="198" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">By Function</text>
+
+  <!-- Manufacturing Box -->
+  <rect x="20" y="208" width="110" height="70" fill="#D97706" rx="6"/>
+  <text x="75" y="232" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Manufacturing</text>
+  <text x="75" y="248" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">DM + DL + OH</text>
+  <text x="75" y="262" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">= Product Cost</text>
+
+  <!-- Selling Box -->
+  <rect x="145" y="208" width="110" height="70" fill="#FBBF24" rx="6"/>
+  <text x="200" y="232" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">Selling</text>
+  <text x="200" y="248" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Marketing, Sales</text>
+  <text x="200" y="262" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Distribution</text>
+
+  <!-- Admin Box -->
+  <rect x="270" y="208" width="110" height="70" fill="#D97706" rx="6"/>
+  <text x="325" y="232" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Administrative</text>
+  <text x="325" y="248" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">General & Admin</text>
+  <text x="325" y="262" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">= Period Cost</text>
+
+  <!-- Connecting bracket bottom -->
+  <line x1="145" y1="285" x2="380" y2="285" stroke="#FBBF24" stroke-width="1"/>
+  <text x="310" y="298" font-family="sans-serif" font-size="9" fill="#B45309" text-anchor="middle">Period Costs (Expensed)</text>
+  <line x1="20" y1="285" x2="130" y2="285" stroke="#D97706" stroke-width="1"/>
+  <text x="75" y="298" font-family="sans-serif" font-size="9" fill="#B45309" text-anchor="middle">Inventoriable</text>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="12" fill="#FFFBEB"/>
+  <!-- Laptop base -->
+  <rect x="30" y="245" width="340" height="12" rx="6" fill="#D97706"/>
+  <ellipse cx="200" cy="251" rx="30" ry="3" fill="#B45309"/>
+  <!-- Laptop screen frame -->
+  <rect x="55" y="30" width="290" height="215" rx="8" fill="#92400E"/>
+  <!-- Screen -->
+  <rect x="65" y="40" width="270" height="195" rx="4" fill="#1F2937"/>
+  <!-- Spreadsheet area (left side of screen) -->
+  <rect x="72" y="58" width="155" height="170" rx="3" fill="white"/>
+  <!-- Spreadsheet header row -->
+  <rect x="72" y="58" width="155" height="16" fill="#F59E0B"/>
+  <line x1="107" y1="58" x2="107" y2="228" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="142" y1="58" x2="142" y2="228" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="177" y1="58" x2="177" y2="228" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="212" y1="58" x2="212" y2="228" stroke="#E5E7EB" stroke-width="0.5"/>
+  <!-- Header text -->
+  <text x="90" y="70" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">Item</text>
+  <text x="124" y="70" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">2024</text>
+  <text x="159" y="70" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">2025</text>
+  <text x="194" y="70" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle" font-weight="bold">2026</text>
+  <!-- Row lines -->
+  <line x1="72" y1="88" x2="227" y2="88" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="102" x2="227" y2="102" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="116" x2="227" y2="116" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="130" x2="227" y2="130" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="144" x2="227" y2="144" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="158" x2="227" y2="158" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="172" x2="227" y2="172" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="186" x2="227" y2="186" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="200" x2="227" y2="200" stroke="#E5E7EB" stroke-width="0.5"/>
+  <line x1="72" y1="214" x2="227" y2="214" stroke="#E5E7EB" stroke-width="0.5"/>
+  <!-- Spreadsheet data -->
+  <text x="77" y="84" font-family="sans-serif" font-size="7" fill="#374151" font-weight="bold">Revenue</text>
+  <text x="124" y="84" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">10,500</text>
+  <text x="159" y="84" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">12,200</text>
+  <text x="194" y="84" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">14,100</text>
+  <text x="77" y="98" font-family="sans-serif" font-size="7" fill="#374151">COGS</text>
+  <text x="124" y="98" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(6,300)</text>
+  <text x="159" y="98" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(7,100)</text>
+  <text x="194" y="98" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(8,000)</text>
+  <text x="77" y="112" font-family="sans-serif" font-size="7" fill="#16A34A" font-weight="bold">Gross Profit</text>
+  <text x="124" y="112" font-family="sans-serif" font-size="6.5" fill="#16A34A" text-anchor="middle">4,200</text>
+  <text x="159" y="112" font-family="sans-serif" font-size="6.5" fill="#16A34A" text-anchor="middle">5,100</text>
+  <text x="194" y="112" font-family="sans-serif" font-size="6.5" fill="#16A34A" text-anchor="middle">6,100</text>
+  <text x="77" y="126" font-family="sans-serif" font-size="7" fill="#374151">OpEx</text>
+  <text x="124" y="126" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(2,100)</text>
+  <text x="159" y="126" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(2,400)</text>
+  <text x="194" y="126" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(2,700)</text>
+  <text x="77" y="140" font-family="sans-serif" font-size="7" fill="#F59E0B" font-weight="bold">EBITDA</text>
+  <text x="124" y="140" font-family="sans-serif" font-size="6.5" fill="#F59E0B" text-anchor="middle">2,100</text>
+  <text x="159" y="140" font-family="sans-serif" font-size="6.5" fill="#F59E0B" text-anchor="middle">2,700</text>
+  <text x="194" y="140" font-family="sans-serif" font-size="6.5" fill="#F59E0B" text-anchor="middle">3,400</text>
+  <text x="77" y="154" font-family="sans-serif" font-size="7" fill="#374151">D&amp;A</text>
+  <text x="124" y="154" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(500)</text>
+  <text x="159" y="154" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(550)</text>
+  <text x="194" y="154" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(600)</text>
+  <text x="77" y="168" font-family="sans-serif" font-size="7" fill="#374151">Interest</text>
+  <text x="124" y="168" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(200)</text>
+  <text x="159" y="168" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(180)</text>
+  <text x="194" y="168" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(160)</text>
+  <text x="77" y="182" font-family="sans-serif" font-size="7" fill="#374151">Tax</text>
+  <text x="124" y="182" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(350)</text>
+  <text x="159" y="182" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(492)</text>
+  <text x="194" y="182" font-family="sans-serif" font-size="6.5" fill="#374151" text-anchor="middle">(660)</text>
+  <rect x="72" y="188" width="155" height="14" fill="#FEF3C7"/>
+  <text x="77" y="198" font-family="sans-serif" font-size="7" fill="#92400E" font-weight="bold">Net Income</text>
+  <text x="124" y="198" font-family="sans-serif" font-size="6.5" fill="#92400E" font-weight="bold" text-anchor="middle">1,050</text>
+  <text x="159" y="198" font-family="sans-serif" font-size="6.5" fill="#92400E" font-weight="bold" text-anchor="middle">1,478</text>
+  <text x="194" y="198" font-family="sans-serif" font-size="6.5" fill="#92400E" font-weight="bold" text-anchor="middle">1,980</text>
+  <text x="77" y="211" font-family="sans-serif" font-size="7" fill="#6B7280">Margin %</text>
+  <text x="124" y="211" font-family="sans-serif" font-size="6.5" fill="#6B7280" text-anchor="middle">10.0%</text>
+  <text x="159" y="211" font-family="sans-serif" font-size="6.5" fill="#6B7280" text-anchor="middle">12.1%</text>
+  <text x="194" y="211" font-family="sans-serif" font-size="6.5" fill="#6B7280" text-anchor="middle">14.0%</text>
+  <!-- Chart area (right side of screen) -->
+  <rect x="234" y="58" width="94" height="80" rx="3" fill="#111827"/>
+  <!-- Mini bar chart -->
+  <rect x="246" y="105" width="14" height="25" fill="#FCD34D"/>
+  <rect x="266" y="90" width="14" height="40" fill="#F59E0B"/>
+  <rect x="286" y="72" width="14" height="58" fill="#FBBF24"/>
+  <rect x="306" y="62" width="14" height="68" fill="#F59E0B"/>
+  <!-- Line chart below -->
+  <rect x="234" y="145" width="94" height="80" rx="3" fill="#111827"/>
+  <polyline points="244,210 260,198 276,202 292,185 308,170 318,165" fill="none" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+  <polyline points="244,205 260,205 276,195 292,192 308,180 318,178" fill="none" stroke="#FCD34D" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3,2"/>
+  <text x="281" y="156" font-family="sans-serif" font-size="6" fill="#9CA3AF" text-anchor="middle">Revenue Growth</text>
+  <!-- Toolbar -->
+  <rect x="65" y="40" width="270" height="14" fill="#374151"/>
+  <circle cx="74" cy="47" r="3" fill="#EF4444"/>
+  <circle cx="84" cy="47" r="3" fill="#F59E0B"/>
+  <circle cx="94" cy="47" r="3" fill="#22C55E"/>
+  <text x="200" y="50" font-family="sans-serif" font-size="7" fill="#9CA3AF" text-anchor="middle">Financial_Model_v3.xlsx</text>
+</svg>

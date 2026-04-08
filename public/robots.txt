@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://accounting.dreamitbiz.com/sitemap.xml

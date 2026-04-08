@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF7ED" rx="8"/>
+
+  <!-- Title -->
+  <text x="200" y="28" font-family="sans-serif" font-size="16" fill="#92400E" text-anchor="middle" font-weight="bold">Process Costing</text>
+
+  <!-- Production Line - Department 1 -->
+  <rect x="20" y="50" width="105" height="80" fill="#D97706" rx="6"/>
+  <text x="72" y="75" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">Department 1</text>
+  <text x="72" y="90" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">Mixing</text>
+  <!-- Conveyor belt dots -->
+  <circle cx="35" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="50" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="65" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="80" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="95" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="110" cy="118" r="4" fill="#FBBF24"/>
+
+  <!-- Arrow 1 -->
+  <line x1="125" y1="90" x2="143" y2="90" stroke="#D97706" stroke-width="2"/>
+  <polygon points="141,84 151,90 141,96" fill="#D97706"/>
+
+  <!-- Department 2 -->
+  <rect x="148" y="50" width="105" height="80" fill="#FBBF24" rx="6"/>
+  <text x="200" y="75" font-family="sans-serif" font-size="10" fill="#92400E" text-anchor="middle" font-weight="bold">Department 2</text>
+  <text x="200" y="90" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Shaping</text>
+  <!-- Conveyor belt dots -->
+  <circle cx="163" cy="118" r="4" fill="#D97706"/>
+  <circle cx="178" cy="118" r="4" fill="#D97706"/>
+  <circle cx="193" cy="118" r="4" fill="#D97706"/>
+  <circle cx="208" cy="118" r="4" fill="#D97706"/>
+  <circle cx="223" cy="118" r="4" fill="#D97706"/>
+  <circle cx="238" cy="118" r="4" fill="#D97706"/>
+
+  <!-- Arrow 2 -->
+  <line x1="253" y1="90" x2="271" y2="90" stroke="#D97706" stroke-width="2"/>
+  <polygon points="269,84 279,90 269,96" fill="#D97706"/>
+
+  <!-- Department 3 -->
+  <rect x="276" y="50" width="105" height="80" fill="#D97706" rx="6"/>
+  <text x="328" y="75" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">Department 3</text>
+  <text x="328" y="90" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">Finishing</text>
+  <!-- Conveyor belt dots -->
+  <circle cx="291" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="306" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="321" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="336" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="351" cy="118" r="4" fill="#FBBF24"/>
+  <circle cx="366" cy="118" r="4" fill="#FBBF24"/>
+
+  <!-- Cost accumulation arrows pointing down into departments -->
+  <text x="72" y="48" font-family="sans-serif" font-size="8" fill="#B45309" text-anchor="middle">+DM +DL +OH</text>
+  <text x="200" y="48" font-family="sans-serif" font-size="8" fill="#B45309" text-anchor="middle">+DL +OH</text>
+  <text x="328" y="48" font-family="sans-serif" font-size="8" fill="#B45309" text-anchor="middle">+DL +OH</text>
+
+  <!-- Equivalent Units Section -->
+  <rect x="20" y="145" width="360" height="65" fill="white" rx="6" stroke="#FBBF24" stroke-width="2"/>
+  <text x="200" y="164" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">Equivalent Units of Production</text>
+
+  <!-- Visual bars for completion -->
+  <rect x="40" y="174" width="150" height="12" fill="#FDE68A" rx="3"/>
+  <rect x="40" y="174" width="112" height="12" fill="#D97706" rx="3"/>
+  <text x="40" y="200" font-family="sans-serif" font-size="8" fill="#92400E">Units Started: 10,000</text>
+  <text x="165" y="183" font-family="sans-serif" font-size="7" fill="white" font-weight="bold">75%</text>
+
+  <rect x="230" y="174" width="130" height="12" fill="#FDE68A" rx="3"/>
+  <rect x="230" y="174" width="52" height="12" fill="#FBBF24" rx="3"/>
+  <text x="230" y="200" font-family="sans-serif" font-size="8" fill="#92400E">Ending WIP: 4,000 (40%)</text>
+  <text x="260" y="183" font-family="sans-serif" font-size="7" fill="#92400E" font-weight="bold">40%</text>
+
+  <!-- Cost Per Unit Calculation -->
+  <rect x="20" y="218" width="170" height="70" fill="#D97706" rx="6"/>
+  <text x="105" y="238" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="bold">Cost Per Equivalent Unit</text>
+  <line x1="35" y1="245" x2="175" y2="245" stroke="#FBBF24" stroke-width="1"/>
+  <text x="105" y="260" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">Total Costs</text>
+  <line x1="60" y1="266" x2="150" y2="266" stroke="#FDE68A" stroke-width="1"/>
+  <text x="105" y="278" font-family="sans-serif" font-size="9" fill="#FDE68A" text-anchor="middle">Equivalent Units</text>
+
+  <!-- Cost Reconciliation -->
+  <rect x="210" y="218" width="170" height="70" fill="#FBBF24" rx="6"/>
+  <text x="295" y="238" font-family="sans-serif" font-size="10" fill="#92400E" text-anchor="middle" font-weight="bold">Cost Reconciliation</text>
+  <line x1="225" y1="245" x2="365" y2="245" stroke="#92400E" stroke-width="0.5"/>
+  <text x="225" y="259" font-family="sans-serif" font-size="9" fill="#92400E">Transferred Out:</text>
+  <text x="360" y="259" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="end">$45,000</text>
+  <text x="225" y="274" font-family="sans-serif" font-size="9" fill="#92400E">Ending WIP:</text>
+  <text x="360" y="274" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="end">$12,000</text>
+  <line x1="225" y1="278" x2="365" y2="278" stroke="#92400E" stroke-width="1"/>
+  <text x="360" y="290" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="end" font-weight="bold">$57,000</text>
+</svg>

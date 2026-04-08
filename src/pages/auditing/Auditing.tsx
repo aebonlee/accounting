@@ -1,0 +1,558 @@
+import { useState } from 'react';
+import { useLanguage } from '../../contexts/LanguageContext';
+import SEOHead from '../../components/SEOHead';
+import TipBox from '../../components/TipBox';
+import type { ReactElement } from 'react';
+
+const SECTIONS = [
+  { id: 'audit-overview', icon: 'fa-clipboard-check', ko: '감사의 개념과 유형', en: 'Audit Concepts & Types' },
+  { id: 'planning', icon: 'fa-map', ko: '감사 계획과 위험평가', en: 'Audit Planning & Risk Assessment' },
+  { id: 'evidence', icon: 'fa-file-circle-check', ko: '감사 증거와 절차', en: 'Audit Evidence & Procedures' },
+  { id: 'internal', icon: 'fa-shield-halved', ko: '내부통제와 내부감사', en: 'Internal Control & Internal Audit' },
+  { id: 'report', icon: 'fa-file-contract', ko: '감사 보고서', en: 'Audit Reports' },
+  { id: 'ethics', icon: 'fa-handshake', ko: '감사 윤리와 독립성', en: 'Audit Ethics & Independence' },
+];
+
+/* ── Section Components ─────────────────────────────────── */
+
+function AuditOverviewSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '감사의 개념과 유형' : 'Audit Concepts & Types'}</h2>
+
+      <h3>{isKo ? '감사(Auditing)란 무엇인가?' : 'What is Auditing?'}</h3>
+      <p>
+        {isKo
+          ? '감사(Auditing)란 특정 경제적 실체의 재무정보에 대한 주장(assertion)이 미리 설정된 기준(criteria)에 부합하는지를 독립적이고 객관적인 제3자가 체계적으로 검증하고, 그 결과를 이해관계자에게 전달하는 과정입니다. 미국회계학회(AAA)는 감사를 "경제적 행위와 사건에 관한 주장과 기준 간의 일치 정도를 확인하기 위해 증거를 체계적으로 수집하고 평가하는 과정"이라 정의했습니다. 감사는 재무보고의 신뢰성을 높이는 핵심 메커니즘으로, 자본시장의 원활한 작동에 필수적인 역할을 수행합니다.'
+          : 'Auditing is the systematic process by which an independent and objective third party verifies whether assertions about the financial information of a specific economic entity conform to pre-established criteria, and communicates the results to stakeholders. The American Accounting Association (AAA) defined auditing as "a systematic process of objectively obtaining and evaluating evidence regarding assertions about economic actions and events to ascertain the degree of correspondence between those assertions and established criteria." Auditing is the core mechanism for enhancing the reliability of financial reporting and plays an essential role in the smooth functioning of capital markets.'}
+      </p>
+      <img src="/assets/images/topics/auditing-audit-overview.svg" alt={isKo ? '감사의 개념과 구조' : 'Audit Concepts and Structure'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '감사의 필요성' : 'Why Auditing is Necessary'}</h3>
+      <p>
+        {isKo
+          ? '감사가 필요한 근본적 이유는 정보 비대칭(information asymmetry)에 있습니다. 기업의 경영자는 재무정보를 직접 생성하는 주체이므로 정보 우위에 있고, 투자자와 채권자 등 외부 이해관계자는 그 정보의 진실성을 직접 확인할 수 없습니다. 이러한 대리인 문제(agency problem)를 해결하기 위해 독립된 감사인이 재무제표를 검증하여 정보의 신뢰성을 보증합니다.'
+          : 'The fundamental reason auditing is necessary lies in information asymmetry. Corporate managers, who directly generate financial information, hold an informational advantage, while external stakeholders such as investors and creditors cannot directly verify the truthfulness of that information. To resolve this agency problem, independent auditors verify financial statements to assure the reliability of the information.'}
+      </p>
+      <ul>
+        <li>{isKo ? '정보 비대칭 해소: 경영자와 이해관계자 간의 정보 격차를 줄입니다' : 'Resolving information asymmetry: reduces the information gap between managers and stakeholders'}</li>
+        <li>{isKo ? '이해 상충 방지: 경영자가 자신의 이익을 위해 재무정보를 왜곡하는 것을 억제합니다' : 'Preventing conflicts of interest: deters managers from distorting financial information for personal gain'}</li>
+        <li>{isKo ? '거래 비용 절감: 각 이해관계자가 개별적으로 정보를 검증할 필요가 없어집니다' : 'Reducing transaction costs: eliminates the need for each stakeholder to individually verify information'}</li>
+        <li>{isKo ? '자본시장 신뢰 확보: 투자자들이 안심하고 투자 의사결정을 할 수 있게 합니다' : 'Securing capital market trust: enables investors to make investment decisions with confidence'}</li>
+        <li>{isKo ? '법적 요구사항 충족: 상장기업 등은 법적으로 외부감사를 받아야 합니다' : 'Meeting legal requirements: listed companies are legally required to undergo external audits'}</li>
+      </ul>
+
+      <h3>{isKo ? '감사의 유형' : 'Types of Audits'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '재무제표 감사 (Financial Statement Audit)' : 'Financial Statement Audit'}</strong>
+          <p>{isKo ? '기업의 재무제표가 일반적으로 인정된 회계원칙(GAAP 또는 IFRS)에 따라 중요성의 관점에서 적정하게 작성되었는지를 검증하는 감사입니다. 가장 일반적이고 대표적인 감사 유형으로, 외부감사인(공인회계사)이 수행합니다. 감사의견을 통해 재무제표의 신뢰성에 대한 합리적 확신을 제공합니다.' : 'An audit that verifies whether a company\'s financial statements are prepared fairly, in all material respects, in accordance with generally accepted accounting principles (GAAP or IFRS). This is the most common and representative type of audit, performed by external auditors (CPAs). It provides reasonable assurance about the reliability of financial statements through an audit opinion.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '업무 감사 (Operational Audit)' : 'Operational Audit'}</strong>
+          <p>{isKo ? '조직의 운영 절차와 방법이 효율적(efficiency)이고 효과적(effectiveness)인지를 평가하는 감사입니다. 재무정보 자체보다는 업무 프로세스의 개선에 초점을 맞추며, 내부감사인이 주로 수행합니다. 비용 절감, 생산성 향상, 품질 개선 등의 권고사항을 제시합니다.' : 'An audit that evaluates whether an organization\'s operating procedures and methods are efficient and effective. It focuses on improving business processes rather than financial information itself, and is mainly performed by internal auditors. It presents recommendations for cost reduction, productivity improvement, and quality enhancement.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '준법 감사 (Compliance Audit)' : 'Compliance Audit'}</strong>
+          <p>{isKo ? '조직이 특정 법률, 규정, 계약조건, 내부정책 등을 준수하고 있는지를 확인하는 감사입니다. 정부기관의 세무조사, 규제 준수 확인, 보조금 사용의 적정성 검토 등이 이에 해당합니다. 위반 사항 적발 시 시정조치를 권고합니다.' : 'An audit that verifies whether an organization complies with specific laws, regulations, contract terms, and internal policies. This includes government tax investigations, regulatory compliance verification, and reviews of the appropriateness of subsidy usage. Corrective actions are recommended when violations are found.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '정보시스템 감사 (IT Audit)' : 'IT Audit'}</strong>
+          <p>{isKo ? '정보시스템의 보안성, 가용성, 무결성, 기밀성을 평가하는 감사입니다. 디지털 전환이 가속화됨에 따라 중요성이 급격히 증가하고 있으며, 사이버 보안 위험 평가, 데이터 거버넌스 점검, IT 통제 테스트 등을 포함합니다.' : 'An audit that evaluates the security, availability, integrity, and confidentiality of information systems. Its importance has rapidly increased with accelerating digital transformation, and includes cybersecurity risk assessment, data governance review, and IT control testing.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '감사인의 유형' : 'Types of Auditors'}</h3>
+      <ul>
+        <li>
+          <strong>{isKo ? '외부감사인 (External Auditor)' : 'External Auditor'}</strong>
+          {isKo ? ': 독립된 공인회계사(CPA) 또는 감사법인으로, 주로 재무제표 감사를 수행합니다. 피감사기업과 독립적인 관계를 유지해야 합니다.' : ': Independent CPAs or audit firms that primarily perform financial statement audits. They must maintain an independent relationship with the audited entity.'}
+        </li>
+        <li>
+          <strong>{isKo ? '내부감사인 (Internal Auditor)' : 'Internal Auditor'}</strong>
+          {isKo ? ': 조직 내부에 소속되어 업무 감사, 내부통제 평가, 위험관리 자문 등을 수행합니다. 경영진에 대한 독립성은 제한적이나 이사회 감사위원회에 직보합니다.' : ': Employed within the organization to perform operational audits, internal control evaluations, and risk management consulting. Independence from management is limited, but they report directly to the board\'s audit committee.'}
+        </li>
+        <li>
+          <strong>{isKo ? '정부감사인 (Government Auditor)' : 'Government Auditor'}</strong>
+          {isKo ? ': 감사원, 국세청 등 정부기관에 소속되어 공공부문의 재정 사용 적정성, 법규 준수 여부 등을 감사합니다.' : ': Employed by government agencies such as the Board of Audit or tax authorities to audit the appropriateness of public sector fiscal spending and regulatory compliance.'}
+        </li>
+      </ul>
+
+      <TipBox type="important" title={isKo ? '감사와 회계의 차이' : 'Difference Between Auditing and Accounting'}>
+        <p>
+          {isKo
+            ? '회계(Accounting)는 경제적 사건을 기록, 분류, 요약하여 재무정보를 생성하는 과정이고, 감사(Auditing)는 그렇게 생성된 재무정보의 신뢰성을 검증하는 과정입니다. 회계사가 재무제표를 "만드는" 역할을 한다면, 감사인은 그 재무제표가 "올바른지 확인하는" 역할을 합니다. 감사는 회계를 전제로 하지만, 별개의 전문 영역입니다.'
+            : 'Accounting is the process of recording, classifying, and summarizing economic events to produce financial information, while Auditing is the process of verifying the reliability of that financial information. If an accountant "creates" financial statements, an auditor "verifies whether they are correct." Auditing presupposes accounting but is a separate professional discipline.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function PlanningSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '감사 계획과 위험평가' : 'Audit Planning & Risk Assessment'}</h2>
+
+      <h3>{isKo ? '감사 계획의 중요성' : 'Importance of Audit Planning'}</h3>
+      <p>
+        {isKo
+          ? '감사 계획(Audit Planning)은 효과적이고 효율적인 감사를 수행하기 위한 전반적 전략과 세부 계획을 수립하는 단계입니다. ISA 300(감사 계획 수립)에 따르면, 감사인은 감사의 범위, 시기, 방향을 설정하고, 이를 구체적인 감사계획서로 문서화해야 합니다. 적절한 감사 계획은 중요한 영역에 적절한 주의를 기울이고, 잠재적 문제를 적시에 파악하며, 감사를 효율적으로 수행할 수 있게 합니다. 감사 계획 없이 진행하는 감사는 마치 항해 계획 없이 바다에 나가는 것과 같습니다.'
+          : 'Audit Planning is the phase of establishing the overall strategy and detailed plan for conducting an effective and efficient audit. According to ISA 300 (Planning an Audit), the auditor must set the scope, timing, and direction of the audit and document these in a specific audit plan. Proper audit planning ensures appropriate attention to significant areas, timely identification of potential problems, and efficient audit execution. Conducting an audit without a plan is like setting sail without a navigation chart.'}
+      </p>
+      <img src="/assets/images/topics/auditing-planning.svg" alt={isKo ? '감사 계획 프로세스' : 'Audit Planning Process'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '감사 위험 모형 (Audit Risk Model)' : 'Audit Risk Model'}</h3>
+      <p>
+        {isKo
+          ? '감사 위험(Audit Risk)은 재무제표에 중요한 왜곡표시가 존재하는데도 감사인이 적정의견을 표명할 위험입니다. 감사 위험 모형은 다음과 같이 구성됩니다: 감사위험(AR) = 고유위험(IR) x 통제위험(CR) x 적발위험(DR). 감사인은 허용 가능한 감사위험 수준을 먼저 결정하고, 고유위험과 통제위험을 평가한 후, 필요한 적발위험 수준을 도출하여 실증절차의 성격, 시기, 범위를 결정합니다.'
+          : 'Audit Risk is the risk that the auditor expresses an unqualified opinion when material misstatements exist in the financial statements. The Audit Risk Model is structured as: Audit Risk (AR) = Inherent Risk (IR) x Control Risk (CR) x Detection Risk (DR). The auditor first determines the acceptable level of audit risk, assesses inherent risk and control risk, then derives the required level of detection risk to determine the nature, timing, and extent of substantive procedures.'}
+      </p>
+      <ol>
+        <li>
+          <strong>{isKo ? '고유위험 (Inherent Risk)' : 'Inherent Risk'}</strong>
+          <p>{isKo ? '내부통제가 없다고 가정할 때 거래 유형, 계정 잔액, 공시사항에 중요한 왜곡표시가 존재할 가능성입니다. 추정치가 많은 계정(대손충당금, 퇴직급여 등), 복잡한 거래, 현금성 자산, 비일상적 거래 등은 고유위험이 높습니다.' : 'The susceptibility of a transaction class, account balance, or disclosure to material misstatement, assuming no internal controls exist. Accounts with many estimates (allowance for bad debts, retirement benefits), complex transactions, cash-equivalent assets, and non-routine transactions have high inherent risk.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '통제위험 (Control Risk)' : 'Control Risk'}</strong>
+          <p>{isKo ? '내부통제가 중요한 왜곡표시를 적시에 예방하거나 발견하여 수정하지 못할 위험입니다. 내부통제의 설계와 운영이 효과적일수록 통제위험은 낮아집니다. 감사인은 통제 테스트를 통해 통제위험을 평가합니다.' : 'The risk that internal controls fail to prevent or detect and correct material misstatements on a timely basis. The more effective the design and operation of internal controls, the lower the control risk. Auditors assess control risk through tests of controls.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '적발위험 (Detection Risk)' : 'Detection Risk'}</strong>
+          <p>{isKo ? '감사인의 실증절차가 존재하는 중요한 왜곡표시를 발견하지 못할 위험입니다. 유일하게 감사인이 직접 통제할 수 있는 위험이며, 감사 절차의 성격, 시기, 범위를 조정하여 적발위험의 수준을 관리합니다.' : 'The risk that the auditor\'s substantive procedures fail to detect a material misstatement that exists. This is the only component the auditor can directly control, managing its level by adjusting the nature, timing, and extent of audit procedures.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '중요성 (Materiality)' : 'Materiality'}</h3>
+      <p>
+        {isKo
+          ? '중요성(Materiality)은 재무제표 이용자의 경제적 의사결정에 영향을 미칠 수 있는 왜곡표시의 크기 또는 성격을 말합니다. 감사인은 감사 계획 단계에서 전체 재무제표 수준의 중요성과 수행중요성(Performance Materiality)을 결정합니다. 수행중요성은 전체 중요성보다 낮은 금액으로 설정하며, 이는 미수정 왜곡표시와 미발견 왜곡표시의 합계가 전체 중요성을 초과할 가능성을 줄이기 위함입니다. 일반적으로 세전이익의 5~10%, 총수익의 0.5~1%, 총자산의 0.5~1% 등을 기준으로 산정합니다.'
+          : 'Materiality refers to the magnitude or nature of misstatements that could influence the economic decisions of financial statement users. Auditors determine overall financial statement materiality and Performance Materiality during the planning phase. Performance Materiality is set at an amount lower than overall materiality to reduce the likelihood that uncorrected and undetected misstatements combined exceed overall materiality. It is typically calculated as 5-10% of pre-tax income, 0.5-1% of total revenue, or 0.5-1% of total assets.'}
+      </p>
+
+      <h3>{isKo ? '감사 계획 수립 절차' : 'Audit Planning Procedures'}</h3>
+      <ul>
+        <li>{isKo ? '피감사기업과 환경의 이해: 산업, 규제, 내부통제, 회계정책 등을 파악합니다' : 'Understanding the entity and its environment: industry, regulation, internal controls, accounting policies'}</li>
+        <li>{isKo ? '전반 감사 전략 수립: 감사 범위, 보고 목적, 시기, 의사소통 방향을 설정합니다' : 'Establishing overall audit strategy: scope, reporting objectives, timing, and communication direction'}</li>
+        <li>{isKo ? '중요한 왜곡표시 위험 식별 및 평가: 재무제표 수준과 경영진 주장 수준의 위험을 평가합니다' : 'Identifying and assessing risks of material misstatement: at both financial statement and assertion levels'}</li>
+        <li>{isKo ? '감사 팀 편성: 필요한 전문 지식과 경험을 갖춘 팀원을 배치합니다' : 'Assembling the audit team: assigning team members with required expertise and experience'}</li>
+        <li>{isKo ? '감사 일정 수립: 중간감사와 기말감사의 시기를 결정합니다' : 'Establishing audit timeline: determining timing of interim and final audit procedures'}</li>
+      </ul>
+
+      <TipBox type="warning" title={isKo ? '감사 계획은 유연해야 한다' : 'Audit Plans Must Be Flexible'}>
+        <p>
+          {isKo
+            ? '감사 계획은 고정불변이 아닙니다. 감사 수행 과정에서 새로운 정보를 입수하거나 예상과 다른 결과가 나오면, 감사 전략과 세부 계획을 적시에 수정해야 합니다. 예를 들어 실증절차 중 예상치 못한 부정 징후를 발견하면, 추가적인 감사 절차를 설계하고 수행해야 합니다. ISA는 이를 "감사의 반복적 특성(iterative nature)"이라 명시하고 있습니다.'
+            : 'Audit plans are not set in stone. If new information is obtained or unexpected results emerge during the audit, the strategy and detailed plans must be revised in a timely manner. For example, if unexpected signs of fraud are discovered during substantive procedures, additional audit procedures must be designed and performed. ISA refers to this as the "iterative nature of auditing."'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function EvidenceSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '감사 증거와 절차' : 'Audit Evidence & Procedures'}</h2>
+
+      <h3>{isKo ? '감사 증거란?' : 'What is Audit Evidence?'}</h3>
+      <p>
+        {isKo
+          ? '감사 증거(Audit Evidence)는 감사인이 감사의견을 형성하기 위한 결론에 도달하는 데 사용하는 모든 정보를 말합니다. ISA 500에 따르면, 감사 증거는 충분성(sufficiency)과 적합성(appropriateness)을 갖추어야 합니다. 충분성은 증거의 양적 측면으로 감사인이 수집한 증거가 결론을 뒷받침하기에 충분한지를 의미하며, 적합성은 증거의 질적 측면으로 목적적합성(relevance)과 신뢰성(reliability)으로 구성됩니다. 감사인은 직업적 판단을 통해 충분하고 적합한 감사 증거를 수집해야 합니다.'
+          : 'Audit Evidence refers to all information used by the auditor to reach the conclusions on which the audit opinion is based. According to ISA 500, audit evidence must have sufficiency and appropriateness. Sufficiency is the quantitative measure — whether enough evidence has been gathered to support conclusions. Appropriateness is the qualitative measure, comprising relevance and reliability. The auditor must exercise professional judgment to obtain sufficient appropriate audit evidence.'}
+      </p>
+      <img src="/assets/images/topics/auditing-evidence.svg" alt={isKo ? '감사 증거의 충분성과 적합성' : 'Sufficiency and Appropriateness of Audit Evidence'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '감사 증거의 신뢰성 기준' : 'Reliability Criteria for Audit Evidence'}</h3>
+      <p>
+        {isKo
+          ? '감사 증거의 신뢰성은 그 출처와 성격에 따라 달라집니다. 일반적으로 다음과 같은 원칙이 적용됩니다.'
+          : 'The reliability of audit evidence varies depending on its source and nature. The following principles generally apply.'}
+      </p>
+      <ul>
+        <li>{isKo ? '외부 출처의 증거가 내부 출처의 증거보다 더 신뢰할 수 있습니다' : 'Evidence from external sources is more reliable than from internal sources'}</li>
+        <li>{isKo ? '내부통제가 효과적일 때 내부적으로 생성된 증거의 신뢰성이 높아집니다' : 'Internally generated evidence is more reliable when internal controls are effective'}</li>
+        <li>{isKo ? '감사인이 직접 입수한 증거가 간접적으로 입수한 증거보다 신뢰할 수 있습니다' : 'Evidence obtained directly by the auditor is more reliable than indirectly obtained evidence'}</li>
+        <li>{isKo ? '문서화된 증거가 구두 증거보다 신뢰할 수 있습니다' : 'Documentary evidence is more reliable than oral evidence'}</li>
+        <li>{isKo ? '원본이 사본보다 신뢰할 수 있습니다' : 'Original documents are more reliable than copies'}</li>
+      </ul>
+
+      <h3>{isKo ? '감사 절차의 유형' : 'Types of Audit Procedures'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '검사 (Inspection)' : 'Inspection'}</strong>
+          <p>{isKo ? '기록이나 문서(내부 또는 외부), 유형자산을 조사하는 절차입니다. 문서 검사는 기록의 존재와 정확성을 확인하고, 유형자산 검사는 자산의 실재성을 확인합니다. 예를 들어 재고자산 실사, 토지 대장 확인, 계약서 검토 등이 이에 해당합니다.' : 'The procedure of examining records, documents (internal or external), or tangible assets. Document inspection verifies the existence and accuracy of records, while tangible asset inspection confirms the existence of assets. Examples include inventory observation, land registry verification, and contract review.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '관찰 (Observation)' : 'Observation'}</strong>
+          <p>{isKo ? '다른 사람이 수행하는 절차나 과정을 지켜보는 것입니다. 예를 들어 재고자산 실사 시 기업 직원의 실사 과정을 관찰하거나, 내부통제 절차가 실제로 수행되는지를 관찰합니다. 관찰 증거는 해당 시점에만 유효하다는 한계가 있습니다.' : 'Watching a procedure or process being performed by others. For example, observing the inventory counting process by company staff, or observing whether internal control procedures are actually being performed. Observation evidence has the limitation of being valid only for the point in time observed.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '외부조회 (External Confirmation)' : 'External Confirmation'}</strong>
+          <p>{isKo ? '제3자로부터 서면 형태로 직접 응답을 받는 절차입니다. 매출채권의 실재성을 확인하기 위한 거래처 조회, 은행 잔액 조회, 소송 사건에 대한 변호사 확인서 등이 대표적입니다. 적극적 조회(차이 여부와 관계없이 응답 요청)와 소극적 조회(차이가 있을 때만 응답 요청)로 구분됩니다.' : 'A procedure of obtaining written responses directly from third parties. Common examples include accounts receivable confirmations with trading partners, bank balance confirmations, and attorney confirmation letters regarding litigation. It is classified into positive confirmation (requesting response regardless of discrepancy) and negative confirmation (requesting response only if a discrepancy exists).'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '재계산 (Recalculation)' : 'Recalculation'}</strong>
+          <p>{isKo ? '문서나 기록의 수학적 정확성을 검증하는 절차입니다. 감가상각비 재계산, 세금 계산 검증, 재고자산 금액의 수량 x 단가 검증 등이 해당합니다. 컴퓨터 보조 감사 기법(CAATs)을 활용하여 대량의 데이터를 효율적으로 재계산할 수 있습니다.' : 'A procedure that verifies the mathematical accuracy of documents or records. This includes recalculating depreciation, verifying tax computations, and verifying inventory amounts (quantity x unit price). Computer-Assisted Audit Techniques (CAATs) can be used to efficiently recalculate large volumes of data.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '재수행 (Reperformance)' : 'Reperformance'}</strong>
+          <p>{isKo ? '원래 내부통제의 일부로 수행된 절차나 통제를 감사인이 독립적으로 다시 수행하는 것입니다. 예를 들어 은행 조정표의 재작성, 발주 승인 절차의 재수행 등이 이에 해당합니다. 통제 테스트에서 주로 사용됩니다.' : 'The auditor\'s independent re-execution of procedures or controls that were originally performed as part of internal controls. Examples include re-preparing bank reconciliations and re-performing purchase order approval procedures. It is primarily used in tests of controls.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '분석적 절차 (Analytical Procedures)' : 'Analytical Procedures'}</strong>
+          <p>{isKo ? '재무 데이터와 비재무 데이터 간의 관계를 분석하여 비합리적인 변동이나 이상 항목을 식별하는 절차입니다. 추세 분석, 비율 분석, 회귀분석 등을 포함합니다. 감사 계획 단계(필수)와 종합 검토 단계(필수)에서 수행되며, 실증절차로도 활용됩니다.' : 'A procedure that analyzes relationships between financial and non-financial data to identify unreasonable fluctuations or anomalies. It includes trend analysis, ratio analysis, and regression analysis. Required during the planning phase and overall review phase, and also used as a substantive procedure.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '질문 (Inquiry)' : 'Inquiry'}</strong>
+          <p>{isKo ? '기업 내외부의 지식이 있는 자에게 재무적 또는 비재무적 정보를 구하는 절차입니다. 질문은 다른 감사 절차와 병행하여 사용해야 하며, 단독으로는 충분한 감사 증거가 되지 않습니다. 경영진, 법무팀, IT부서 등 다양한 부서의 담당자에게 질문합니다.' : 'A procedure of seeking financial or non-financial information from knowledgeable persons inside or outside the entity. Inquiry must be used in conjunction with other audit procedures and alone does not constitute sufficient audit evidence. Questions are directed to personnel in various departments including management, legal, and IT.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '경영진 주장 (Management Assertions)' : 'Management Assertions'}</h3>
+      <p>
+        {isKo
+          ? '감사인은 경영진의 주장(assertion)에 대응하여 감사 절차를 설계합니다. 거래와 사건에 대한 주장(발생, 완전성, 정확성, 기간귀속, 분류), 기말 계정잔액에 대한 주장(실재성, 권리와 의무, 완전성, 평가와 배분), 표시와 공시에 대한 주장(발생 및 권리와 의무, 완전성, 분류와 이해가능성, 정확성과 평가)으로 구분됩니다.'
+          : 'Auditors design audit procedures to respond to management assertions. These are classified into assertions about transactions and events (occurrence, completeness, accuracy, cutoff, classification), assertions about account balances at period end (existence, rights and obligations, completeness, valuation and allocation), and assertions about presentation and disclosure (occurrence and rights and obligations, completeness, classification and understandability, accuracy and valuation).'}
+      </p>
+
+      <TipBox type="tip" title={isKo ? '감사 증거 수집의 핵심 원칙' : 'Core Principle of Gathering Audit Evidence'}>
+        <p>
+          {isKo
+            ? '감사 증거는 "충분하고 적합한(sufficient appropriate)" 것이어야 합니다. 아무리 많은 증거를 수집하더라도 목적적합성이 없으면 의미가 없고, 아무리 신뢰성 높은 증거라도 양이 부족하면 결론을 뒷받침할 수 없습니다. 감사인은 비용과 효익을 고려하되, 증거 수집의 어려움이나 비용이 특정 절차를 생략하는 정당한 사유가 될 수 없다는 점을 명심해야 합니다.'
+            : '"Sufficient appropriate" is the gold standard for audit evidence. No matter how much evidence is collected, it is meaningless without relevance, and no matter how reliable, insufficient quantity cannot support conclusions. While auditors consider cost-benefit trade-offs, they must remember that difficulty or cost of obtaining evidence is not a valid reason for omitting a necessary procedure.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function InternalSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '내부통제와 내부감사' : 'Internal Control & Internal Audit'}</h2>
+
+      <h3>{isKo ? '내부통제의 정의와 목적' : 'Definition and Purpose of Internal Control'}</h3>
+      <p>
+        {isKo
+          ? '내부통제(Internal Control)는 재무보고의 신뢰성, 영업의 효과성과 효율성, 관련 법규의 준수라는 세 가지 목적 달성에 대한 합리적 확신을 제공하기 위해 이사회, 경영진 및 기타 구성원에 의해 설계되고 수행되는 과정입니다. COSO(Committee of Sponsoring Organizations) 프레임워크에 따르면, 내부통제는 절대적 확신이 아닌 합리적 확신(reasonable assurance)을 제공합니다. 이는 내부통제에 고유한 한계가 존재하기 때문인데, 경영진의 내부통제 무력화(management override), 공모(collusion), 인적 오류 등이 그 한계입니다.'
+          : 'Internal Control is a process designed and performed by the board of directors, management, and other personnel to provide reasonable assurance regarding the achievement of objectives in three categories: reliability of financial reporting, effectiveness and efficiency of operations, and compliance with applicable laws and regulations. According to the COSO (Committee of Sponsoring Organizations) framework, internal control provides reasonable assurance, not absolute assurance. This is because inherent limitations exist in internal controls, including management override, collusion, and human error.'}
+      </p>
+      <img src="/assets/images/topics/auditing-internal.svg" alt={isKo ? 'COSO 내부통제 프레임워크' : 'COSO Internal Control Framework'} className="guide-section-illustration" />
+
+      <h3>{isKo ? 'COSO 내부통제의 5가지 구성요소' : 'Five Components of COSO Internal Control'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '통제환경 (Control Environment)' : 'Control Environment'}</strong>
+          <p>{isKo ? '조직의 내부통제에 대한 전반적인 분위기를 형성하는 기반입니다. 경영진의 성실성과 윤리적 가치, 이사회의 지배구조 역할, 조직 구조, 권한과 책임의 배분, 인사정책 등이 포함됩니다. "상층부의 어조(Tone at the Top)"가 가장 중요한 요소로, 최고경영진이 윤리와 통제를 중시하는 문화를 조성해야 합니다.' : 'The foundation that shapes the overall tone of internal control within the organization. It includes management integrity and ethical values, the board\'s governance role, organizational structure, assignment of authority and responsibility, and human resource policies. "Tone at the Top" is the most critical factor — senior management must foster a culture that values ethics and controls.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '위험평가 (Risk Assessment)' : 'Risk Assessment'}</strong>
+          <p>{isKo ? '기업이 목적 달성에 영향을 미치는 위험을 식별하고 분석하는 과정입니다. 내부 위험(조직 변경, 신규 시스템 도입 등)과 외부 위험(경제 변동, 규제 변경 등)을 모두 고려하며, 부정위험도 평가합니다. 위험의 발생가능성과 영향도를 평가하여 대응 방안을 수립합니다.' : 'The process by which the entity identifies and analyzes risks that affect objective achievement. Both internal risks (organizational changes, new system implementations) and external risks (economic fluctuations, regulatory changes) are considered, and fraud risk is also assessed. Response plans are established by evaluating the likelihood and impact of risks.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '통제활동 (Control Activities)' : 'Control Activities'}</strong>
+          <p>{isKo ? '경영진의 지시가 실행되도록 하는 정책과 절차입니다. 승인, 검증, 조정, 직무분리, 자산 보호, 성과 검토 등이 포함됩니다. IT 통제(일반통제와 응용통제)도 핵심 통제활동에 해당합니다. 예방통제(사전에 오류를 방지)와 발견통제(사후에 오류를 발견)로 구분할 수 있습니다.' : 'Policies and procedures that ensure management directives are carried out. These include authorization, verification, reconciliation, segregation of duties, safeguarding of assets, and performance reviews. IT controls (general controls and application controls) are also key control activities. They can be classified as preventive controls (preventing errors beforehand) and detective controls (discovering errors after the fact).'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '정보와 의사소통 (Information & Communication)' : 'Information & Communication'}</strong>
+          <p>{isKo ? '관련 정보를 적시에 식별, 수집하여 구성원들이 각자의 책임을 이행할 수 있도록 의사소통하는 체계입니다. 회계정보시스템, 내부 보고체계, 외부 의사소통(규제기관, 주주 등) 등을 포함합니다. 정보는 적시에, 정확하게, 적절한 수준의 세부사항으로 전달되어야 합니다.' : 'The system that identifies and captures relevant information in a timely manner and communicates it so personnel can fulfill their responsibilities. It includes accounting information systems, internal reporting systems, and external communication (regulators, shareholders, etc.). Information must be communicated timely, accurately, and with appropriate level of detail.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '모니터링 활동 (Monitoring Activities)' : 'Monitoring Activities'}</strong>
+          <p>{isKo ? '내부통제의 운영 효과성을 지속적으로 평가하는 과정입니다. 상시적 모니터링(일상 업무 과정에서의 자동적 감시)과 개별 평가(내부감사 등 독립적 평가)로 구분됩니다. 발견된 미비점은 적시에 경영진과 이사회에 보고하여 시정조치를 취해야 합니다.' : 'The process of continuously evaluating the operating effectiveness of internal controls. It is classified into ongoing monitoring (automatic surveillance during daily operations) and separate evaluations (independent assessments such as internal audits). Identified deficiencies must be reported to management and the board in a timely manner for corrective action.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '내부감사의 역할과 기능' : 'Role and Function of Internal Audit'}</h3>
+      <p>
+        {isKo
+          ? '내부감사(Internal Audit)는 IIA(Institute of Internal Auditors)에 의해 "조직의 운영을 개선하고 가치를 부여하기 위해 설계된 독립적이고 객관적인 확인 및 컨설팅 활동"으로 정의됩니다. 내부감사부서는 조직 내부에 존재하지만, 기능적으로는 이사회 산하 감사위원회에 직접 보고하여 독립성을 확보합니다. 내부감사의 주요 기능은 다음과 같습니다.'
+          : 'Internal Audit is defined by the IIA (Institute of Internal Auditors) as "an independent, objective assurance and consulting activity designed to add value and improve an organization\'s operations." While the internal audit department exists within the organization, it functionally reports directly to the audit committee under the board to ensure independence. Key functions of internal audit include the following.'}
+      </p>
+      <ul>
+        <li>{isKo ? '내부통제 시스템의 적정성과 효과성 평가' : 'Evaluating the adequacy and effectiveness of internal control systems'}</li>
+        <li>{isKo ? '위험관리 프로세스의 효과성 검토 및 개선 권고' : 'Reviewing and recommending improvements to risk management processes'}</li>
+        <li>{isKo ? '지배구조 프로세스의 평가 및 개선 기여' : 'Evaluating and contributing to the improvement of governance processes'}</li>
+        <li>{isKo ? '부정 징후의 조사 및 예방 활동' : 'Investigating fraud indicators and prevention activities'}</li>
+        <li>{isKo ? '경영진에 대한 자문 및 컨설팅 서비스 제공' : 'Providing advisory and consulting services to management'}</li>
+        <li>{isKo ? '외부감사인과의 협력 및 감사 효율성 증대' : 'Collaborating with external auditors and increasing audit efficiency'}</li>
+      </ul>
+
+      <h3>{isKo ? '직무분리의 원칙' : 'Principle of Segregation of Duties'}</h3>
+      <p>
+        {isKo
+          ? '직무분리(Segregation of Duties, SoD)는 가장 기본적이면서도 중요한 내부통제 원칙입니다. 한 사람이 거래의 승인, 기록, 자산 보관을 모두 담당하면 부정이나 오류의 가능성이 크게 증가합니다. 따라서 이 세 가지 기능을 서로 다른 담당자에게 배분하여 상호 견제가 이루어지도록 합니다. 예를 들어 구매 주문 승인자, 물품 수령 확인자, 대금 지급 담당자가 각각 다른 사람이어야 합니다.'
+          : 'Segregation of Duties (SoD) is the most fundamental and critical internal control principle. When one person handles authorization of transactions, recording, and custody of assets, the possibility of fraud or error increases significantly. Therefore, these three functions are distributed among different individuals to create mutual checks. For example, the purchase order approver, goods receipt verifier, and payment processor should each be different people.'}
+      </p>
+
+      <TipBox type="important" title={isKo ? '내부통제의 고유한 한계' : 'Inherent Limitations of Internal Control'}>
+        <p>
+          {isKo
+            ? '아무리 잘 설계된 내부통제라도 절대적 확신을 제공할 수 없습니다. 경영진의 내부통제 무력화(management override)는 가장 심각한 한계로, 최고경영자가 직접 통제 절차를 우회할 수 있습니다. 이 외에도 직원 간 공모, 판단 오류, 비용-효익 제약으로 인한 통제 미비, 예상치 못한 새로운 유형의 거래 등이 내부통제의 한계입니다. 이러한 한계를 인식하는 것이 효과적인 통제 환경을 구축하는 출발점입니다.'
+            : 'No matter how well designed, internal controls cannot provide absolute assurance. Management override is the most serious limitation — the CEO can directly bypass control procedures. Other limitations include collusion among employees, errors in judgment, control deficiencies due to cost-benefit constraints, and unexpected new types of transactions. Recognizing these limitations is the starting point for building an effective control environment.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function ReportSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '감사 보고서' : 'Audit Reports'}</h2>
+
+      <h3>{isKo ? '감사 보고서의 의의' : 'Significance of the Audit Report'}</h3>
+      <p>
+        {isKo
+          ? '감사 보고서(Audit Report)는 감사 과정의 최종 산출물로, 감사인이 수집한 감사 증거에 기반하여 재무제표에 대한 의견을 표명하는 공식 문서입니다. 감사 보고서는 투자자, 채권자, 규제기관 등 다양한 이해관계자가 재무제표를 신뢰할 수 있는지 판단하는 가장 중요한 근거가 됩니다. ISA 700에 따라 감사 보고서에는 제목, 수신인, 감사의견, 감사의견의 근거, 계속기업 관련 중요한 불확실성, 핵심감사사항, 기타 정보, 경영진과 감사위원회의 책임, 감사인의 책임, 서명 및 날짜 등이 포함됩니다.'
+          : 'The Audit Report is the final product of the audit process, an official document in which the auditor expresses an opinion on the financial statements based on collected audit evidence. The audit report is the most important basis for various stakeholders — investors, creditors, regulators — to determine whether financial statements can be trusted. Under ISA 700, the audit report includes a title, addressee, audit opinion, basis for opinion, material uncertainty related to going concern, key audit matters, other information, responsibilities of management and the audit committee, auditor responsibilities, and signature and date.'}
+      </p>
+      <img src="/assets/images/topics/auditing-report.svg" alt={isKo ? '감사 보고서 유형' : 'Types of Audit Reports'} className="guide-section-illustration" />
+
+      <h3>{isKo ? '감사의견의 유형' : 'Types of Audit Opinions'}</h3>
+      <ol>
+        <li>
+          <strong>{isKo ? '적정의견 (Unmodified / Unqualified Opinion)' : 'Unmodified / Unqualified Opinion'}</strong>
+          <p>{isKo ? '재무제표가 중요성의 관점에서 해당 재무보고체계(IFRS 또는 GAAP)에 따라 적정하게 작성되었다고 판단할 때 표명합니다. 가장 바람직한 의견 유형으로, "깨끗한 의견(clean opinion)"이라고도 합니다. 대다수의 감사 보고서가 적정의견입니다.' : 'Expressed when the auditor concludes that the financial statements are prepared fairly, in all material respects, in accordance with the applicable financial reporting framework (IFRS or GAAP). This is the most desirable opinion type, also called a "clean opinion." The majority of audit reports carry an unmodified opinion.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '한정의견 (Qualified Opinion)' : 'Qualified Opinion'}</strong>
+          <p>{isKo ? '재무제표에 중요한 왜곡표시가 존재하지만 그 영향이 전반적(pervasive)이지 않을 때, 또는 충분하고 적합한 감사 증거를 입수할 수 없지만 미발견 왜곡표시의 잠재적 영향이 전반적이지 않을 때 표명합니다. "...를 제외하고는 적정하게 표시하고 있습니다(except for...)"라는 문구를 사용합니다.' : 'Expressed when material misstatements exist in the financial statements but their effect is not pervasive, or when the auditor is unable to obtain sufficient appropriate audit evidence but the potential effects of undetected misstatements are not pervasive. Uses the phrase "except for..." in the opinion.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '부적정의견 (Adverse Opinion)' : 'Adverse Opinion'}</strong>
+          <p>{isKo ? '재무제표에 중요하고도 전반적인(material and pervasive) 왜곡표시가 존재한다고 판단할 때 표명합니다. 가장 부정적인 감사의견으로, 재무제표 전체가 신뢰할 수 없음을 의미합니다. 실무상 매우 드물지만 심각한 회계부정이 적발된 경우 등에 표명됩니다.' : 'Expressed when the auditor concludes that misstatements are both material and pervasive to the financial statements. This is the most negative audit opinion, meaning the financial statements as a whole cannot be relied upon. Very rare in practice, but may be issued when serious accounting fraud is detected.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '의견거절 (Disclaimer of Opinion)' : 'Disclaimer of Opinion'}</strong>
+          <p>{isKo ? '감사인이 충분하고 적합한 감사 증거를 입수할 수 없고, 미발견 왜곡표시의 잠재적 영향이 중요하고 전반적일 수 있다고 판단할 때 표명합니다. 감사 범위가 심각하게 제한되어 의견을 형성할 수 없는 경우입니다. 예를 들어 핵심 회계기록에 접근이 거부된 경우가 해당됩니다.' : 'Expressed when the auditor is unable to obtain sufficient appropriate audit evidence and concludes that the potential effects of undetected misstatements could be both material and pervasive. This occurs when the scope of the audit is severely limited, making it impossible to form an opinion. An example would be when access to key accounting records is denied.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '핵심감사사항 (Key Audit Matters, KAM)' : 'Key Audit Matters (KAM)'}</h3>
+      <p>
+        {isKo
+          ? '핵심감사사항(KAM)은 ISA 701에 도입된 개념으로, 감사인이 당기 감사에서 가장 중요하다고 판단한 사항을 감사 보고서에 기재하는 것입니다. 감사위원회와 커뮤니케이션한 사항 중에서 선정하며, 감사인의 직업적 판단에 의해 결정됩니다. KAM은 상장기업 감사에 필수적으로 포함되며, 감사 보고서의 정보 가치를 높이고 이용자에게 감사 과정의 투명성을 제공합니다. 예를 들어 수익 인식의 적절성, 영업권 손상 평가, 소송 충당부채의 추정 등이 KAM으로 보고될 수 있습니다.'
+          : 'Key Audit Matters (KAM), introduced in ISA 701, are matters the auditor judges to be of most significance in the current period audit and includes in the audit report. They are selected from matters communicated with the audit committee and determined by the auditor\'s professional judgment. KAM is mandatory for listed entity audits, enhancing the informational value of the audit report and providing transparency to users about the audit process. Examples include appropriateness of revenue recognition, goodwill impairment assessment, and estimation of litigation provisions.'}
+      </p>
+
+      <h3>{isKo ? '계속기업 관련 감사인의 책임' : 'Auditor Responsibility Regarding Going Concern'}</h3>
+      <p>
+        {isKo
+          ? '감사인은 경영진의 계속기업 가정 사용이 적절한지, 그리고 계속기업 능력에 대한 중요한 불확실성이 존재하는지를 평가해야 합니다. 계속기업에 대한 중요한 불확실성이 존재하고 재무제표에 적절히 공시된 경우, 감사인은 적정의견을 표명하되 "계속기업 관련 중요한 불확실성" 문단을 별도로 기재합니다. 만약 적절히 공시되지 않은 경우에는 한정의견 또는 부적정의견을 표명합니다.'
+          : 'The auditor must evaluate whether management\'s use of the going concern assumption is appropriate and whether material uncertainty exists regarding the entity\'s ability to continue as a going concern. When material uncertainty exists and is properly disclosed in the financial statements, the auditor expresses an unmodified opinion but includes a separate "Material Uncertainty Related to Going Concern" section. If not properly disclosed, a qualified or adverse opinion is expressed.'}
+      </p>
+
+      <TipBox type="danger" title={isKo ? '감사의견의 변경' : 'Changes in Audit Opinion'}>
+        <p>
+          {isKo
+            ? '감사의견이 적정에서 비적정으로 변경되면 기업에 미치는 영향은 매우 심각합니다. 주가 급락, 신용등급 하락, 금융기관의 대출 회수, 거래처의 신용한도 축소 등이 발생할 수 있습니다. 특히 상장기업이 2년 연속 의견거절을 받으면 상장폐지 사유가 됩니다. 따라서 기업은 감사의견이 변경되기 전에 문제를 사전에 해결하고, 감사인과 적극적으로 소통하여야 합니다.'
+            : 'When an audit opinion changes from unmodified to modified, the impact on the company can be severe: stock price drops, credit rating downgrades, bank loan recalls, and reduced credit limits from trading partners. Particularly, if a listed company receives disclaimers of opinion for two consecutive years, it becomes grounds for delisting. Therefore, companies must proactively resolve issues before the audit opinion changes and actively communicate with auditors.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+function EthicsSection({ isKo }: { isKo: boolean }): ReactElement {
+  return (
+    <section className="guide-section">
+      <h2>{isKo ? '감사 윤리와 독립성' : 'Audit Ethics & Independence'}</h2>
+
+      <h3>{isKo ? '감사인의 윤리적 기본 원칙' : 'Fundamental Ethical Principles for Auditors'}</h3>
+      <p>
+        {isKo
+          ? '감사의 가치는 감사인의 윤리성에 기반합니다. IESBA(국제회계사윤리기준위원회)의 윤리규정은 모든 직업회계사가 준수해야 할 5가지 기본 원칙을 규정하고 있습니다. 이 원칙들은 공익에 봉사하는 회계 전문직의 존재 이유를 구성하며, 이를 위반하면 자본시장 전체의 신뢰가 손상됩니다. 특히 감사인은 재무정보의 신뢰성을 보증하는 "공공의 파수꾼(public watchdog)" 역할을 수행하므로 윤리적 기준이 더욱 엄격합니다.'
+          : 'The value of an audit is grounded in the auditor\'s ethics. The IESBA (International Ethics Standards Board for Accountants) Code of Ethics prescribes five fundamental principles that all professional accountants must observe. These principles constitute the raison d\'etre of the accounting profession\'s service to the public interest, and violations damage the trust of the entire capital market. Auditors in particular, serving as "public watchdogs" who assure the reliability of financial information, are held to even more stringent ethical standards.'}
+      </p>
+      <img src="/assets/images/topics/auditing-ethics.svg" alt={isKo ? '감사인의 윤리 원칙' : 'Auditor Ethical Principles'} className="guide-section-illustration" />
+
+      <ol>
+        <li>
+          <strong>{isKo ? '성실성 (Integrity)' : 'Integrity'}</strong>
+          <p>{isKo ? '모든 직업적, 사업적 관계에서 솔직하고 정직해야 합니다. 중요한 정보를 의도적으로 누락하거나 오도하는 보고서를 작성해서는 안 됩니다. 성실성이 훼손되면 다른 모든 원칙의 기반이 무너집니다.' : 'Must be straightforward and honest in all professional and business relationships. Must not prepare reports that intentionally omit important information or are misleading. When integrity is compromised, the foundation of all other principles collapses.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '객관성 (Objectivity)' : 'Objectivity'}</strong>
+          <p>{isKo ? '편견, 이해충돌, 타인의 부당한 영향으로 직업적 또는 사업적 판단이 훼손되지 않도록 해야 합니다. 감사인은 사실에 근거하여 판단하며, 개인적 선호나 외부 압력에 의해 결론을 변경해서는 안 됩니다.' : 'Must not allow bias, conflicts of interest, or undue influence of others to compromise professional or business judgment. Auditors judge based on facts and must not alter conclusions due to personal preferences or external pressure.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '직업적 능력과 주의의무 (Professional Competence & Due Care)' : 'Professional Competence & Due Care'}</strong>
+          <p>{isKo ? '전문적인 서비스를 제공할 수 있는 수준의 지식과 기술을 유지하고, 해당 기준에 따라 성실히 업무를 수행해야 합니다. 지속적인 교육(CPE: Continuing Professional Education)을 통해 전문성을 유지해야 하며, 자신의 능력 범위를 넘어서는 업무를 수임해서는 안 됩니다.' : 'Must maintain professional knowledge and skill at the level required to provide competent professional services and diligently perform duties in accordance with applicable standards. Must maintain expertise through continuing professional education (CPE) and must not accept engagements beyond one\'s competence.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '비밀유지 (Confidentiality)' : 'Confidentiality'}</strong>
+          <p>{isKo ? '직업적 관계에서 취득한 정보를 적절한 권한 없이 제3자에게 공개하거나 개인적 이익을 위해 사용해서는 안 됩니다. 이 의무는 감사 계약 종료 후에도 지속됩니다. 단, 법적 의무나 직업적 의무에 의한 공개는 예외입니다.' : 'Must not disclose information acquired through professional relationships to third parties without proper authority or use it for personal benefit. This obligation continues even after the engagement ends. However, disclosure required by legal or professional obligations is an exception.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '전문가적 행동 (Professional Behavior)' : 'Professional Behavior'}</strong>
+          <p>{isKo ? '관련 법규를 준수하고 회계 전문직의 신용을 훼손하는 행동을 회피해야 합니다. 직업의 명성을 유지하기 위해 과장된 광고를 지양하고, 다른 전문직에 대해 불필요한 비방을 하지 않아야 합니다.' : 'Must comply with relevant laws and regulations and avoid actions that discredit the profession. Must refrain from exaggerated advertising and unnecessary disparagement of other professionals to maintain the profession\'s reputation.'}</p>
+        </li>
+      </ol>
+
+      <h3>{isKo ? '독립성 (Independence)의 두 가지 차원' : 'Two Dimensions of Independence'}</h3>
+      <p>
+        {isKo
+          ? '독립성은 감사의 생명선입니다. 독립성이 없는 감사는 의미가 없습니다. 독립성은 두 가지 차원으로 구성됩니다.'
+          : 'Independence is the lifeline of auditing. An audit without independence is meaningless. Independence consists of two dimensions.'}
+      </p>
+      <ul>
+        <li>
+          <strong>{isKo ? '정신적 독립성 (Independence of Mind)' : 'Independence of Mind'}</strong>
+          <p>{isKo ? '직업적 판단에 영향을 미치는 요인에 의해 훼손되지 않는 정신 상태를 말합니다. 실질적 독립성이라고도 하며, 감사인이 실제로 편견 없이 객관적으로 판단하는 것을 의미합니다. 외부에서 관찰할 수 없는 주관적 상태이므로 이를 보완하기 위해 외관적 독립성이 필요합니다.' : 'Refers to the state of mind that permits expressing a conclusion without being affected by influences that compromise professional judgment. Also called independence in fact, it means the auditor actually judges objectively without bias. Since this is a subjective state that cannot be externally observed, independence in appearance is needed to complement it.'}</p>
+        </li>
+        <li>
+          <strong>{isKo ? '외관적 독립성 (Independence in Appearance)' : 'Independence in Appearance'}</strong>
+          <p>{isKo ? '합리적이고 충분한 정보를 가진 제3자가 감사인이 독립적이라고 판단할 수 있는 상태를 말합니다. 실제로 독립적이더라도 외관상 독립적으로 보이지 않으면 감사의 신뢰성이 손상됩니다. 예를 들어 감사인이 피감사기업의 주식을 보유하면, 실제 판단에 영향이 없더라도 독립성 위반으로 간주됩니다.' : 'Refers to a state where a reasonable and informed third party would conclude that the auditor is independent. Even if actually independent, if not perceived as independent in appearance, audit credibility is damaged. For example, if an auditor holds stock in the audited entity, it is considered an independence violation even if it does not actually affect judgment.'}</p>
+        </li>
+      </ul>
+
+      <h3>{isKo ? '독립성을 위협하는 요인' : 'Threats to Independence'}</h3>
+      <ul>
+        <li>
+          <strong>{isKo ? '자기검토 위협 (Self-Review Threat)' : 'Self-Review Threat'}</strong>
+          {isKo ? ': 감사인이 자신이 수행한 비감사업무의 결과를 감사할 때 발생합니다. 예를 들어 감사인이 피감사기업의 재무제표 작성을 도와주고 동시에 감사하는 경우입니다.' : ': Arises when the auditor audits the results of non-audit services they performed. For example, when the auditor helps prepare the client\'s financial statements and also audits them.'}
+        </li>
+        <li>
+          <strong>{isKo ? '자기이익 위협 (Self-Interest Threat)' : 'Self-Interest Threat'}</strong>
+          {isKo ? ': 감사인이 피감사기업에 대해 재무적 또는 기타 이해관계를 가질 때 발생합니다. 예를 들어 피감사기업 주식 보유, 과도한 감사보수 의존 등이 해당됩니다.' : ': Arises when the auditor has a financial or other interest in the client. Examples include holding client stock or excessive fee dependence on the client.'}
+        </li>
+        <li>
+          <strong>{isKo ? '옹호 위협 (Advocacy Threat)' : 'Advocacy Threat'}</strong>
+          {isKo ? ': 감사인이 피감사기업의 입장을 옹호하여 객관성이 훼손될 수 있을 때 발생합니다. 피감사기업의 주식 발행을 주선하거나 소송에서 기업을 대리하는 경우가 해당됩니다.' : ': Arises when the auditor promotes the client\'s position to the point where objectivity may be compromised. Examples include promoting client stock issuance or representing the entity in litigation.'}
+        </li>
+        <li>
+          <strong>{isKo ? '친밀 위협 (Familiarity Threat)' : 'Familiarity Threat'}</strong>
+          {isKo ? ': 피감사기업과의 장기적이고 밀접한 관계로 인해 감사인이 지나치게 동조적이 될 때 발생합니다. 이를 방지하기 위해 감사인 교체(rotation) 제도가 운영됩니다.' : ': Arises when a long and close relationship with the client makes the auditor overly sympathetic. Auditor rotation requirements exist to prevent this.'}
+        </li>
+        <li>
+          <strong>{isKo ? '협박 위협 (Intimidation Threat)' : 'Intimidation Threat'}</strong>
+          {isKo ? ': 실질적이거나 인지된 압박으로 감사인이 객관적으로 행동하지 못할 때 발생합니다. 감사 의뢰인이 감사인 교체를 위협하거나 소송을 제기하겠다고 협박하는 경우입니다.' : ': Arises when actual or perceived pressures prevent the auditor from acting objectively. Examples include the client threatening to replace the auditor or initiating litigation against them.'}
+        </li>
+      </ul>
+
+      <h3>{isKo ? '독립성 보호를 위한 안전장치' : 'Safeguards to Protect Independence'}</h3>
+      <p>
+        {isKo
+          ? '독립성 위협을 허용 가능한 수준으로 줄이기 위해 다양한 안전장치가 마련되어 있습니다. 법적/제도적 장치로는 감사인 강제교체제도(담당이사 주기적 교체), 비감사서비스 제한(회계기록 작성, 경영진 기능 수행 금지 등), 감사보수 제한(특정 의뢰인 보수가 전체 수입의 일정 비율 초과 금지) 등이 있습니다. 감사법인 내부 안전장치로는 품질관리시스템, 독립성 모니터링 체계, 업무수행이사 교체, 감사품질 검토(engagement quality review) 등이 운영됩니다.'
+          : 'Various safeguards are in place to reduce independence threats to an acceptable level. Legal and institutional safeguards include mandatory auditor rotation (periodic rotation of engagement partners), restrictions on non-audit services (prohibiting accounting record preparation, performing management functions, etc.), and fee limitations (prohibiting fees from a specific client from exceeding a certain percentage of total revenue). Internal firm safeguards include quality management systems, independence monitoring systems, engagement partner rotation, and engagement quality reviews.'}
+      </p>
+
+      <TipBox type="danger" title={isKo ? '독립성 위반의 결과' : 'Consequences of Independence Violations'}>
+        <p>
+          {isKo
+            ? '독립성 위반은 감사인 개인뿐 아니라 감사법인 전체, 나아가 회계 전문직의 신뢰에 치명적인 영향을 미칩니다. 2001년 엔론(Enron) 사태에서 아서 앤더슨(Arthur Andersen)의 독립성 위반은 세계 5대 회계법인 중 하나의 파산으로 이어졌고, 사베인스-옥슬리법(SOX법)의 제정을 촉발하여 전 세계 감사 규제가 대폭 강화되는 계기가 되었습니다. 독립성은 타협의 대상이 아닙니다.'
+            : 'Independence violations have devastating consequences not only for individual auditors but for the entire audit firm and, by extension, trust in the accounting profession. In the 2001 Enron scandal, Arthur Andersen\'s independence violations led to the bankruptcy of one of the world\'s Big Five accounting firms and triggered the enactment of the Sarbanes-Oxley Act (SOX), resulting in dramatically strengthened audit regulations worldwide. Independence is not subject to compromise.'}
+        </p>
+      </TipBox>
+    </section>
+  );
+}
+
+/* ── Main Component ─────────────────────────────────────── */
+
+export default function Auditing(): ReactElement {
+  const { language } = useLanguage();
+  const [activeSection, setActiveSection] = useState(SECTIONS[0].id);
+  const isKo = language === 'ko';
+  const currentIndex = SECTIONS.findIndex((s) => s.id === activeSection);
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setActiveSection(SECTIONS[currentIndex - 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex < SECTIONS.length - 1) {
+      setActiveSection(SECTIONS[currentIndex + 1].id);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const handleNavClick = (id: string) => {
+    setActiveSection(id);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <SEOHead
+        title={isKo ? '회계감사 완벽 가이드' : 'Complete Guide to Auditing'}
+        description={
+          isKo
+            ? '회계감사의 핵심 개념을 체계적으로 학습합니다. 감사의 유형, 감사 계획과 위험평가, 감사 증거와 절차, 내부통제, 감사 보고서, 감사 윤리와 독립성까지 모든 영역을 다룹니다.'
+            : 'Learn the core concepts of auditing systematically. Covers audit types, audit planning and risk assessment, audit evidence and procedures, internal controls, audit reports, and audit ethics and independence.'
+        }
+        path="/auditing"
+      />
+
+      <div className="guide-page">
+        <div className="guide-layout">
+          {/* Sidebar */}
+          <aside className="guide-sidebar">
+            <div className="guide-sidebar-title">
+              {isKo ? '목차' : 'Contents'}
+            </div>
+            <ul className="guide-nav">
+              {SECTIONS.map((section) => (
+                <li key={section.id} className="guide-nav-item">
+                  <button
+                    className={`guide-nav-link ${activeSection === section.id ? 'active' : ''}`}
+                    onClick={() => handleNavClick(section.id)}
+                  >
+                    <i className={`fa-solid ${section.icon}`} />
+                    <span>{isKo ? section.ko : section.en}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </aside>
+
+          {/* Content */}
+          <main className="guide-content">
+            <div className="guide-content-header">
+              <h1>{isKo ? '회계감사 완벽 가이드' : 'Complete Guide to Auditing'}</h1>
+              <p>
+                {isKo
+                  ? '회계감사는 재무보고의 신뢰성을 보증하는 핵심 메커니즘입니다. 감사의 기본 개념과 유형, 체계적인 감사 계획과 위험평가, 감사 증거의 수집과 평가, 내부통제의 이해, 감사 보고서의 해석, 그리고 감사인의 윤리와 독립성까지 체계적으로 학습합니다.'
+                  : 'Auditing is the core mechanism that assures the reliability of financial reporting. Learn systematically from basic audit concepts and types, systematic audit planning and risk assessment, gathering and evaluating audit evidence, understanding internal controls, interpreting audit reports, to auditor ethics and independence.'}
+              </p>
+              <img src="/assets/images/topics/auditing-hero.svg" alt={isKo ? '회계감사 일러스트' : 'Auditing Illustration'} className="guide-hero-illustration" />
+            </div>
+
+            {/* ────────── Section Rendering ────────── */}
+            {activeSection === 'audit-overview' && <AuditOverviewSection isKo={isKo} />}
+            {activeSection === 'planning' && <PlanningSection isKo={isKo} />}
+            {activeSection === 'evidence' && <EvidenceSection isKo={isKo} />}
+            {activeSection === 'internal' && <InternalSection isKo={isKo} />}
+            {activeSection === 'report' && <ReportSection isKo={isKo} />}
+            {activeSection === 'ethics' && <EthicsSection isKo={isKo} />}
+
+            {/* Section Navigation */}
+            <div className="guide-section-nav">
+              <button className="guide-nav-btn prev" onClick={handlePrev} disabled={currentIndex === 0}>
+                <i className="fa-solid fa-arrow-left" />
+                <span>
+                  {currentIndex > 0
+                    ? (isKo ? SECTIONS[currentIndex - 1].ko : SECTIONS[currentIndex - 1].en)
+                    : (isKo ? '이전' : 'Previous')}
+                </span>
+              </button>
+              <button className="guide-nav-btn next" onClick={handleNext} disabled={currentIndex === SECTIONS.length - 1}>
+                <span>
+                  {currentIndex < SECTIONS.length - 1
+                    ? (isKo ? SECTIONS[currentIndex + 1].ko : SECTIONS[currentIndex + 1].en)
+                    : (isKo ? '다음' : 'Next')}
+                </span>
+                <i className="fa-solid fa-arrow-right" />
+              </button>
+            </div>
+          </main>
+        </div>
+      </div>
+    </>
+  );
+}

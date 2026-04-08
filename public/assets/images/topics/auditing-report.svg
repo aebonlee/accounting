@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#ECFDF5" rx="12"/>
+
+  <!-- Background decorations -->
+  <circle cx="40" cy="40" r="18" fill="#D1FAE5"/>
+  <rect x="350" y="240" width="28" height="28" fill="#D1FAE5" rx="4" transform="rotate(-15 364 254)"/>
+  <circle cx="360" cy="50" r="14" fill="#D1FAE5"/>
+
+  <!-- Official Report Document -->
+  <rect x="100" y="25" width="200" height="230" fill="#FFFFFF" rx="8" stroke="#10B981" stroke-width="2.5"/>
+
+  <!-- Document header band -->
+  <rect x="100" y="25" width="200" height="40" fill="#10B981" rx="8"/>
+  <rect x="100" y="50" width="200" height="15" fill="#10B981"/>
+  <text x="200" y="52" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AUDIT REPORT</text>
+
+  <!-- Document subtitle -->
+  <text x="200" y="82" font-family="sans-serif" font-size="9" fill="#6B7280" text-anchor="middle">Independent Auditor's Report</text>
+  <line x1="130" y1="90" x2="270" y2="90" stroke="#D1FAE5" stroke-width="1"/>
+
+  <!-- Report content lines -->
+  <line x1="125" y1="105" x2="275" y2="105" stroke="#E5E7EB" stroke-width="1.5"/>
+  <line x1="125" y1="118" x2="265" y2="118" stroke="#E5E7EB" stroke-width="1.5"/>
+  <line x1="125" y1="131" x2="270" y2="131" stroke="#E5E7EB" stroke-width="1.5"/>
+  <line x1="125" y1="144" x2="255" y2="144" stroke="#E5E7EB" stroke-width="1.5"/>
+  <line x1="125" y1="157" x2="275" y2="157" stroke="#E5E7EB" stroke-width="1.5"/>
+  <line x1="125" y1="170" x2="260" y2="170" stroke="#E5E7EB" stroke-width="1.5"/>
+
+  <!-- Opinion section -->
+  <rect x="125" y="182" width="150" height="24" fill="#F0FDF4" rx="4" stroke="#6EE7B7" stroke-width="1"/>
+  <text x="200" y="198" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10B981" text-anchor="middle">Unqualified Opinion</text>
+
+  <!-- Stamp/Seal -->
+  <circle cx="240" cy="225" r="22" fill="none" stroke="#10B981" stroke-width="2.5"/>
+  <circle cx="240" cy="225" r="17" fill="none" stroke="#6EE7B7" stroke-width="1.5"/>
+  <text x="240" y="222" font-family="sans-serif" font-size="7" font-weight="bold" fill="#10B981" text-anchor="middle">APPROVED</text>
+  <text x="240" y="232" font-family="sans-serif" font-size="6" fill="#10B981" text-anchor="middle">AUDITOR</text>
+
+  <!-- Signature line -->
+  <line x1="130" y1="240" x2="200" y2="240" stroke="#10B981" stroke-width="1.5"/>
+  <path d="M135,236 C140,228 150,244 160,232 C165,228 170,238 178,234" fill="none" stroke="#10B981" stroke-width="1.5"/>
+  <text x="165" y="250" font-family="sans-serif" font-size="7" fill="#6B7280" text-anchor="middle">Signature</text>
+
+  <!-- Side icons - Report types -->
+  <!-- Unqualified -->
+  <rect x="320" y="40" width="65" height="45" fill="#FFFFFF" rx="6" stroke="#10B981" stroke-width="1.5"/>
+  <circle cx="352" cy="55" r="10" fill="#10B981"/>
+  <polyline points="346,55 350,60 360,50" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <text x="352" y="78" font-family="sans-serif" font-size="7" font-weight="bold" fill="#10B981" text-anchor="middle">Unqualified</text>
+
+  <!-- Qualified -->
+  <rect x="320" y="95" width="65" height="45" fill="#FFFFFF" rx="6" stroke="#6EE7B7" stroke-width="1.5"/>
+  <circle cx="352" cy="110" r="10" fill="#6EE7B7"/>
+  <text x="352" y="114" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">!</text>
+  <text x="352" y="133" font-family="sans-serif" font-size="7" font-weight="bold" fill="#10B981" text-anchor="middle">Qualified</text>
+
+  <!-- Adverse -->
+  <rect x="320" y="150" width="65" height="45" fill="#FFFFFF" rx="6" stroke="#6EE7B7" stroke-width="1.5"/>
+  <circle cx="352" cy="165" r="10" fill="#F59E0B"/>
+  <text x="352" y="170" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">X</text>
+  <text x="352" y="188" font-family="sans-serif" font-size="7" font-weight="bold" fill="#10B981" text-anchor="middle">Adverse</text>
+
+  <!-- Disclaimer -->
+  <rect x="320" y="205" width="65" height="45" fill="#FFFFFF" rx="6" stroke="#6EE7B7" stroke-width="1.5"/>
+  <circle cx="352" cy="220" r="10" fill="#EF4444"/>
+  <text x="352" y="225" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">?</text>
+  <text x="352" y="243" font-family="sans-serif" font-size="7" font-weight="bold" fill="#10B981" text-anchor="middle">Disclaimer</text>
+
+  <!-- Connecting lines -->
+  <line x1="300" y1="100" x2="318" y2="62" stroke="#A7F3D0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="300" y1="130" x2="318" y2="117" stroke="#A7F3D0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="300" y1="155" x2="318" y2="172" stroke="#A7F3D0" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="300" y1="180" x2="318" y2="227" stroke="#A7F3D0" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Title -->
+  <text x="200" y="280" font-family="sans-serif" font-size="16" font-weight="bold" fill="#10B981" text-anchor="middle">Audit Reports</text>
+</svg>

@@ -1,2 +1,2 @@
-# accounting
-accounting
+# study
+study

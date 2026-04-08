@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#F0FDFA" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0891B2">Balanced Scorecard</text>
+
+  <!-- Center circle -->
+  <circle cx="200" cy="155" r="30" fill="#0891B2"/>
+  <text x="200" y="151" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">VISION</text>
+  <text x="200" y="163" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#FFFFFF">Strategy</text>
+
+  <!-- Quadrant 1: Financial (top-left) -->
+  <rect x="25" y="42" width="145" height="80" fill="#FFFFFF" rx="8" stroke="#0891B2" stroke-width="2"/>
+  <rect x="25" y="42" width="145" height="24" fill="#0891B2" rx="8"/>
+  <rect x="25" y="58" width="145" height="8" fill="#0891B2"/>
+  <text x="97" y="59" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Financial</text>
+  <!-- Mini chart -->
+  <polyline points="45,105 65,95 85,100 105,85 125,80 145,75" fill="none" stroke="#0891B2" stroke-width="2" stroke-linecap="round"/>
+  <text x="97" y="80" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6B7280">Revenue / ROI</text>
+
+  <!-- Quadrant 2: Customer (top-right) -->
+  <rect x="230" y="42" width="145" height="80" fill="#FFFFFF" rx="8" stroke="#67E8F9" stroke-width="2"/>
+  <rect x="230" y="42" width="145" height="24" fill="#67E8F9" rx="8"/>
+  <rect x="230" y="58" width="145" height="8" fill="#67E8F9"/>
+  <text x="302" y="59" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0E7490">Customer</text>
+  <!-- Satisfaction icon -->
+  <circle cx="272" cy="95" r="10" fill="#67E8F9"/>
+  <circle cx="302" cy="95" r="10" fill="#0891B2"/>
+  <circle cx="332" cy="95" r="10" fill="#67E8F9"/>
+  <text x="272" y="99" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0E7490">&#9786;</text>
+  <text x="302" y="99" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#FFFFFF">&#9733;</text>
+  <text x="332" y="99" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#0E7490">&#9825;</text>
+  <text x="302" y="80" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6B7280">Satisfaction</text>
+
+  <!-- Quadrant 3: Internal Process (bottom-left) -->
+  <rect x="25" y="185" width="145" height="80" fill="#FFFFFF" rx="8" stroke="#0891B2" stroke-width="2"/>
+  <rect x="25" y="185" width="145" height="24" fill="#0891B2" rx="8"/>
+  <rect x="25" y="201" width="145" height="8" fill="#0891B2"/>
+  <text x="97" y="202" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Internal Process</text>
+  <!-- Gear icons -->
+  <circle cx="72" cy="240" r="14" fill="#E0F2FE" stroke="#0891B2" stroke-width="1.5"/>
+  <circle cx="72" cy="240" r="5" fill="#0891B2"/>
+  <circle cx="107" cy="240" r="11" fill="#E0F2FE" stroke="#0891B2" stroke-width="1.5"/>
+  <circle cx="107" cy="240" r="4" fill="#0891B2"/>
+  <text x="97" y="222" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6B7280">Efficiency</text>
+
+  <!-- Quadrant 4: Learning & Growth (bottom-right) -->
+  <rect x="230" y="185" width="145" height="80" fill="#FFFFFF" rx="8" stroke="#67E8F9" stroke-width="2"/>
+  <rect x="230" y="185" width="145" height="24" fill="#67E8F9" rx="8"/>
+  <rect x="230" y="201" width="145" height="8" fill="#67E8F9"/>
+  <text x="302" y="202" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#0E7490">Learning &amp; Growth</text>
+  <!-- Growth bars -->
+  <rect x="258" y="248" width="16" height="12" fill="#67E8F9" rx="2"/>
+  <rect x="280" y="238" width="16" height="22" fill="#67E8F9" rx="2"/>
+  <rect x="302" y="228" width="16" height="32" fill="#0891B2" rx="2"/>
+  <rect x="324" y="218" width="16" height="42" fill="#0891B2" rx="2"/>
+  <text x="302" y="222" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6B7280">Innovation</text>
+
+  <!-- Connecting lines from center to quadrants -->
+  <line x1="176" y1="140" x2="145" y2="122" stroke="#0891B2" stroke-width="1.5"/>
+  <line x1="224" y1="140" x2="255" y2="122" stroke="#67E8F9" stroke-width="1.5"/>
+  <line x1="176" y1="170" x2="145" y2="185" stroke="#0891B2" stroke-width="1.5"/>
+  <line x1="224" y1="170" x2="255" y2="185" stroke="#67E8F9" stroke-width="1.5"/>
+
+  <!-- Bottom label -->
+  <text x="200" y="288" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B7280">Performance Measurement Framework</text>
+</svg>

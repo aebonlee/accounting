@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F0F5FF" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="30" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1D4ED8" text-anchor="middle">IFRS &amp; K-GAAP</text>
+
+  <!-- Globe icon (center top) -->
+  <circle cx="200" cy="90" r="45" fill="#DBEAFE" stroke="#1D4ED8" stroke-width="2.5"/>
+  <!-- Globe meridians -->
+  <ellipse cx="200" cy="90" rx="20" ry="45" fill="none" stroke="#3B82F6" stroke-width="1.5"/>
+  <ellipse cx="200" cy="90" rx="35" ry="45" fill="none" stroke="#3B82F6" stroke-width="1"/>
+  <!-- Globe parallels -->
+  <line x1="155" y1="75" x2="245" y2="75" stroke="#3B82F6" stroke-width="1"/>
+  <line x1="155" y1="90" x2="245" y2="90" stroke="#3B82F6" stroke-width="1.5"/>
+  <line x1="155" y1="105" x2="245" y2="105" stroke="#3B82F6" stroke-width="1"/>
+  <!-- Globe highlight -->
+  <circle cx="185" cy="75" r="8" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- Arrow from globe to left document -->
+  <path d="M165 120 Q130 150 100 165" fill="none" stroke="#1D4ED8" stroke-width="2.5"/>
+  <polygon points="100,165 108,158 105,168" fill="#1D4ED8"/>
+
+  <!-- Arrow from globe to right document -->
+  <path d="M235 120 Q270 150 300 165" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
+  <polygon points="300,165 292,158 295,168" fill="#3B82F6"/>
+
+  <!-- Left Document: IFRS -->
+  <rect x="30" y="165" width="140" height="110" fill="#FFFFFF" rx="8" stroke="#1D4ED8" stroke-width="2"/>
+  <!-- Document header -->
+  <rect x="30" y="165" width="140" height="32" fill="#1D4ED8" rx="8"/>
+  <rect x="30" y="185" width="140" height="12" fill="#1D4ED8"/>
+  <text x="100" y="187" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">IFRS</text>
+  <!-- Document lines -->
+  <rect x="45" y="208" width="80" height="5" fill="#DBEAFE" rx="2"/>
+  <rect x="45" y="220" width="60" height="5" fill="#DBEAFE" rx="2"/>
+  <rect x="45" y="232" width="100" height="5" fill="#DBEAFE" rx="2"/>
+  <rect x="45" y="244" width="70" height="5" fill="#DBEAFE" rx="2"/>
+  <!-- Badge -->
+  <circle cx="145" cy="250" r="12" fill="#1D4ED8"/>
+  <text x="145" y="254" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">INT</text>
+
+  <!-- Right Document: K-GAAP -->
+  <rect x="230" y="165" width="140" height="110" fill="#FFFFFF" rx="8" stroke="#3B82F6" stroke-width="2"/>
+  <!-- Document header -->
+  <rect x="230" y="165" width="140" height="32" fill="#3B82F6" rx="8"/>
+  <rect x="230" y="185" width="140" height="12" fill="#3B82F6"/>
+  <text x="300" y="187" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">K-GAAP</text>
+  <!-- Document lines -->
+  <rect x="245" y="208" width="80" height="5" fill="#DBEAFE" rx="2"/>
+  <rect x="245" y="220" width="60" height="5" fill="#DBEAFE" rx="2"/>
+  <rect x="245" y="232" width="100" height="5" fill="#DBEAFE" rx="2"/>
+  <rect x="245" y="244" width="70" height="5" fill="#DBEAFE" rx="2"/>
+  <!-- Badge -->
+  <circle cx="345" cy="250" r="12" fill="#3B82F6"/>
+  <text x="345" y="254" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">KR</text>
+
+  <!-- Bidirectional arrow between documents -->
+  <line x1="170" y1="220" x2="230" y2="220" stroke="#1D4ED8" stroke-width="2"/>
+  <polygon points="228,220 222,215 222,225" fill="#1D4ED8"/>
+  <polygon points="172,220 178,215 178,225" fill="#1D4ED8"/>
+
+  <!-- Convergence label -->
+  <rect x="172" y="228" width="56" height="18" fill="#DBEAFE" rx="9"/>
+  <text x="200" y="241" font-family="sans-serif" font-size="8" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Converge</text>
+
+  <!-- Bottom labels -->
+  <text x="100" y="290" font-family="sans-serif" font-size="10" fill="#1D4ED8" text-anchor="middle">International Standards</text>
+  <text x="300" y="290" font-family="sans-serif" font-size="10" fill="#3B82F6" text-anchor="middle">Korean Standards</text>
+</svg>
