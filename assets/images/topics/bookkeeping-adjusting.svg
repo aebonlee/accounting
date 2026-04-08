@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" rx="12" fill="#F5F3FF"/>
+
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#8B5CF6">Adjusting Entries</text>
+
+  <!-- Document -->
+  <rect x="70" y="45" width="200" height="240" rx="6" fill="#FFFFFF" stroke="#C4B5FD" stroke-width="2"/>
+
+  <!-- Document header -->
+  <rect x="70" y="45" width="200" height="28" rx="6" fill="#8B5CF6"/>
+  <rect x="70" y="58" width="200" height="15" fill="#8B5CF6"/>
+  <text x="170" y="65" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Adjusting Journal Entry</text>
+
+  <!-- Line items on document -->
+  <!-- Entry 1 header -->
+  <text x="82" y="90" font-family="sans-serif" font-size="9" font-weight="bold" fill="#8B5CF6">AJE #1 - Depreciation</text>
+  <line x1="82" y1="94" x2="258" y2="94" stroke="#C4B5FD" stroke-width="0.5"/>
+  <text x="90" y="107" font-family="sans-serif" font-size="9" fill="#4C1D95">Dr. Depreciation Exp</text>
+  <text x="250" y="107" text-anchor="end" font-family="sans-serif" font-size="9" fill="#4C1D95">2,400</text>
+  <text x="100" y="120" font-family="sans-serif" font-size="9" fill="#4C1D95">Cr. Accum. Depreciation</text>
+  <text x="250" y="120" text-anchor="end" font-family="sans-serif" font-size="9" fill="#4C1D95">2,400</text>
+
+  <!-- Entry 2 header -->
+  <text x="82" y="142" font-family="sans-serif" font-size="9" font-weight="bold" fill="#8B5CF6">AJE #2 - Accrued Revenue</text>
+  <line x1="82" y1="146" x2="258" y2="146" stroke="#C4B5FD" stroke-width="0.5"/>
+  <text x="90" y="159" font-family="sans-serif" font-size="9" fill="#4C1D95">Dr. Accounts Receivable</text>
+  <text x="250" y="159" text-anchor="end" font-family="sans-serif" font-size="9" fill="#4C1D95">1,500</text>
+  <text x="100" y="172" font-family="sans-serif" font-size="9" fill="#4C1D95">Cr. Service Revenue</text>
+  <text x="250" y="172" text-anchor="end" font-family="sans-serif" font-size="9" fill="#4C1D95">1,500</text>
+
+  <!-- Entry 3 header -->
+  <text x="82" y="194" font-family="sans-serif" font-size="9" font-weight="bold" fill="#8B5CF6">AJE #3 - Prepaid Insurance</text>
+  <line x1="82" y1="198" x2="258" y2="198" stroke="#C4B5FD" stroke-width="0.5"/>
+  <text x="90" y="211" font-family="sans-serif" font-size="9" fill="#4C1D95">Dr. Insurance Expense</text>
+  <text x="250" y="211" text-anchor="end" font-family="sans-serif" font-size="9" fill="#4C1D95">800</text>
+  <text x="100" y="224" font-family="sans-serif" font-size="9" fill="#4C1D95">Cr. Prepaid Insurance</text>
+  <text x="250" y="224" text-anchor="end" font-family="sans-serif" font-size="9" fill="#4C1D95">800</text>
+
+  <!-- Approved stamp area -->
+  <rect x="100" y="242" width="80" height="20" rx="4" fill="#C4B5FD"/>
+  <text x="140" y="256" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF">ADJUSTED</text>
+
+  <!-- Wrench/Tool icon (right side) -->
+  <!-- Wrench handle -->
+  <rect x="300" y="90" width="16" height="80" rx="5" fill="#8B5CF6"/>
+  <!-- Wrench head -->
+  <path d="M296,80 L298,62 C298,55 305,50 312,50 C319,50 322,55 322,62 L320,80 L316,80 L314,68 C314,64 318,62 312,60 C306,62 310,64 310,68 L308,80 Z" fill="#8B5CF6"/>
+  <!-- Wrench detail -->
+  <rect x="304" y="170" width="8" height="4" rx="2" fill="#C4B5FD"/>
+
+  <!-- Gear icon (right side, below wrench) -->
+  <circle cx="308" cy="210" r="20" fill="#C4B5FD"/>
+  <circle cx="308" cy="210" r="10" fill="#F5F3FF"/>
+  <!-- Gear teeth -->
+  <rect x="303" y="188" width="10" height="8" rx="2" fill="#C4B5FD"/>
+  <rect x="303" y="228" width="10" height="8" rx="2" fill="#C4B5FD"/>
+  <rect x="286" y="205" width="8" height="10" rx="2" fill="#C4B5FD"/>
+  <rect x="322" y="205" width="8" height="10" rx="2" fill="#C4B5FD"/>
+  <!-- Diagonal teeth -->
+  <rect x="289" y="192" width="8" height="8" rx="2" fill="#C4B5FD" transform="rotate(45,293,196)"/>
+  <rect x="319" y="192" width="8" height="8" rx="2" fill="#C4B5FD" transform="rotate(45,323,196)"/>
+  <rect x="289" y="222" width="8" height="8" rx="2" fill="#C4B5FD" transform="rotate(45,293,226)"/>
+  <rect x="319" y="222" width="8" height="8" rx="2" fill="#C4B5FD" transform="rotate(45,323,226)"/>
+  <!-- Center of gear -->
+  <circle cx="308" cy="210" r="4" fill="#8B5CF6"/>
+
+  <!-- Arrow from tool to document -->
+  <line x1="290" y1="150" x2="275" y2="150" stroke="#8B5CF6" stroke-width="2"/>
+  <polygon points="275,146 265,150 275,154" fill="#8B5CF6"/>
+
+  <!-- Footer -->
+  <text x="200" y="290" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#A78BFA">Period-End Corrections</text>
+</svg>

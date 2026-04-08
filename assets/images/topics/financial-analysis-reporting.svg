@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="12" fill="#FFFBEB"/>
+  <!-- Main report document -->
+  <rect x="80" y="15" width="240" height="270" rx="6" fill="white" stroke="#D97706" stroke-width="2"/>
+  <!-- Document header band -->
+  <rect x="80" y="15" width="240" height="40" rx="6" fill="#F59E0B"/>
+  <rect x="80" y="35" width="240" height="20" fill="#F59E0B"/>
+  <text x="200" y="38" font-family="sans-serif" font-size="12" fill="white" font-weight="bold" text-anchor="middle">Management Report</text>
+  <text x="200" y="50" font-family="sans-serif" font-size="8" fill="#FEFCE8" text-anchor="middle">Q4 2025 - Executive Summary</text>
+  <!-- Executive summary lines -->
+  <rect x="96" y="65" width="110" height="3" rx="1.5" fill="#FDE68A"/>
+  <rect x="96" y="73" width="195" height="2" rx="1" fill="#E5E7EB"/>
+  <rect x="96" y="80" width="195" height="2" rx="1" fill="#E5E7EB"/>
+  <rect x="96" y="87" width="160" height="2" rx="1" fill="#E5E7EB"/>
+  <!-- KPI boxes row -->
+  <rect x="96" y="98" width="52" height="35" rx="4" fill="#FEF3C7" stroke="#FBBF24" stroke-width="1"/>
+  <text x="122" y="110" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">Revenue</text>
+  <text x="122" y="124" font-family="sans-serif" font-size="10" fill="#F59E0B" font-weight="bold" text-anchor="middle">$14.1M</text>
+  <rect x="156" y="98" width="52" height="35" rx="4" fill="#FEF3C7" stroke="#FBBF24" stroke-width="1"/>
+  <text x="182" y="110" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">EBITDA</text>
+  <text x="182" y="124" font-family="sans-serif" font-size="10" fill="#F59E0B" font-weight="bold" text-anchor="middle">$3.4M</text>
+  <rect x="216" y="98" width="52" height="35" rx="4" fill="#FEF3C7" stroke="#FBBF24" stroke-width="1"/>
+  <text x="242" y="110" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">Net Inc.</text>
+  <text x="242" y="124" font-family="sans-serif" font-size="10" fill="#F59E0B" font-weight="bold" text-anchor="middle">$1.98M</text>
+  <rect x="276" y="98" width="32" height="35" rx="4" fill="#FEF3C7" stroke="#FBBF24" stroke-width="1"/>
+  <text x="292" y="110" font-family="sans-serif" font-size="7" fill="#92400E" text-anchor="middle">ROE</text>
+  <text x="292" y="124" font-family="sans-serif" font-size="10" fill="#16A34A" font-weight="bold" text-anchor="middle">18%</text>
+  <!-- Chart section in report -->
+  <rect x="96" y="142" width="100" height="70" rx="4" fill="#FAFAFA" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="146" y="153" font-family="sans-serif" font-size="7" fill="#92400E" font-weight="bold" text-anchor="middle">Revenue Trend</text>
+  <!-- Mini bar chart -->
+  <rect x="108" y="190" width="10" height="15" fill="#FDE68A"/>
+  <rect x="122" y="182" width="10" height="23" fill="#FBBF24"/>
+  <rect x="136" y="174" width="10" height="31" fill="#F59E0B"/>
+  <rect x="150" y="164" width="10" height="41" fill="#D97706"/>
+  <text x="113" y="200" font-family="sans-serif" font-size="5" fill="#6B7280" text-anchor="middle">Q1</text>
+  <text x="127" y="200" font-family="sans-serif" font-size="5" fill="#6B7280" text-anchor="middle">Q2</text>
+  <text x="141" y="200" font-family="sans-serif" font-size="5" fill="#6B7280" text-anchor="middle">Q3</text>
+  <text x="155" y="200" font-family="sans-serif" font-size="5" fill="#6B7280" text-anchor="middle">Q4</text>
+  <!-- Pie chart in report -->
+  <rect x="204" y="142" width="100" height="70" rx="4" fill="#FAFAFA" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="254" y="153" font-family="sans-serif" font-size="7" fill="#92400E" font-weight="bold" text-anchor="middle">Cost Breakdown</text>
+  <circle cx="254" cy="185" r="22" fill="#FDE68A"/>
+  <path d="M254,185 L254,163 A22,22 0 0,1 273,177 Z" fill="#F59E0B"/>
+  <path d="M254,185 L273,177 A22,22 0 0,1 264,205 Z" fill="#FBBF24"/>
+  <path d="M254,185 L264,205 A22,22 0 0,1 234,195 Z" fill="#D97706"/>
+  <!-- Analysis section -->
+  <text x="96" y="226" font-family="sans-serif" font-size="8" fill="#92400E" font-weight="bold">Key Findings</text>
+  <circle cx="102" cy="236" r="2" fill="#F59E0B"/>
+  <rect x="108" y="234" width="180" height="2" rx="1" fill="#D1D5DB"/>
+  <circle cx="102" cy="246" r="2" fill="#F59E0B"/>
+  <rect x="108" y="244" width="160" height="2" rx="1" fill="#D1D5DB"/>
+  <circle cx="102" cy="256" r="2" fill="#F59E0B"/>
+  <rect x="108" y="254" width="170" height="2" rx="1" fill="#D1D5DB"/>
+  <!-- Recommendation box -->
+  <rect x="96" y="264" width="208" height="14" rx="3" fill="#FEF3C7"/>
+  <text x="200" y="274" font-family="sans-serif" font-size="7" fill="#92400E" font-weight="bold" text-anchor="middle">Recommendation: Expand into new markets</text>
+  <!-- Side decorations - small floating pages -->
+  <rect x="20" y="60" width="45" height="55" rx="3" fill="white" stroke="#FBBF24" stroke-width="1.5" transform="rotate(-8,42,87)"/>
+  <rect x="26" y="68" width="30" height="2" rx="1" fill="#FDE68A" transform="rotate(-8,42,87)"/>
+  <rect x="26" y="74" width="33" height="2" rx="1" fill="#E5E7EB" transform="rotate(-8,42,87)"/>
+  <rect x="26" y="80" width="33" height="2" rx="1" fill="#E5E7EB" transform="rotate(-8,42,87)"/>
+  <rect x="26" y="90" width="20" height="12" rx="2" fill="#FEF3C7" transform="rotate(-8,42,87)"/>
+  <rect x="335" y="70" width="45" height="55" rx="3" fill="white" stroke="#FDE68A" stroke-width="1.5" transform="rotate(6,357,97)"/>
+  <rect x="341" y="78" width="30" height="2" rx="1" fill="#FDE68A" transform="rotate(6,357,97)"/>
+  <rect x="341" y="84" width="33" height="2" rx="1" fill="#E5E7EB" transform="rotate(6,357,97)"/>
+  <rect x="341" y="90" width="33" height="2" rx="1" fill="#E5E7EB" transform="rotate(6,357,97)"/>
+  <rect x="355" y="96" width="18" height="14" rx="2" fill="#FEF3C7" transform="rotate(6,357,97)"/>
+  <!-- Stamp/seal -->
+  <circle cx="40" cy="230" r="22" fill="none" stroke="#F59E0B" stroke-width="2"/>
+  <circle cx="40" cy="230" r="18" fill="none" stroke="#F59E0B" stroke-width="1"/>
+  <text x="40" y="228" font-family="sans-serif" font-size="7" fill="#F59E0B" font-weight="bold" text-anchor="middle">CFO</text>
+  <text x="40" y="238" font-family="sans-serif" font-size="6" fill="#F59E0B" text-anchor="middle">Approved</text>
+  <!-- Pen icon -->
+  <rect x="345" y="220" width="6" height="40" rx="2" fill="#F59E0B" transform="rotate(30,348,240)"/>
+  <polygon points="345,258 348,268 351,258" fill="#D97706" transform="rotate(30,348,260)"/>
+  <rect x="345" y="218" width="6" height="8" rx="1" fill="#D97706" transform="rotate(30,348,222)"/>
+</svg>

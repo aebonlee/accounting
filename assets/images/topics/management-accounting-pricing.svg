@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#F0FDFA" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0891B2">Pricing Strategy</text>
+
+  <!-- Price Tag -->
+  <rect x="220" y="42" width="150" height="100" fill="#FFFFFF" rx="10" stroke="#0891B2" stroke-width="2.5"/>
+  <!-- Tag hole -->
+  <circle cx="345" cy="67" r="10" fill="#F0FDFA" stroke="#0891B2" stroke-width="2"/>
+  <!-- Tag string -->
+  <line x1="355" y1="60" x2="375" y2="42" stroke="#0891B2" stroke-width="1.5"/>
+  <!-- Price text -->
+  <text x="280" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B7280">PRICE</text>
+  <text x="280" y="108" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#0891B2">$149</text>
+  <text x="280" y="130" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#22D3EE">per unit</text>
+
+  <!-- Cost Layers (stacked underneath the price tag) -->
+  <!-- Arrow from tag to layers -->
+  <line x1="200" y1="92" x2="178" y2="92" stroke="#0891B2" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="178,92 184,88 184,96" fill="#0891B2"/>
+
+  <!-- Layer stack -->
+  <!-- Profit margin (top) -->
+  <rect x="25" y="48" width="152" height="35" fill="#0891B2" rx="6"/>
+  <text x="101" y="63" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Profit Margin</text>
+  <text x="101" y="76" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#CFFAFE">$30 (20%)</text>
+
+  <!-- Selling & Admin (second) -->
+  <rect x="25" y="87" width="152" height="35" fill="#22D3EE" rx="6"/>
+  <text x="101" y="102" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Selling &amp; Admin</text>
+  <text x="101" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FFFFFF">$24 (16%)</text>
+
+  <!-- Manufacturing Overhead (third) -->
+  <rect x="25" y="126" width="152" height="35" fill="#0891B2" rx="6" opacity="0.7"/>
+  <text x="101" y="141" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Mfg. Overhead</text>
+  <text x="101" y="154" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FFFFFF">$35 (23%)</text>
+
+  <!-- Direct Labor (fourth) -->
+  <rect x="25" y="165" width="152" height="35" fill="#22D3EE" rx="6" opacity="0.8"/>
+  <text x="101" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Direct Labor</text>
+  <text x="101" y="193" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FFFFFF">$28 (19%)</text>
+
+  <!-- Direct Materials (bottom) -->
+  <rect x="25" y="204" width="152" height="35" fill="#0891B2" rx="6" opacity="0.5"/>
+  <text x="101" y="219" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Direct Materials</text>
+  <text x="101" y="232" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FFFFFF">$32 (22%)</text>
+
+  <!-- Total cost bracket -->
+  <line x1="185" y1="87" x2="195" y2="87" stroke="#6B7280" stroke-width="1"/>
+  <line x1="195" y1="87" x2="195" y2="239" stroke="#6B7280" stroke-width="1"/>
+  <line x1="185" y1="239" x2="195" y2="239" stroke="#6B7280" stroke-width="1"/>
+  <text x="200" y="167" font-family="sans-serif" font-size="9" fill="#6B7280" transform="rotate(90,200,167)">Total Cost $119</text>
+
+  <!-- Pricing Methods Section -->
+  <rect x="220" y="160" width="160" height="120" fill="#FFFFFF" rx="8" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="300" y="182" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#374151">Pricing Methods</text>
+
+  <circle cx="242" cy="202" r="5" fill="#0891B2"/>
+  <text x="252" y="205" font-family="sans-serif" font-size="10" fill="#374151">Cost-Plus</text>
+
+  <circle cx="242" cy="222" r="5" fill="#22D3EE"/>
+  <text x="252" y="225" font-family="sans-serif" font-size="10" fill="#374151">Target Costing</text>
+
+  <circle cx="242" cy="242" r="5" fill="#0891B2" opacity="0.6"/>
+  <text x="252" y="245" font-family="sans-serif" font-size="10" fill="#374151">Value-Based</text>
+
+  <circle cx="242" cy="262" r="5" fill="#22D3EE" opacity="0.6"/>
+  <text x="252" y="265" font-family="sans-serif" font-size="10" fill="#374151">Market-Based</text>
+</svg>

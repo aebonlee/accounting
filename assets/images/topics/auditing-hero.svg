@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#ECFDF5" rx="12"/>
+
+  <!-- Abstract geometric shapes - background -->
+  <rect x="30" y="40" width="60" height="60" fill="#D1FAE5" rx="8" transform="rotate(15 60 70)"/>
+  <rect x="700" y="50" width="50" height="50" fill="#D1FAE5" rx="6" transform="rotate(-10 725 75)"/>
+  <circle cx="720" cy="330" r="25" fill="#D1FAE5"/>
+  <rect x="50" y="310" width="40" height="40" fill="#D1FAE5" rx="4" transform="rotate(25 70 330)"/>
+
+  <!-- Financial Document Stack -->
+  <rect x="160" y="80" width="180" height="230" fill="#FFFFFF" rx="6" stroke="#10B981" stroke-width="2"/>
+  <rect x="150" y="90" width="180" height="230" fill="#F0FDF4" rx="6" stroke="#10B981" stroke-width="2"/>
+  <rect x="140" y="100" width="180" height="230" fill="#FFFFFF" rx="6" stroke="#10B981" stroke-width="2"/>
+
+  <!-- Document content lines -->
+  <line x1="165" y1="130" x2="290" y2="130" stroke="#A7F3D0" stroke-width="2"/>
+  <line x1="165" y1="150" x2="280" y2="150" stroke="#A7F3D0" stroke-width="2"/>
+  <line x1="165" y1="170" x2="285" y2="170" stroke="#A7F3D0" stroke-width="2"/>
+  <line x1="165" y1="190" x2="270" y2="190" stroke="#A7F3D0" stroke-width="2"/>
+  <line x1="165" y1="210" x2="290" y2="210" stroke="#A7F3D0" stroke-width="2"/>
+
+  <!-- Dollar sign on document -->
+  <text x="230" y="280" font-family="sans-serif" font-size="36" font-weight="bold" fill="#10B981" text-anchor="middle">$</text>
+
+  <!-- Magnifying Glass over documents -->
+  <circle cx="340" cy="180" r="70" fill="none" stroke="#10B981" stroke-width="5"/>
+  <circle cx="340" cy="180" r="60" fill="#ECFDF5" fill-opacity="0.5"/>
+  <line x1="390" y1="230" x2="440" y2="280" stroke="#10B981" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Checkmark inside magnifying glass -->
+  <polyline points="310,180 330,200 370,160" fill="none" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Shield -->
+  <path d="M560,100 L620,120 L620,190 C620,230 590,260 560,280 C530,260 500,230 500,190 L500,120 Z" fill="#10B981"/>
+  <path d="M560,115 L610,132 L610,190 C610,224 585,248 560,265 C535,248 510,224 510,190 L510,132 Z" fill="#FFFFFF"/>
+
+  <!-- Checkmark inside shield -->
+  <polyline points="535,175 550,195 585,155" fill="none" stroke="#10B981" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Floating checkmarks -->
+  <circle cx="670" cy="140" r="18" fill="#34D399"/>
+  <polyline points="660,140 667,148 682,133" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="470" cy="100" r="15" fill="#6EE7B7"/>
+  <polyline points="462,100 468,107 480,94" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="690" cy="230" r="14" fill="#A7F3D0"/>
+  <polyline points="682,230 688,237 700,224" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Small audit icons -->
+  <rect x="640" y="260" width="30" height="38" fill="#FFFFFF" rx="3" stroke="#10B981" stroke-width="1.5"/>
+  <line x1="648" y1="272" x2="662" y2="272" stroke="#A7F3D0" stroke-width="1.5"/>
+  <line x1="648" y1="280" x2="660" y2="280" stroke="#A7F3D0" stroke-width="1.5"/>
+  <line x1="648" y1="288" x2="658" y2="288" stroke="#A7F3D0" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="400" y="370" font-family="sans-serif" font-size="22" font-weight="bold" fill="#10B981" text-anchor="middle">Auditing</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF7ED" rx="8"/>
+
+  <!-- Title -->
+  <text x="200" y="28" font-family="sans-serif" font-size="16" fill="#92400E" text-anchor="middle" font-weight="bold">Job-Order Costing</text>
+
+  <!-- Job Card 1 -->
+  <rect x="20" y="45" width="170" height="115" fill="white" rx="4" stroke="#D97706" stroke-width="2"/>
+  <rect x="20" y="45" width="170" height="24" fill="#D97706" rx="4"/>
+  <rect x="20" y="61" width="170" height="8" fill="#D97706"/>
+  <text x="105" y="62" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Job #101</text>
+
+  <!-- Job Card 1 Content -->
+  <text x="32" y="86" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Direct Materials:</text>
+  <text x="158" y="86" font-family="sans-serif" font-size="9" fill="#D97706" text-anchor="end">$2,400</text>
+  <line x1="30" y1="90" x2="180" y2="90" stroke="#FDE68A" stroke-width="0.5"/>
+
+  <text x="32" y="103" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Direct Labor:</text>
+  <text x="158" y="103" font-family="sans-serif" font-size="9" fill="#D97706" text-anchor="end">$1,800</text>
+  <line x1="30" y1="107" x2="180" y2="107" stroke="#FDE68A" stroke-width="0.5"/>
+
+  <text x="32" y="120" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Overhead Applied:</text>
+  <text x="158" y="120" font-family="sans-serif" font-size="9" fill="#D97706" text-anchor="end">$1,200</text>
+  <line x1="30" y1="124" x2="180" y2="124" stroke="#D97706" stroke-width="1"/>
+
+  <text x="32" y="140" font-family="sans-serif" font-size="10" fill="#92400E" font-weight="bold">Total Cost:</text>
+  <text x="158" y="140" font-family="sans-serif" font-size="10" fill="#D97706" text-anchor="end" font-weight="bold">$5,400</text>
+
+  <!-- Status badge -->
+  <rect x="110" y="146" width="70" height="14" fill="#D97706" rx="7"/>
+  <text x="145" y="156" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">COMPLETED</text>
+
+  <!-- Job Card 2 -->
+  <rect x="210" y="45" width="170" height="115" fill="white" rx="4" stroke="#FCD34D" stroke-width="2"/>
+  <rect x="210" y="45" width="170" height="24" fill="#FCD34D" rx="4"/>
+  <rect x="210" y="61" width="170" height="8" fill="#FCD34D"/>
+  <text x="295" y="62" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">Job #102</text>
+
+  <!-- Job Card 2 Content -->
+  <text x="222" y="86" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Direct Materials:</text>
+  <text x="348" y="86" font-family="sans-serif" font-size="9" fill="#D97706" text-anchor="end">$3,100</text>
+  <line x1="220" y1="90" x2="370" y2="90" stroke="#FDE68A" stroke-width="0.5"/>
+
+  <text x="222" y="103" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Direct Labor:</text>
+  <text x="348" y="103" font-family="sans-serif" font-size="9" fill="#D97706" text-anchor="end">$2,500</text>
+  <line x1="220" y1="107" x2="370" y2="107" stroke="#FDE68A" stroke-width="0.5"/>
+
+  <text x="222" y="120" font-family="sans-serif" font-size="9" fill="#92400E" font-weight="bold">Overhead Applied:</text>
+  <text x="348" y="120" font-family="sans-serif" font-size="9" fill="#D97706" text-anchor="end">$1,600</text>
+  <line x1="220" y1="124" x2="370" y2="124" stroke="#D97706" stroke-width="1"/>
+
+  <text x="222" y="140" font-family="sans-serif" font-size="10" fill="#92400E" font-weight="bold">Total Cost:</text>
+  <text x="348" y="140" font-family="sans-serif" font-size="10" fill="#D97706" text-anchor="end" font-weight="bold">$7,200</text>
+
+  <!-- Status badge -->
+  <rect x="300" y="146" width="70" height="14" fill="#FCD34D" rx="7"/>
+  <text x="335" y="156" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle" font-weight="bold">IN PROGRESS</text>
+
+  <!-- Overhead Rate Calculation Box -->
+  <rect x="20" y="175" width="360" height="50" fill="#D97706" rx="6"/>
+  <text x="200" y="195" font-family="sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Predetermined Overhead Rate</text>
+  <text x="200" y="215" font-family="sans-serif" font-size="10" fill="#FDE68A" text-anchor="middle">Est. Overhead / Est. Activity Base = Rate per Unit</text>
+
+  <!-- Flow diagram at bottom -->
+  <!-- Materials Requisition -->
+  <rect x="15" y="240" width="80" height="40" fill="#FCD34D" rx="4"/>
+  <text x="55" y="257" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle" font-weight="bold">Materials</text>
+  <text x="55" y="269" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle">Requisition</text>
+
+  <!-- Arrow -->
+  <line x1="95" y1="260" x2="115" y2="260" stroke="#D97706" stroke-width="2"/>
+  <polygon points="113,254 123,260 113,266" fill="#D97706"/>
+
+  <!-- Time Ticket -->
+  <rect x="125" y="240" width="70" height="40" fill="#FCD34D" rx="4"/>
+  <text x="160" y="257" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle" font-weight="bold">Time</text>
+  <text x="160" y="269" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle">Tickets</text>
+
+  <!-- Arrow -->
+  <line x1="195" y1="260" x2="215" y2="260" stroke="#D97706" stroke-width="2"/>
+  <polygon points="213,254 223,260 213,266" fill="#D97706"/>
+
+  <!-- Job Cost Sheet -->
+  <rect x="225" y="237" width="80" height="46" fill="#D97706" rx="4"/>
+  <text x="265" y="256" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">Job Cost</text>
+  <text x="265" y="270" font-family="sans-serif" font-size="8" fill="white" text-anchor="middle" font-weight="bold">Sheet</text>
+
+  <!-- Arrow -->
+  <line x1="305" y1="260" x2="325" y2="260" stroke="#D97706" stroke-width="2"/>
+  <polygon points="323,254 333,260 323,266" fill="#D97706"/>
+
+  <!-- Finished Goods -->
+  <rect x="335" y="240" width="50" height="40" fill="#FCD34D" rx="4"/>
+  <text x="360" y="257" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle" font-weight="bold">FG</text>
+  <text x="360" y="269" font-family="sans-serif" font-size="8" fill="#92400E" text-anchor="middle">Inventory</text>
+</svg>

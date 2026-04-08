@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="#FFF7ED" rx="8"/>
+
+  <!-- Factory Building -->
+  <rect x="60" y="120" width="200" height="160" fill="#D97706" rx="4"/>
+  <rect x="80" y="140" width="40" height="40" fill="#FFF7ED" rx="2"/>
+  <rect x="140" y="140" width="40" height="40" fill="#FFF7ED" rx="2"/>
+  <rect x="200" y="140" width="40" height="40" fill="#FFF7ED" rx="2"/>
+  <rect x="80" y="200" width="40" height="40" fill="#FFF7ED" rx="2"/>
+  <rect x="140" y="200" width="40" height="40" fill="#FFF7ED" rx="2"/>
+  <rect x="200" y="200" width="40" height="40" fill="#FFF7ED" rx="2"/>
+  <!-- Door -->
+  <rect x="135" y="240" width="50" height="40" fill="#92400E" rx="2"/>
+  <!-- Chimney -->
+  <rect x="90" y="80" width="30" height="40" fill="#B45309"/>
+  <rect x="200" y="80" width="30" height="40" fill="#B45309"/>
+  <!-- Roof -->
+  <polygon points="50,120 160,60 270,120" fill="#B45309"/>
+
+  <!-- Cost Flow Arrows -->
+  <!-- Arrow 1: Materials -->
+  <rect x="290" y="130" width="100" height="30" fill="#FBBF24" rx="4"/>
+  <text x="340" y="150" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">Materials</text>
+  <polygon points="390,135 410,145 390,155" fill="#D97706"/>
+
+  <!-- Arrow 2: Labor -->
+  <rect x="290" y="180" width="100" height="30" fill="#FBBF24" rx="4"/>
+  <text x="340" y="200" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">Labor</text>
+  <polygon points="390,185 410,195 390,205" fill="#D97706"/>
+
+  <!-- Arrow 3: Overhead -->
+  <rect x="290" y="230" width="100" height="30" fill="#FBBF24" rx="4"/>
+  <text x="340" y="250" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">Overhead</text>
+  <polygon points="390,235 410,245 390,255" fill="#D97706"/>
+
+  <!-- WIP Box -->
+  <rect x="420" y="155" width="100" height="80" fill="#D97706" rx="6"/>
+  <text x="470" y="190" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Work in</text>
+  <text x="470" y="208" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Process</text>
+
+  <!-- Arrow to Finished Goods -->
+  <line x1="520" y1="195" x2="560" y2="195" stroke="#D97706" stroke-width="3"/>
+  <polygon points="558,185 578,195 558,205" fill="#D97706"/>
+
+  <!-- Finished Goods Box -->
+  <rect x="580" y="155" width="100" height="80" fill="#B45309" rx="6"/>
+  <text x="630" y="190" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Finished</text>
+  <text x="630" y="208" font-family="sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">Goods</text>
+
+  <!-- Arrow to COGS -->
+  <line x1="680" y1="195" x2="710" y2="195" stroke="#D97706" stroke-width="3"/>
+  <polygon points="708,185 728,195 708,205" fill="#D97706"/>
+
+  <!-- COGS Circle -->
+  <circle cx="755" cy="195" r="35" fill="#FBBF24"/>
+  <text x="755" y="192" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle" font-weight="bold">COGS</text>
+  <text x="755" y="206" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">$$$</text>
+
+  <!-- Bar Chart Bottom Right -->
+  <rect x="580" y="280" width="30" height="70" fill="#FBBF24" rx="2"/>
+  <rect x="620" y="260" width="30" height="90" fill="#D97706" rx="2"/>
+  <rect x="660" y="290" width="30" height="60" fill="#FBBF24" rx="2"/>
+  <rect x="700" y="240" width="30" height="110" fill="#D97706" rx="2"/>
+  <line x1="570" y1="350" x2="740" y2="350" stroke="#92400E" stroke-width="2"/>
+  <line x1="570" y1="240" x2="570" y2="350" stroke="#92400E" stroke-width="2"/>
+  <text x="655" y="375" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle">Cost Analysis</text>
+
+  <!-- Pie Chart Bottom Left -->
+  <circle cx="110" cy="330" r="40" fill="#D97706"/>
+  <path d="M110,330 L110,290 A40,40 0 0,1 144,310 Z" fill="#FBBF24"/>
+  <path d="M110,330 L144,310 A40,40 0 0,1 130,368 Z" fill="#FDE68A"/>
+  <text x="110" y="388" font-family="sans-serif" font-size="11" fill="#92400E" text-anchor="middle">Cost Distribution</text>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="sans-serif" font-size="28" fill="#92400E" text-anchor="middle" font-weight="bold">Cost Accounting</text>
+  <text x="400" y="65" font-family="sans-serif" font-size="14" fill="#B45309" text-anchor="middle">Tracking, Analyzing, and Controlling Costs</text>
+
+  <!-- Dollar signs decoration -->
+  <text x="340" y="320" font-family="sans-serif" font-size="40" fill="#FDE68A" text-anchor="middle" font-weight="bold">$</text>
+  <text x="420" y="340" font-family="sans-serif" font-size="30" fill="#FBBF24" text-anchor="middle" font-weight="bold">$</text>
+  <text x="500" y="310" font-family="sans-serif" font-size="36" fill="#FDE68A" text-anchor="middle" font-weight="bold">$</text>
+</svg>

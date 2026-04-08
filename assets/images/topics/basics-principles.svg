@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#F0F5FF" rx="10"/>
+
+  <!-- Scale base / pillar -->
+  <rect x="190" y="220" width="20" height="60" fill="#1D4ED8" rx="3"/>
+  <rect x="170" y="270" width="60" height="12" fill="#1D4ED8" rx="4"/>
+
+  <!-- Scale beam -->
+  <rect x="80" y="108" width="240" height="6" fill="#1D4ED8" rx="3"/>
+
+  <!-- Fulcrum triangle -->
+  <polygon points="200,114 188,135 212,135" fill="#1D4ED8"/>
+
+  <!-- Left chain -->
+  <line x1="110" y1="114" x2="110" y2="145" stroke="#1D4ED8" stroke-width="2.5"/>
+
+  <!-- Right chain -->
+  <line x1="290" y1="114" x2="290" y2="145" stroke="#1D4ED8" stroke-width="2.5"/>
+
+  <!-- Left pan -->
+  <path d="M70 145 Q110 160 150 145" fill="none" stroke="#1D4ED8" stroke-width="2.5"/>
+  <line x1="70" y1="145" x2="110" y2="145" stroke="#1D4ED8" stroke-width="2"/>
+  <line x1="110" y1="145" x2="150" y2="145" stroke="#1D4ED8" stroke-width="2"/>
+
+  <!-- Left documents stack -->
+  <rect x="82" y="118" width="56" height="28" fill="#FFFFFF" rx="4" stroke="#60A5FA" stroke-width="1.5"/>
+  <rect x="90" y="126" width="30" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="90" y="132" width="22" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="78" y="112" width="56" height="28" fill="#FFFFFF" rx="4" stroke="#1D4ED8" stroke-width="1.5"/>
+  <rect x="86" y="120" width="30" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="86" y="126" width="22" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="86" y="132" width="36" height="3" fill="#DBEAFE" rx="1"/>
+
+  <!-- Right pan -->
+  <path d="M250 145 Q290 160 330 145" fill="none" stroke="#1D4ED8" stroke-width="2.5"/>
+  <line x1="250" y1="145" x2="290" y2="145" stroke="#1D4ED8" stroke-width="2"/>
+  <line x1="290" y1="145" x2="330" y2="145" stroke="#1D4ED8" stroke-width="2"/>
+
+  <!-- Right documents stack -->
+  <rect x="262" y="118" width="56" height="28" fill="#FFFFFF" rx="4" stroke="#60A5FA" stroke-width="1.5"/>
+  <rect x="270" y="126" width="30" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="270" y="132" width="22" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="258" y="112" width="56" height="28" fill="#FFFFFF" rx="4" stroke="#1D4ED8" stroke-width="1.5"/>
+  <rect x="266" y="120" width="30" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="266" y="126" width="22" height="3" fill="#DBEAFE" rx="1"/>
+  <rect x="266" y="132" width="36" height="3" fill="#DBEAFE" rx="1"/>
+
+  <!-- Stars / fairness symbols -->
+  <polygon points="200,55 204,67 217,67 207,74 210,87 200,79 190,87 193,74 183,67 196,67" fill="#60A5FA"/>
+
+  <!-- Left label -->
+  <text x="110" y="185" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Standards</text>
+
+  <!-- Right label -->
+  <text x="290" y="185" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Practice</text>
+
+  <!-- Checkmarks beside the scale -->
+  <text x="38" y="80" font-family="sans-serif" font-size="16" fill="#60A5FA">&#x2713;</text>
+  <text x="30" y="100" font-family="sans-serif" font-size="11" fill="#1D4ED8">Reliability</text>
+
+  <text x="330" y="80" font-family="sans-serif" font-size="16" fill="#60A5FA">&#x2713;</text>
+  <text x="322" y="100" font-family="sans-serif" font-size="11" fill="#1D4ED8">Relevance</text>
+
+  <!-- Bottom decorative elements -->
+  <rect x="130" y="248" width="140" height="28" fill="#DBEAFE" rx="14"/>
+  <text x="200" y="267" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1D4ED8" text-anchor="middle">Fairness &amp; Balance</text>
+
+  <!-- Corner decorations -->
+  <circle cx="35" cy="35" r="12" fill="#DBEAFE"/>
+  <circle cx="365" cy="35" r="8" fill="#DBEAFE"/>
+  <circle cx="365" cy="265" r="10" fill="#DBEAFE"/>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="8" fill="#1D4ED8"/>
+  <!-- Calculator body -->
+  <rect x="8" y="6" width="16" height="20" rx="2" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Screen -->
+  <rect x="10" y="8" width="12" height="5" rx="1" fill="#1D4ED8" opacity="0.3"/>
+  <!-- Number display -->
+  <text x="20" y="12" font-family="sans-serif" font-size="4" fill="#1D4ED8" text-anchor="end" font-weight="bold">1,024</text>
+  <!-- Buttons row 1 -->
+  <rect x="10" y="15" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.6"/>
+  <rect x="13.5" y="15" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.6"/>
+  <rect x="17" y="15" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.6"/>
+  <!-- Buttons row 2 -->
+  <rect x="10" y="18.5" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.4"/>
+  <rect x="13.5" y="18.5" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.4"/>
+  <rect x="17" y="18.5" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.4"/>
+  <!-- Buttons row 3 -->
+  <rect x="10" y="22" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.3"/>
+  <rect x="13.5" y="22" width="2.5" height="2.5" rx="0.5" fill="#1D4ED8" opacity="0.3"/>
+  <rect x="17" y="22" width="2.5" height="2.5" rx="0.5" fill="#059669" opacity="0.7"/>
+  <!-- Plus sign on green button -->
+  <line x1="18.25" y1="22.5" x2="18.25" y2="24" stroke="white" stroke-width="0.5"/>
+  <line x1="17.5" y1="23.25" x2="19" y2="23.25" stroke="white" stroke-width="0.5"/>
+  <!-- Dollar sign accent -->
+  <text x="21.5" y="20" font-family="sans-serif" font-size="5" fill="#1D4ED8" opacity="0.2" font-weight="bold">$</text>
+</svg>

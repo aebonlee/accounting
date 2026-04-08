@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" rx="12" fill="#FFFBEB"/>
+  <!-- Diamond/gem shape -->
+  <polygon points="200,40 280,120 200,220 120,120" fill="#FCD34D" stroke="#F59E0B" stroke-width="3"/>
+  <!-- Diamond facets -->
+  <line x1="200" y1="40" x2="200" y2="220" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="120" y1="120" x2="280" y2="120" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.5"/>
+  <line x1="200" y1="40" x2="150" y2="120" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="200" y1="40" x2="250" y2="120" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="150" y1="120" x2="200" y2="220" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.4"/>
+  <line x1="250" y1="120" x2="200" y2="220" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.4"/>
+  <!-- Inner highlight -->
+  <polygon points="200,60 250,120 200,190 150,120" fill="#FEFCE8" fill-opacity="0.4"/>
+  <!-- Dollar sign on diamond -->
+  <text x="200" y="135" font-family="sans-serif" font-size="36" fill="#92400E" font-weight="bold" text-anchor="middle">$</text>
+  <!-- Upward value arrows - left -->
+  <line x1="60" y1="200" x2="60" y2="80" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="60,70 48,90 72,90" fill="#F59E0B"/>
+  <text x="60" y="215" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">DCF</text>
+  <rect x="45" y="140" width="30" height="8" rx="2" fill="#FCD34D"/>
+  <rect x="45" y="155" width="30" height="8" rx="2" fill="#FCD34D"/>
+  <rect x="45" y="170" width="30" height="8" rx="2" fill="#FCD34D"/>
+  <!-- Upward value arrows - right -->
+  <line x1="340" y1="200" x2="340" y2="80" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="340,70 328,90 352,90" fill="#F59E0B"/>
+  <text x="340" y="215" font-family="sans-serif" font-size="9" fill="#92400E" text-anchor="middle">P/E</text>
+  <rect x="325" y="140" width="30" height="8" rx="2" fill="#FCD34D"/>
+  <rect x="325" y="155" width="30" height="8" rx="2" fill="#FCD34D"/>
+  <rect x="325" y="170" width="30" height="8" rx="2" fill="#FCD34D"/>
+  <!-- Value indicators -->
+  <rect x="40" y="230" width="100" height="50" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+  <text x="90" y="250" font-family="sans-serif" font-size="10" fill="#92400E" font-weight="bold" text-anchor="middle">Enterprise Value</text>
+  <text x="90" y="270" font-family="sans-serif" font-size="14" fill="#F59E0B" font-weight="bold" text-anchor="middle">$12.5M</text>
+  <rect x="155" y="230" width="90" height="50" rx="8" fill="white" stroke="#FCD34D" stroke-width="2"/>
+  <text x="200" y="250" font-family="sans-serif" font-size="10" fill="#92400E" font-weight="bold" text-anchor="middle">Equity Value</text>
+  <text x="200" y="270" font-family="sans-serif" font-size="14" fill="#F59E0B" font-weight="bold" text-anchor="middle">$8.2M</text>
+  <rect x="260" y="230" width="100" height="50" rx="8" fill="white" stroke="#F59E0B" stroke-width="2"/>
+  <text x="310" y="250" font-family="sans-serif" font-size="10" fill="#92400E" font-weight="bold" text-anchor="middle">Per Share</text>
+  <text x="310" y="270" font-family="sans-serif" font-size="14" fill="#F59E0B" font-weight="bold" text-anchor="middle">$24.60</text>
+</svg>

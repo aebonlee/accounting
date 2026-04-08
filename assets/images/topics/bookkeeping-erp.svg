@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" rx="12" fill="#F5F3FF"/>
+
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#8B5CF6">ERP Accounting Software</text>
+
+  <!-- Monitor -->
+  <rect x="60" y="40" width="280" height="190" rx="10" fill="#4C1D95"/>
+  <!-- Screen bezel -->
+  <rect x="70" y="48" width="260" height="170" rx="6" fill="#1E1B4B"/>
+
+  <!-- Screen content area -->
+  <rect x="76" y="54" width="248" height="158" rx="4" fill="#FFFFFF"/>
+
+  <!-- Top nav bar on screen -->
+  <rect x="76" y="54" width="248" height="22" rx="4" fill="#8B5CF6"/>
+  <rect x="76" y="64" width="248" height="12" fill="#8B5CF6"/>
+  <text x="100" y="69" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">ERP Dashboard</text>
+  <!-- Nav items -->
+  <rect x="175" y="59" width="30" height="10" rx="3" fill="#A78BFA"/>
+  <rect x="210" y="59" width="30" height="10" rx="3" fill="#A78BFA"/>
+  <rect x="245" y="59" width="30" height="10" rx="3" fill="#A78BFA"/>
+  <rect x="280" y="59" width="36" height="10" rx="3" fill="#A78BFA"/>
+
+  <!-- Left sidebar on screen -->
+  <rect x="76" y="76" width="55" height="136" fill="#EDE9FE"/>
+  <!-- Sidebar menu items -->
+  <rect x="80" y="82" width="47" height="12" rx="3" fill="#8B5CF6"/>
+  <text x="103" y="91" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">GL</text>
+  <rect x="80" y="98" width="47" height="12" rx="3" fill="#A78BFA"/>
+  <text x="103" y="107" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">AR</text>
+  <rect x="80" y="114" width="47" height="12" rx="3" fill="#A78BFA"/>
+  <text x="103" y="123" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">AP</text>
+  <rect x="80" y="130" width="47" height="12" rx="3" fill="#A78BFA"/>
+  <text x="103" y="139" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">Payroll</text>
+  <rect x="80" y="146" width="47" height="12" rx="3" fill="#A78BFA"/>
+  <text x="103" y="155" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">Inventory</text>
+  <rect x="80" y="162" width="47" height="12" rx="3" fill="#A78BFA"/>
+  <text x="103" y="171" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">Reports</text>
+  <rect x="80" y="178" width="47" height="12" rx="3" fill="#A78BFA"/>
+  <text x="103" y="187" text-anchor="middle" font-family="sans-serif" font-size="6" fill="#FFFFFF">Tax</text>
+
+  <!-- Main content area: Dashboard cards -->
+  <!-- Card 1: Revenue chart -->
+  <rect x="138" y="80" width="88" height="58" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="182" y="92" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="bold" fill="#8B5CF6">Revenue</text>
+  <!-- Bar chart -->
+  <rect x="148" y="120" width="8" height="14" rx="1" fill="#A78BFA"/>
+  <rect x="159" y="112" width="8" height="22" rx="1" fill="#8B5CF6"/>
+  <rect x="170" y="116" width="8" height="18" rx="1" fill="#A78BFA"/>
+  <rect x="181" y="106" width="8" height="28" rx="1" fill="#8B5CF6"/>
+  <rect x="192" y="100" width="8" height="34" rx="1" fill="#A78BFA"/>
+  <rect x="203" y="96" width="8" height="38" rx="1" fill="#8B5CF6"/>
+
+  <!-- Card 2: Expenses -->
+  <rect x="232" y="80" width="88" height="58" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="276" y="92" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="bold" fill="#8B5CF6">Expenses</text>
+  <!-- Pie chart (simplified) -->
+  <circle cx="264" cy="118" r="16" fill="#8B5CF6"/>
+  <path d="M264,118 L264,102 A16,16 0 0,1 278,112 Z" fill="#A78BFA"/>
+  <path d="M264,118 L278,112 A16,16 0 0,1 272,132 Z" fill="#C4B5FD"/>
+  <!-- Legend dots -->
+  <circle cx="288" cy="108" r="3" fill="#8B5CF6"/>
+  <text x="293" y="111" font-family="sans-serif" font-size="5" fill="#4C1D95">Ops</text>
+  <circle cx="288" cy="118" r="3" fill="#A78BFA"/>
+  <text x="293" y="121" font-family="sans-serif" font-size="5" fill="#4C1D95">HR</text>
+  <circle cx="288" cy="128" r="3" fill="#C4B5FD"/>
+  <text x="293" y="131" font-family="sans-serif" font-size="5" fill="#4C1D95">IT</text>
+
+  <!-- Card 3: Recent Transactions -->
+  <rect x="138" y="144" width="88" height="62" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="182" y="156" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="bold" fill="#8B5CF6">Transactions</text>
+  <!-- Transaction lines -->
+  <rect x="143" y="161" width="78" height="7" rx="2" fill="#EDE9FE"/>
+  <rect x="143" y="171" width="78" height="7" rx="2" fill="#DDD6FE"/>
+  <rect x="143" y="181" width="78" height="7" rx="2" fill="#EDE9FE"/>
+  <rect x="143" y="191" width="78" height="7" rx="2" fill="#DDD6FE"/>
+
+  <!-- Card 4: KPIs -->
+  <rect x="232" y="144" width="88" height="62" rx="4" fill="#F5F3FF" stroke="#DDD6FE" stroke-width="1"/>
+  <text x="276" y="156" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="bold" fill="#8B5CF6">KPIs</text>
+  <!-- KPI values -->
+  <text x="276" y="170" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#8B5CF6">$124K</text>
+  <text x="276" y="179" text-anchor="middle" font-family="sans-serif" font-size="5" fill="#6D28D9">Net Income</text>
+  <!-- Up arrow indicator -->
+  <polygon points="260,186 268,186 264,181" fill="#22C55E"/>
+  <text x="276" y="191" font-family="sans-serif" font-size="6" fill="#22C55E">+12.4%</text>
+  <text x="276" y="201" text-anchor="middle" font-family="sans-serif" font-size="5" fill="#4C1D95">ROI: 18.2%</text>
+
+  <!-- Monitor stand -->
+  <rect x="170" y="230" width="60" height="10" rx="2" fill="#4C1D95"/>
+  <rect x="155" y="238" width="90" height="8" rx="4" fill="#4C1D95"/>
+
+  <!-- Module labels below monitor -->
+  <rect x="30" y="258" width="60" height="22" rx="6" fill="#8B5CF6"/>
+  <text x="60" y="273" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">GL</text>
+
+  <rect x="98" y="258" width="60" height="22" rx="6" fill="#A78BFA"/>
+  <text x="128" y="273" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">AR / AP</text>
+
+  <rect x="166" y="258" width="68" height="22" rx="6" fill="#8B5CF6"/>
+  <text x="200" y="273" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">Payroll</text>
+
+  <rect x="242" y="258" width="60" height="22" rx="6" fill="#A78BFA"/>
+  <text x="272" y="273" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">Inventory</text>
+
+  <rect x="310" y="258" width="60" height="22" rx="6" fill="#8B5CF6"/>
+  <text x="340" y="273" text-anchor="middle" font-family="sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF">Reports</text>
+
+  <!-- Connection lines from modules to monitor -->
+  <line x1="60" y1="258" x2="150" y2="240" stroke="#DDD6FE" stroke-width="1"/>
+  <line x1="128" y1="258" x2="175" y2="240" stroke="#DDD6FE" stroke-width="1"/>
+  <line x1="200" y1="258" x2="200" y2="246" stroke="#DDD6FE" stroke-width="1"/>
+  <line x1="272" y1="258" x2="225" y2="240" stroke="#DDD6FE" stroke-width="1"/>
+  <line x1="340" y1="258" x2="245" y2="240" stroke="#DDD6FE" stroke-width="1"/>
+
+  <!-- Footer -->
+  <text x="200" y="294" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#A78BFA">Integrated Accounting Modules</text>
+</svg>

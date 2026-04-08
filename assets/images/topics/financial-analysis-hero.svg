@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" rx="12" fill="#FFFBEB"/>
+  <!-- Background grid -->
+  <line x1="80" y1="60" x2="80" y2="340" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="180" y1="60" x2="180" y2="340" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="280" y1="60" x2="280" y2="340" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="380" y1="60" x2="380" y2="340" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="480" y1="60" x2="480" y2="340" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="80" y1="120" x2="480" y2="120" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="80" y1="180" x2="480" y2="180" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="80" y1="240" x2="480" y2="240" stroke="#FDE68A" stroke-width="1"/>
+  <line x1="80" y1="300" x2="480" y2="300" stroke="#FDE68A" stroke-width="1"/>
+  <!-- Bar chart -->
+  <rect x="100" y="250" width="30" height="90" rx="3" fill="#FBBF24"/>
+  <rect x="150" y="210" width="30" height="130" rx="3" fill="#F59E0B"/>
+  <rect x="200" y="230" width="30" height="110" rx="3" fill="#FBBF24"/>
+  <rect x="250" y="180" width="30" height="160" rx="3" fill="#F59E0B"/>
+  <rect x="300" y="150" width="30" height="190" rx="3" fill="#FBBF24"/>
+  <rect x="350" y="120" width="30" height="220" rx="3" fill="#F59E0B"/>
+  <rect x="400" y="100" width="30" height="240" rx="3" fill="#FBBF24"/>
+  <rect x="450" y="80" width="30" height="260" rx="3" fill="#F59E0B"/>
+  <!-- Upward trend line -->
+  <polyline points="115,240 165,200 215,220 265,170 315,140 365,110 415,90 465,70" fill="none" stroke="#D97706" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="465" cy="70" r="5" fill="#D97706"/>
+  <!-- Upward arrow at trend end -->
+  <polygon points="465,45 455,60 475,60" fill="#D97706"/>
+  <line x1="465" y1="58" x2="465" y2="70" stroke="#D97706" stroke-width="3"/>
+  <!-- Pie chart -->
+  <circle cx="610" cy="140" r="70" fill="#FDE68A"/>
+  <path d="M610,140 L610,70 A70,70 0 0,1 670.6,105 Z" fill="#F59E0B"/>
+  <path d="M610,140 L670.6,105 A70,70 0 0,1 649.5,199.5 Z" fill="#FBBF24"/>
+  <path d="M610,140 L649.5,199.5 A70,70 0 0,1 560.5,199.5 Z" fill="#D97706"/>
+  <circle cx="610" cy="140" r="25" fill="#FFFBEB"/>
+  <!-- Pie chart labels -->
+  <text x="635" y="95" font-family="sans-serif" font-size="11" fill="#92400E" font-weight="bold">35%</text>
+  <text x="655" y="160" font-family="sans-serif" font-size="11" fill="#92400E" font-weight="bold">28%</text>
+  <text x="595" y="195" font-family="sans-serif" font-size="11" fill="#FFFBEB" font-weight="bold">22%</text>
+  <text x="565" y="130" font-family="sans-serif" font-size="11" fill="#92400E" font-weight="bold">15%</text>
+  <!-- Line chart (bottom right) -->
+  <rect x="540" y="230" width="220" height="130" rx="8" fill="white" stroke="#FBBF24" stroke-width="2"/>
+  <polyline points="560,330 590,310 620,320 650,290 680,270 710,280 740,250" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="560,320 590,325 620,305 650,310 680,285 710,260 740,265" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5,3"/>
+  <circle cx="740" cy="250" r="4" fill="#F59E0B"/>
+  <circle cx="740" cy="265" r="3" fill="#FBBF24"/>
+  <text x="560" y="248" font-family="sans-serif" font-size="10" fill="#92400E" font-weight="bold">Trend Analysis</text>
+  <!-- Magnifying glass -->
+  <circle cx="700" cy="80" r="35" fill="none" stroke="#F59E0B" stroke-width="5"/>
+  <circle cx="700" cy="80" r="30" fill="white" fill-opacity="0.5"/>
+  <line x1="725" y1="105" x2="750" y2="130" stroke="#F59E0B" stroke-width="5" stroke-linecap="round"/>
+  <!-- Small chart inside magnifying glass -->
+  <polyline points="680,90 690,80 700,85 710,70 720,75" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+  <!-- Title -->
+  <text x="400" y="380" font-family="sans-serif" font-size="18" fill="#92400E" font-weight="bold" text-anchor="middle">Financial Analysis</text>
+</svg>

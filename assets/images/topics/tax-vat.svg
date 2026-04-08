@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#FFF1F2" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#E11D48">Value-Added Tax (VAT)</text>
+
+  <!-- Stage 1: Raw Materials -->
+  <rect x="15" y="50" width="85" height="60" fill="white" stroke="#FB7185" stroke-width="2" rx="6"/>
+  <rect x="30" y="56" width="16" height="20" fill="#FB7185" rx="2"/>
+  <rect x="50" y="62" width="16" height="14" fill="#FB7185" rx="2"/>
+  <rect x="70" y="58" width="16" height="18" fill="#FB7185" rx="2"/>
+  <text x="57" y="95" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">Raw Materials</text>
+  <text x="57" y="125" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4B5563">Price: 100</text>
+  <text x="57" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">VAT: +10</text>
+
+  <!-- Arrow 1 -->
+  <polygon points="108,75 118,70 118,80" fill="#E11D48"/>
+  <line x1="100" y1="75" x2="118" y2="75" stroke="#E11D48" stroke-width="2"/>
+  <text x="109" y="65" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#E11D48">+Value</text>
+
+  <!-- Stage 2: Manufacturer -->
+  <rect x="125" y="50" width="85" height="60" fill="white" stroke="#E11D48" stroke-width="2" rx="6"/>
+  <rect x="147" y="58" width="40" height="30" fill="#E11D48" rx="3"/>
+  <rect x="153" y="63" width="10" height="10" fill="#FFF1F2" rx="1"/>
+  <rect x="167" y="63" width="10" height="10" fill="#FFF1F2" rx="1"/>
+  <rect x="155" y="78" width="20" height="6" fill="#FFF1F2" rx="1"/>
+  <text x="167" y="95" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">Manufacturer</text>
+  <text x="167" y="125" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4B5563">Price: 300</text>
+  <text x="167" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">VAT: +30</text>
+
+  <!-- Arrow 2 -->
+  <polygon points="218,75 228,70 228,80" fill="#E11D48"/>
+  <line x1="210" y1="75" x2="228" y2="75" stroke="#E11D48" stroke-width="2"/>
+  <text x="219" y="65" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#E11D48">+Value</text>
+
+  <!-- Stage 3: Retailer -->
+  <rect x="235" y="50" width="85" height="60" fill="white" stroke="#FB7185" stroke-width="2" rx="6"/>
+  <rect x="258" y="56" width="38" height="32" fill="#FB7185" rx="3"/>
+  <text x="277" y="76" text-anchor="middle" font-family="sans-serif" font-size="14" fill="white">SHOP</text>
+  <text x="277" y="95" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">Retailer</text>
+  <text x="277" y="125" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4B5563">Price: 500</text>
+  <text x="277" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">VAT: +50</text>
+
+  <!-- Arrow 3 -->
+  <polygon points="328,75 338,70 338,80" fill="#E11D48"/>
+  <line x1="320" y1="75" x2="338" y2="75" stroke="#E11D48" stroke-width="2"/>
+  <text x="329" y="65" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#E11D48">+Value</text>
+
+  <!-- Stage 4: Consumer -->
+  <rect x="345" y="50" width="42" height="60" fill="white" stroke="#E11D48" stroke-width="2" rx="6"/>
+  <circle cx="366" cy="66" r="8" fill="#E11D48"/>
+  <rect x="356" y="78" width="20" height="18" fill="#E11D48" rx="3"/>
+  <text x="366" y="95" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">Consumer</text>
+  <text x="366" y="125" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#4B5563">Pays: 550</text>
+  <text x="366" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" font-weight="bold" fill="#E11D48">(incl. 50)</text>
+
+  <!-- VAT Calculation Section -->
+  <rect x="20" y="155" width="360" height="120" fill="white" stroke="#E11D48" stroke-width="1.5" rx="8"/>
+  <text x="200" y="175" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#E11D48">VAT Payment per Stage</text>
+
+  <!-- Table headers -->
+  <text x="60" y="195" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#4B5563">Stage</text>
+  <text x="140" y="195" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#4B5563">Output</text>
+  <text x="210" y="195" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#4B5563">Input</text>
+  <text x="300" y="195" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#E11D48">Payment</text>
+  <line x1="30" y1="200" x2="370" y2="200" stroke="#FDA4AF" stroke-width="1"/>
+
+  <!-- Row 1 -->
+  <text x="60" y="216" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">Materials</text>
+  <text x="140" y="216" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">10</text>
+  <text x="210" y="216" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">0</text>
+  <rect x="265" y="205" width="70" height="16" fill="#FECDD3" rx="3"/>
+  <text x="300" y="216" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#E11D48">= 10</text>
+
+  <!-- Row 2 -->
+  <text x="60" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">Manufacturer</text>
+  <text x="140" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">30</text>
+  <text x="210" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">10</text>
+  <rect x="265" y="225" width="70" height="16" fill="#FECDD3" rx="3"/>
+  <text x="300" y="236" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#E11D48">= 20</text>
+
+  <!-- Row 3 -->
+  <text x="60" y="256" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">Retailer</text>
+  <text x="140" y="256" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">50</text>
+  <text x="210" y="256" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#4B5563">30</text>
+  <rect x="265" y="245" width="70" height="16" fill="#FECDD3" rx="3"/>
+  <text x="300" y="256" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#E11D48">= 20</text>
+
+  <!-- Total -->
+  <line x1="265" y1="262" x2="335" y2="262" stroke="#E11D48" stroke-width="1.5"/>
+  <text x="300" y="275" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E11D48">Total: 50</text>
+
+  <!-- Minus signs -->
+  <text x="175" y="216" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#E11D48">-</text>
+  <text x="175" y="236" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#E11D48">-</text>
+  <text x="175" y="256" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#E11D48">-</text>
+</svg>

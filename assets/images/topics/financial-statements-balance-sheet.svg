@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F0FDF4" rx="8"/>
+
+  <!-- Title -->
+  <text x="200" y="30" font-family="sans-serif" font-size="15" fill="#059669" text-anchor="middle" font-weight="bold">Balance Sheet</text>
+
+  <!-- T-account top bar -->
+  <rect x="40" y="45" width="320" height="6" fill="#059669" rx="2"/>
+
+  <!-- Vertical divider -->
+  <rect x="198" y="45" width="4" height="210" fill="#059669"/>
+
+  <!-- Left side: Assets -->
+  <text x="120" y="70" font-family="sans-serif" font-size="13" fill="#059669" text-anchor="middle" font-weight="bold">Assets</text>
+
+  <!-- Asset items -->
+  <rect x="55" y="82" width="130" height="22" fill="#059669" rx="3"/>
+  <text x="120" y="97" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Current Assets</text>
+
+  <rect x="55" y="110" width="130" height="22" fill="#34D399" rx="3"/>
+  <text x="120" y="125" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Fixed Assets</text>
+
+  <rect x="55" y="138" width="130" height="22" fill="#6EE7B7" rx="3"/>
+  <text x="120" y="153" font-family="sans-serif" font-size="10" fill="#059669" text-anchor="middle">Intangible Assets</text>
+
+  <!-- Asset total -->
+  <rect x="55" y="175" width="130" height="2" fill="#059669"/>
+  <text x="65" y="195" font-family="sans-serif" font-size="11" fill="#059669" font-weight="bold">Total</text>
+  <text x="175" y="195" font-family="sans-serif" font-size="11" fill="#059669" font-weight="bold" text-anchor="end">500,000</text>
+
+  <!-- Right side: Liabilities + Equity -->
+  <text x="290" y="70" font-family="sans-serif" font-size="13" fill="#059669" text-anchor="middle" font-weight="bold">Liabilities + Equity</text>
+
+  <!-- Liability items -->
+  <rect x="215" y="82" width="130" height="22" fill="#059669" rx="3"/>
+  <text x="280" y="97" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Current Liabilities</text>
+
+  <rect x="215" y="110" width="130" height="22" fill="#34D399" rx="3"/>
+  <text x="280" y="125" font-family="sans-serif" font-size="10" fill="white" text-anchor="middle">Long-term Liabilities</text>
+
+  <rect x="215" y="138" width="130" height="22" fill="#A7F3D0" rx="3"/>
+  <text x="280" y="153" font-family="sans-serif" font-size="10" fill="#059669" text-anchor="middle">Equity</text>
+
+  <!-- Liability total -->
+  <rect x="215" y="175" width="130" height="2" fill="#059669"/>
+  <text x="225" y="195" font-family="sans-serif" font-size="11" fill="#059669" font-weight="bold">Total</text>
+  <text x="335" y="195" font-family="sans-serif" font-size="11" fill="#059669" font-weight="bold" text-anchor="end">500,000</text>
+
+  <!-- Balance indicator -->
+  <rect x="120" y="230" width="160" height="36" fill="#059669" rx="18"/>
+  <text x="200" y="253" font-family="sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">A = L + E</text>
+
+  <!-- Equal sign emphasis -->
+  <circle cx="80" cy="248" r="14" fill="#34D399"/>
+  <text x="80" y="253" font-family="sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">=</text>
+  <circle cx="320" cy="248" r="14" fill="#34D399"/>
+  <text x="320" y="253" font-family="sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">OK</text>
+
+  <text x="200" y="290" font-family="sans-serif" font-size="11" fill="#059669" text-anchor="middle">Assets always equal Liabilities plus Equity</text>
+</svg>

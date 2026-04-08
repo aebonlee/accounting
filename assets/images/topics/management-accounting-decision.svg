@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#F0FDFA" rx="10"/>
+
+  <!-- Title -->
+  <text x="200" y="28" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#0891B2">Decision-Making Analysis</text>
+
+  <!-- Main path (vertical stem) -->
+  <rect x="190" y="42" width="20" height="60" fill="#D1D5DB" rx="4"/>
+
+  <!-- Decision diamond -->
+  <polygon points="200,100 240,130 200,160 160,130" fill="#0891B2"/>
+  <text x="200" y="133" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#FFFFFF">DECIDE</text>
+
+  <!-- Left fork - Cost side -->
+  <line x1="160" y1="130" x2="70" y2="180" stroke="#0891B2" stroke-width="3" stroke-linecap="round"/>
+  <!-- Left path continuation -->
+  <rect x="55" y="180" width="30" height="60" fill="#D1D5DB" rx="4" transform="rotate(-15, 70, 210)"/>
+
+  <!-- Right fork - Benefit side -->
+  <line x1="240" y1="130" x2="330" y2="180" stroke="#A5F3FC" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right path continuation -->
+  <rect x="315" y="180" width="30" height="60" fill="#D1D5DB" rx="4" transform="rotate(15, 330, 210)"/>
+
+  <!-- Left panel: Costs -->
+  <rect x="15" y="185" width="150" height="100" fill="#FFFFFF" rx="8" stroke="#0891B2" stroke-width="2"/>
+  <rect x="15" y="185" width="150" height="26" fill="#0891B2" rx="8"/>
+  <rect x="15" y="203" width="150" height="8" fill="#0891B2"/>
+  <text x="90" y="203" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">COSTS</text>
+
+  <!-- Cost items with minus icons -->
+  <circle cx="35" y="228" r="7" fill="#FEE2E2"/>
+  <rect x="31" y="226" width="8" height="2" fill="#EF4444" rx="1"/>
+  <text x="50" y="230" font-family="sans-serif" font-size="10" fill="#374151">Fixed Costs: $120K</text>
+
+  <circle cx="35" y="248" r="7" fill="#FEE2E2"/>
+  <rect x="31" y="246" width="8" height="2" fill="#EF4444" rx="1"/>
+  <text x="50" y="250" font-family="sans-serif" font-size="10" fill="#374151">Variable Costs: $80K</text>
+
+  <circle cx="35" y="268" r="7" fill="#FEE2E2"/>
+  <rect x="31" y="266" width="8" height="2" fill="#EF4444" rx="1"/>
+  <text x="50" y="270" font-family="sans-serif" font-size="10" fill="#374151">Opportunity: $45K</text>
+
+  <!-- Right panel: Benefits -->
+  <rect x="235" y="185" width="150" height="100" fill="#FFFFFF" rx="8" stroke="#A5F3FC" stroke-width="2"/>
+  <rect x="235" y="185" width="150" height="26" fill="#A5F3FC" rx="8"/>
+  <rect x="235" y="203" width="150" height="8" fill="#A5F3FC"/>
+  <text x="310" y="203" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#0E7490">BENEFITS</text>
+
+  <!-- Benefit items with plus icons -->
+  <circle cx="255" y="228" r="7" fill="#D1FAE5"/>
+  <rect x="251" y="226" width="8" height="2" fill="#10B981" rx="1"/>
+  <rect x="254" y="223" width="2" height="8" fill="#10B981" rx="1"/>
+  <text x="270" y="230" font-family="sans-serif" font-size="10" fill="#374151">Revenue: $350K</text>
+
+  <circle cx="255" y="248" r="7" fill="#D1FAE5"/>
+  <rect x="251" y="246" width="8" height="2" fill="#10B981" rx="1"/>
+  <rect x="254" y="243" width="2" height="8" fill="#10B981" rx="1"/>
+  <text x="270" y="250" font-family="sans-serif" font-size="10" fill="#374151">Market Share: +5%</text>
+
+  <circle cx="255" y="268" r="7" fill="#D1FAE5"/>
+  <rect x="251" y="266" width="8" height="2" fill="#10B981" rx="1"/>
+  <rect x="254" y="263" width="2" height="8" fill="#10B981" rx="1"/>
+  <text x="270" y="270" font-family="sans-serif" font-size="10" fill="#374151">Efficiency: +12%</text>
+
+  <!-- Person icon at top -->
+  <circle cx="200" cy="50" r="8" fill="#0891B2"/>
+  <rect x="192" y="60" width="16" height="12" fill="#0891B2" rx="3"/>
+
+  <!-- Signpost arrows on the crossroads -->
+  <rect x="130" y="108" width="35" height="14" fill="#0891B2" rx="3"/>
+  <polygon points="128,115 121,108 121,122" fill="#0891B2"/>
+  <text x="147" y="118" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#FFFFFF">Cost</text>
+
+  <rect x="235" y="108" width="42" height="14" fill="#A5F3FC" rx="3"/>
+  <polygon points="277,115 284,108 284,122" fill="#A5F3FC"/>
+  <text x="256" y="118" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#0E7490">Benefit</text>
+</svg>

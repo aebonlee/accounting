@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#F0FDFA" rx="10"/>
+
+  <!-- Budget Document -->
+  <rect x="30" y="25" width="150" height="190" fill="#FFFFFF" rx="6" stroke="#0891B2" stroke-width="2"/>
+  <!-- Document header -->
+  <rect x="30" y="25" width="150" height="35" fill="#0891B2" rx="6"/>
+  <rect x="30" y="45" width="150" height="15" fill="#0891B2"/>
+  <text x="105" y="48" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">BUDGET</text>
+  <text x="105" y="62" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#FFFFFF">FY 2026</text>
+
+  <!-- Document lines -->
+  <rect x="45" y="80" width="80" height="6" fill="#E0F2FE" rx="2"/>
+  <rect x="135" y="80" width="30" height="6" fill="#22D3EE" rx="2"/>
+
+  <rect x="45" y="95" width="80" height="6" fill="#E0F2FE" rx="2"/>
+  <rect x="135" y="95" width="30" height="6" fill="#22D3EE" rx="2"/>
+
+  <rect x="45" y="110" width="80" height="6" fill="#E0F2FE" rx="2"/>
+  <rect x="135" y="110" width="30" height="6" fill="#22D3EE" rx="2"/>
+
+  <rect x="45" y="125" width="80" height="6" fill="#E0F2FE" rx="2"/>
+  <rect x="135" y="125" width="30" height="6" fill="#22D3EE" rx="2"/>
+
+  <line x1="45" y1="143" x2="165" y2="143" stroke="#0891B2" stroke-width="1"/>
+
+  <rect x="45" y="152" width="80" height="6" fill="#E0F2FE" rx="2"/>
+  <rect x="135" y="152" width="30" height="6" fill="#0891B2" rx="2"/>
+
+  <!-- Checkmark icon -->
+  <circle cx="105" cy="187" r="14" fill="#0891B2"/>
+  <polyline points="96,187 103,194 115,181" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bar Chart: Planned vs Actual -->
+  <rect x="205" y="25" width="170" height="250" fill="#FFFFFF" rx="6" stroke="#E5E7EB" stroke-width="1"/>
+  <text x="290" y="48" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#374151">Planned vs Actual</text>
+
+  <!-- Y axis -->
+  <line x1="230" y1="60" x2="230" y2="235" stroke="#9CA3AF" stroke-width="1"/>
+  <!-- X axis -->
+  <line x1="230" y1="235" x2="365" y2="235" stroke="#9CA3AF" stroke-width="1"/>
+
+  <!-- Y axis labels -->
+  <text x="225" y="80" text-anchor="end" font-family="sans-serif" font-size="8" fill="#9CA3AF">100%</text>
+  <text x="225" y="119" text-anchor="end" font-family="sans-serif" font-size="8" fill="#9CA3AF">75%</text>
+  <text x="225" y="158" text-anchor="end" font-family="sans-serif" font-size="8" fill="#9CA3AF">50%</text>
+  <text x="225" y="197" text-anchor="end" font-family="sans-serif" font-size="8" fill="#9CA3AF">25%</text>
+
+  <!-- Grid lines -->
+  <line x1="230" y1="76" x2="360" y2="76" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="230" y1="115" x2="360" y2="115" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="230" y1="155" x2="360" y2="155" stroke="#F3F4F6" stroke-width="1"/>
+  <line x1="230" y1="195" x2="360" y2="195" stroke="#F3F4F6" stroke-width="1"/>
+
+  <!-- Q1 bars -->
+  <rect x="240" y="95" width="14" height="140" fill="#0891B2" rx="2"/>
+  <rect x="256" y="105" width="14" height="130" fill="#22D3EE" rx="2"/>
+
+  <!-- Q2 bars -->
+  <rect x="280" y="85" width="14" height="150" fill="#0891B2" rx="2"/>
+  <rect x="296" y="100" width="14" height="135" fill="#22D3EE" rx="2"/>
+
+  <!-- Q3 bars -->
+  <rect x="320" y="76" width="14" height="159" fill="#0891B2" rx="2"/>
+  <rect x="336" y="90" width="14" height="145" fill="#22D3EE" rx="2"/>
+
+  <!-- X axis labels -->
+  <text x="255" y="250" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B7280">Q1</text>
+  <text x="295" y="250" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B7280">Q2</text>
+  <text x="335" y="250" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#6B7280">Q3</text>
+
+  <!-- Legend -->
+  <rect x="240" y="262" width="10" height="10" fill="#0891B2" rx="2"/>
+  <text x="255" y="271" font-family="sans-serif" font-size="9" fill="#374151">Planned</text>
+  <rect x="300" y="262" width="10" height="10" fill="#22D3EE" rx="2"/>
+  <text x="315" y="271" font-family="sans-serif" font-size="9" fill="#374151">Actual</text>
+
+  <!-- Variance arrow -->
+  <text x="105" y="240" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0891B2">Variance</text>
+  <text x="105" y="255" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#22D3EE">Analysis</text>
+  <!-- Arrow connecting document to chart -->
+  <line x1="160" y1="248" x2="200" y2="248" stroke="#0891B2" stroke-width="1.5"/>
+  <polygon points="200,248 194,244 194,252" fill="#0891B2"/>
+</svg>
